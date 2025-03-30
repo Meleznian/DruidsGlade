@@ -101,5 +101,11 @@ public class RitualController : MonoBehaviour
 
             i++;
         }
+
+        if(i == ritualList.Count)
+        {
+            nextHint = -1;
+        }
+
     }
 }

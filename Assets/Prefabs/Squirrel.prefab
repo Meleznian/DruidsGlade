@@ -637,6 +637,7 @@ MonoBehaviour:
     - '*Squirrel Noises*'
     - Those fruits look tasty!
     - Those rocks don't look tasty!
+    - I hear moss contains special size magic. maybe you could work with that
   - refID: OnFire
     sequence: 0
     dialogueOptions:
@@ -652,6 +653,25 @@ MonoBehaviour:
     - Dialogue Test 1
     - Dialogue Test 2
     - Dialogue Test 3
+  - refID: Welcome
+    sequence: 1
+    dialogueOptions:
+    - Hi, Welcome to the Gladee
+  - refID: PotRitual
+    sequence: 1
+    dialogueOptions:
+    - Rituals are pretty easy to perform
+    - Just place your ingredients on the table and wave your staff over them
+    - Try performing a ritual with two pots as a catalysts
+  - refID: RainDance
+    sequence: 1
+    dialogueOptions:
+    - Wow it sure is dry today
+    - Why don't you try summoning rain
+    - The Rain Dance is pretty easy you only need two ingredients
+    - Those flowers are quite pretty, I wonder how'd they go as ritual ingredients
+    - Did you know the water in that pool over there can also be used in rituals
+    - Perform the Rain Dance using a flower and some water
 --- !u!1 &8609283020193246910
 GameObject:
   m_ObjectHideFlags: 0

@@ -173,6 +173,15 @@ public class Squirrel : MonoBehaviour
 
     void GetHint()
     {
-        GetDialogue(RitualController.instance.ritualList[RitualController.instance.nextHint].refID);   
+        int i = RitualController.instance.nextHint;
+
+        if (i != -1)
+        {
+            GetDialogue(RitualController.instance.ritualList[i].refID);
+        }
+        else
+        {
+            GetDialogue("Ambient");
+        }
     }
 }
