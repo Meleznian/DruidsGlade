@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897940d25a814d146885cba680ca3053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfPots: 10
-  PotPrefab: {fileID: 5492619184011646898, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
+  numberOfObjects: 10
+  ObjectPrefab: {fileID: 5492619184011646898, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
   burstForce: 50
   burstRadius: 3
+  decayTime: 0

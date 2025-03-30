@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Staff : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public ActivationArea activationArea;
+    
+    public void PickedUp(SelectEnterEventArgs arg)
     {
-        
+        activationArea.staffHeld = true;
+
+        if (arg.interactorObject == HandManager.instance.rightInteractor)
+        {
+            activationArea.StaffinRightHand = true;
+        }
+        else
+        {
+            activationArea.StaffinRightHand = false;
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Dropped()
     {
-        
+        activationArea.staffHeld = true;
     }
 }

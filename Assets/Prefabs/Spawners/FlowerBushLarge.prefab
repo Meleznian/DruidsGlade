@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 1519932911809584251}
   - component: {fileID: 8523632269799743452}
   m_Layer: 0
-  m_Name: FlowerBush
+  m_Name: FlowerBushLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.26558134, z: 0, w: 0.96408844}
   m_LocalPosition: {x: -3.31, y: -0.487, z: 1.544}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5078860103502863379}

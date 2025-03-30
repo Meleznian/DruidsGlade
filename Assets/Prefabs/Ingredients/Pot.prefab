@@ -147,7 +147,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.781, y: 0.639, z: 0.057}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.19999997, y: 0.19999997, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3750997446210077317}
@@ -354,7 +354,7 @@ MonoBehaviour:
   ingredientScriptable: {fileID: 11400000, guid: c4873ee309fd98d4eb726198b048a9ca, type: 2}
   unstable: 0
   fragile: 1
-  endurance: 3
+  endurance: 5
   eatTime: 2
 --- !u!114 &1209971088835338597
 MonoBehaviour:

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8512275503110301002}
   - component: {fileID: 3638699020549788339}
   - component: {fileID: 9178253762282374143}
+  - component: {fileID: 7088601308185924163}
   m_Layer: 0
   m_Name: Staff
   m_TagString: Staff
@@ -31,8 +32,8 @@ Transform:
   m_GameObject: {fileID: 2164423502347427745}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6671016, y: -0.623, z: 0.8839047}
-  m_LocalScale: {x: 0.05, y: 0.5, z: 0.05}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.049999997, y: 0.5, z: 0.05000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3276589270727774975}
@@ -185,10 +186,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7088601308185924163}
+        m_TargetAssemblyTypeName: Staff, Assembly-CSharp
+        m_MethodName: PickedUp
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7088601308185924163}
+        m_TargetAssemblyTypeName: Staff, Assembly-CSharp
+        m_MethodName: Dropped
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -272,6 +297,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7470e71866329341a2a54616a9753d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7088601308185924163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164423502347427745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b04e131a824f04a91bfb1ae39606f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationArea: {fileID: 0}
 --- !u!1 &4571316409436153761
 GameObject:
   m_ObjectHideFlags: 0

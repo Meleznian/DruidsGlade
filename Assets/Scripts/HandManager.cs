@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.XR;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
@@ -59,9 +58,12 @@ public class HandManager : MonoBehaviour
     {
         //CheckHands();
 
-        SummonStaff();
-
         ToggleTeleport();
+    }
+
+    private void FixedUpdate()
+    {
+        SummonStaff();
     }
 
     void SummonStaff()

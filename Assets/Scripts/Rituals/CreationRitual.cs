@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PotRitualScript : MonoBehaviour
-{
+public class CreationRitual : MonoBehaviour
+{ 
 
-    public int numberOfPots;
-    public GameObject PotPrefab;
+    public int numberOfObjects;
+    public GameObject ObjectPrefab;
 
     public float burstForce;
     public float burstRadius;
@@ -30,15 +29,15 @@ public class PotRitualScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while(i < numberOfPots)
+        while(i < numberOfObjects)
         {
-            Rigidbody rb = Instantiate(PotPrefab, new Vector3(transform.position.x + Random.Range(0.3f,-0.3f),transform.position.y + 0.3f, transform.position.z + Random.Range(0.3f, -0.3f)), transform.rotation, interactableHolder).GetComponent < Rigidbody>();
+            Rigidbody rb = Instantiate(ObjectPrefab, new Vector3(transform.position.x + Random.Range(0.3f,-0.3f),transform.position.y + 0.3f, transform.position.z + Random.Range(0.3f, -0.3f)), transform.rotation, interactableHolder).GetComponent < Rigidbody>();
 
             rb.AddExplosionForce(burstForce, transform.position, burstRadius);
             i++;
         }
 
-        if(i >= numberOfPots)
+        if(i >= numberOfObjects)
         {
             timer += Time.deltaTime;
 

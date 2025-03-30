@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: Stone
   ingredientID: 7
-  prefab: {fileID: 0}
+  prefab: {fileID: 7866701732936293457, guid: ac890733d1c7d514f8e0ad9b36b443de, type: 3}

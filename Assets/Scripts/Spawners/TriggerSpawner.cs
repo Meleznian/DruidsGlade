@@ -2,12 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
-using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.UIElements;
-using UnityEngine.XR.Interaction.Toolkit.Interactors;
-using UnityEngine.XR;
 using UnityEngine.InputSystem;
-using Unity.VisualScripting;
 
 public class TriggerSpawner : MonoBehaviour
 {
@@ -34,13 +29,13 @@ public class TriggerSpawner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Left Controller")
+        if (other.transform.parent.name == "Left Controller")
         {
             print("Left Hand Entered");
             HandManager.instance.leftHand.SendHapticImpulse(0, 0.5f, 0.1f);
             leftHandin = true;
         }
-        else if(other.gameObject.name == "Right Controller")
+        else if(other.transform.parent.name == "Right Controller")
         {
             print("Right Hand Entered");
             HandManager.instance.rightHand.SendHapticImpulse(0, 0.5f, 0.1f);
@@ -50,13 +45,13 @@ public class TriggerSpawner : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "Left Controller")
+        if (other.transform.parent.name == "Left Controller")
         {
             print("Left Hand Removed");
             HandManager.instance.leftHand.SendHapticImpulse(0, 0.5f, 0.1f);
             leftHandin = false;
         }
-        else if (other.gameObject.name == "Right Controller")
+        else if(other.transform.parent.name == "Right Controller")
         {
             print("Right Hand Removed");
             HandManager.instance.rightHand.SendHapticImpulse(0, 0.5f, 0.1f);
