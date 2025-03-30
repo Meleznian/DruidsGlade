@@ -11,8 +11,13 @@ public class ExamplePanelLogic : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public void ChangeLightIntensity(float intensity)
+    public void ActivateAllSpawners()
     {
-        sun.intensity = intensity;
+        MasterSpawner.instance.ActivateAllSpawners();
+    }
+
+    public void ToggleSquirrel()
+    {
+        Squirrel.instance.GetDialogue("Test");
     }
 }

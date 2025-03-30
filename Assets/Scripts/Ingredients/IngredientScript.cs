@@ -29,6 +29,7 @@ public class IngredientScript : MonoBehaviour
         {
             if(collision.gameObject.name != "RitualTable")
             {
+                print(collision.gameObject.name);
                 Destroy(gameObject);
             }
         }

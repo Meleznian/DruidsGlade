@@ -48,4 +48,4 @@ MonoBehaviour:
   ObjectPrefab: {fileID: 5492619184011646898, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
   burstForce: 50
   burstRadius: 3
-  decayTime: 0
+  decayTime: 0.5

@@ -73,7 +73,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5839db152ab971f4eac59f47ff7f47ac, type: 2}
   - {fileID: 11400000, guid: 565ec489b795bf04981e6f78f4fabb93, type: 2}
   - {fileID: 11400000, guid: 1f616d6ba4af3204e8a6e52f55aa3f3c, type: 2}
-  failureForce: 70
+  failureForce: 50
   failureSize: 10
   activationTime: 3
   floatStrength: 1

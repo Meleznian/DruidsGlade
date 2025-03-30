@@ -35,6 +35,9 @@ public class HandManager : MonoBehaviour
     public Material crystalActive;
     public Material crystalInactive;
 
+    public bool leftHandOnFire;
+    public bool rightHandOnFire;
+
     void Awake()
     {
         if (instance != null && instance != this)
@@ -56,9 +59,8 @@ public class HandManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //CheckHands();
-
         ToggleTeleport();
+        OnFire();
     }
 
     private void FixedUpdate()
@@ -118,6 +120,18 @@ public class HandManager : MonoBehaviour
             {
                 print("Right Hand Found");
             }
+        }
+    }
+
+    void OnFire()
+    {
+        if (leftHandOnFire)
+        {
+            leftHand.SendHapticImpulse(0, 0.5f, 0.1f);
+        }
+        if (rightHandOnFire)
+        {
+            rightHand.SendHapticImpulse(0, 0.5f, 0.1f);
         }
     }
 }

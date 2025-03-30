@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &613860354001787131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1013147631777728590}
+  m_Layer: 0
+  m_Name: Grabpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1013147631777728590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613860354001787131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0068, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 747527830696599108}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1803373249068917469
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,7 +72,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803373249068917469}
-  m_Mesh: {fileID: 4300000, guid: d1fd41beb70267947bc1c996df07593d, type: 3}
+  m_Mesh: {fileID: -2564423107879867638, guid: 72af14b56f398804bbcbc04b48efce81, type: 3}
 --- !u!23 &7209601370660255484
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62,7 +93,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5b066c0e3e98334c888ebaa12c7725b, type: 2}
+  - {fileID: 2100000, guid: bd65063de7fd07d4483885e880a0bcac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119,9 +150,8 @@ GameObject:
   - component: {fileID: 5371942861939237702}
   - component: {fileID: -7194874800978592758}
   - component: {fileID: 8353479415529883657}
-  - component: {fileID: -8826809558749629863}
   m_Layer: 0
-  m_Name: Stone
+  m_Name: BottledWind
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,10 +167,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.944233, y: -0.9134153, z: 0.51688534}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_LocalScale: {x: 7, y: 9, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7681734882775209062}
+  - {fileID: 1013147631777728590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8768620979118106482
@@ -217,34 +248,10 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -8826809558749629863}
-        m_TargetAssemblyTypeName: Growable, Assembly-CSharp
-        m_MethodName: RemoveFromBush
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -8826809558749629863}
-        m_TargetAssemblyTypeName: Growable, Assembly-CSharp
-        m_MethodName: UpdateRB
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -266,7 +273,7 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1013147631777728590}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -328,11 +335,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16c24949043b8e48bc01bc9b21c8be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredientScriptable: {fileID: 11400000, guid: 62fae0fddf9dda446b2f3aad446ed7ee, type: 2}
+  ingredientScriptable: {fileID: 11400000, guid: c4a3170b1b8dbfc48b70273d364a15b2, type: 2}
   unstable: 0
-  fragile: 0
-  endurance: 0
-  eatTime: 1
+  fragile: 1
+  endurance: 5
+  eatTime: 2
 --- !u!114 &-7194874800978592758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,19 +373,4 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: d1fd41beb70267947bc1c996df07593d, type: 3}
---- !u!114 &-8826809558749629863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7866701732936293457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de749caed26ff840b4f5fb5857b4926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
-  attachedToSpawner: 0
-  bushReference: 0
+  m_Mesh: {fileID: -2564423107879867638, guid: 72af14b56f398804bbcbc04b48efce81, type: 3}

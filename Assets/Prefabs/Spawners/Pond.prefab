@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &743938058607416067
+--- !u!1 &1794992017433265164
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8298891741374315186}
-  m_Layer: 4
-  m_Name: spawnB
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8298891741374315186
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743938058607416067}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.261, y: 0.5, z: -0.171}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8495561610540228459}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!1 &3186484950802320291
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6914524609498466615}
+  - component: {fileID: 4459615263746654101}
   m_Layer: 4
   m_Name: spawnA
   m_TagString: Untagged
@@ -47,20 +16,51 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6914524609498466615
+--- !u!4 &4459615263746654101
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3186484950802320291}
+  m_GameObject: {fileID: 1794992017433265164}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.18, y: 0.5, z: -0.134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8495561610540228459}
+  m_Father: {fileID: 5303359020526077649}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!1 &2162824276746434320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6282492451070493502}
+  m_Layer: 4
+  m_Name: spawnB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6282492451070493502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2162824276746434320}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.261, y: 0.5, z: -0.171}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5303359020526077649}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &3557455298086827298
 GameObject:
@@ -76,9 +76,8 @@ GameObject:
   - component: {fileID: 5186017834602084317}
   - component: {fileID: 2256678901190237900}
   - component: {fileID: 1229771178859309439}
-  - component: {fileID: 5972738063326163492}
   m_Layer: 4
-  m_Name: WaterSpawner
+  m_Name: Pond
   m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,8 +96,7 @@ Transform:
   m_LocalScale: {x: 1.2, y: 0.2, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6914524609498466615}
-  - {fileID: 8298891741374315186}
+  - {fileID: 5303359020526077649}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 34.223, z: 0}
 --- !u!33 &4493684013335270849
@@ -163,8 +161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6da445647f9d548bce33c1c4ea8f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
   ingredient: {fileID: 11400000, guid: 183833e627833ed4b99d5ecef1caf738, type: 2}
-  interactableHolder: {fileID: 0}
+  ingredientHolder: {fileID: 0}
+  fire: 0
   RightGrip: {fileID: 7733706496374974999, guid: 58aa85d4a1f806546b648451d88c884a, type: 3}
   LeftGrip: {fileID: 1586269695115098663, guid: 58aa85d4a1f806546b648451d88c884a, type: 3}
 --- !u!54 &2256678901190237900
@@ -216,28 +216,184 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5972738063326163492
+--- !u!1 &7193149583841529363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5303359020526077649}
+  - component: {fileID: 4350491738800022438}
+  - component: {fileID: 4823149895384639300}
+  - component: {fileID: 2911657996726923389}
+  - component: {fileID: 4803316619737704210}
+  - component: {fileID: 6159909511952539994}
+  - component: {fileID: 49273781147640718}
+  m_Layer: 4
+  m_Name: SeaweedSpawner
+  m_TagString: Water
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5303359020526077649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193149583841529363}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4459615263746654101}
+  - {fileID: 6282492451070493502}
+  m_Father: {fileID: 8495561610540228459}
+  m_LocalEulerAnglesHint: {x: 0, y: 34.223, z: 0}
+--- !u!33 &4350491738800022438
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193149583841529363}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4823149895384639300
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193149583841529363}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0666a1b0a34846349acdd2e134a4e291, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2911657996726923389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3557455298086827298}
+  m_GameObject: {fileID: 7193149583841529363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6da445647f9d548bce33c1c4ea8f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
+  ingredient: {fileID: 11400000, guid: 183833e627833ed4b99d5ecef1caf738, type: 2}
+  ingredientHolder: {fileID: 0}
+  fire: 0
+  RightGrip: {fileID: 7733706496374974999, guid: 58aa85d4a1f806546b648451d88c884a, type: 3}
+  LeftGrip: {fileID: 1586269695115098663, guid: 58aa85d4a1f806546b648451d88c884a, type: 3}
+--- !u!54 &4803316619737704210
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193149583841529363}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &6159909511952539994
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193149583841529363}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &49273781147640718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7193149583841529363}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c221411a349c57b488ea6b0187604f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
-  - growPoint: {fileID: 6914524609498466615}
-    attachedIngredient: {fileID: 0}
-    pointID: 0
-    timer: 0
-  - growPoint: {fileID: 8298891741374315186}
-    attachedIngredient: {fileID: 0}
-    pointID: 0
-    timer: 0
-  interactablesHolder: {fileID: 0}
-  growTime: 1
   active: 1
   ingredient: {fileID: 11400000, guid: d7ec0c056bbb18c44bfedc43591c4c8d, type: 2}
+  ingredientHolder: {fileID: 0}
+  spawnPoints:
+  - growPoint: {fileID: 4459615263746654101}
+    attachedIngredient: {fileID: 0}
+    pointID: 0
+    timer: 0
+  - growPoint: {fileID: 6282492451070493502}
+    attachedIngredient: {fileID: 0}
+    pointID: 0
+    timer: 0
+  growTime: 1

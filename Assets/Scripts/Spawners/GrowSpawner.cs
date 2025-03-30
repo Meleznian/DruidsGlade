@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-public class GrowSpawner : MonoBehaviour
+public class GrowSpawner : SpawnerBase
 {
     [System.Serializable]
-    public class spawnPoint
+    public class SpawnPoint
     {
         public Transform growPoint;
         public GameObject attachedIngredient;
@@ -13,20 +14,14 @@ public class GrowSpawner : MonoBehaviour
         public float timer;
     }
 
-    public List<spawnPoint> spawnPoints = new List<spawnPoint>();
-
-    public Transform interactablesHolder;
+    public List<SpawnPoint> spawnPoints = new List<SpawnPoint>();
 
     public float growTime;
-    public bool active;
-
-    public Ingredient ingredient;
-
     // Start is called before the first frame update
     void Start()
     {
         int i = 0;
-        foreach(spawnPoint s in spawnPoints)
+        foreach(SpawnPoint s in spawnPoints)
         {
             s.pointID = i;
             i++;
@@ -45,7 +40,7 @@ public class GrowSpawner : MonoBehaviour
 
     void RegrowLogic()
     {
-        foreach(spawnPoint s in spawnPoints)
+        foreach(SpawnPoint s in spawnPoints)
         {
             if(s.attachedIngredient == null)
             {
@@ -53,7 +48,7 @@ public class GrowSpawner : MonoBehaviour
 
                 if (s.timer >= growTime)
                 {
-                    s.attachedIngredient = Instantiate(ingredient.prefab, s.growPoint.position, s.growPoint.rotation, interactablesHolder);
+                    s.attachedIngredient = Instantiate(ingredient.prefab, s.growPoint.position, s.growPoint.rotation, ingredientHolder);
                     PrepGrowable(s.attachedIngredient, s.pointID);
                     s.timer = 0;
                 }
@@ -74,7 +69,7 @@ public class GrowSpawner : MonoBehaviour
 
     public void RemoveGrowable(int GrowableRef)
     {
-        foreach(spawnPoint s in spawnPoints)
+        foreach(SpawnPoint s in spawnPoints)
         {
             if(GrowableRef == s.pointID)
             {
@@ -83,5 +78,4 @@ public class GrowSpawner : MonoBehaviour
             }
         }
     }
-
 }

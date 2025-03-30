@@ -8,6 +8,9 @@ TagManager:
   - Staff
   - Water
   - Mouth
+  - Left Controller
+  - Right Controller
+  - Fire
   layers:
   - Default
   - TransparentFX

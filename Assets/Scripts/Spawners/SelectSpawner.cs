@@ -6,45 +6,32 @@ using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
-public class SelectSpawner : MonoBehaviour
+public class SelectSpawner : SpawnerBase
 {
-    public Ingredient ingredient;
     public Transform spawnPoint;
-    public Transform interactableHolder;
-
-    public bool activeOnStart;
-
-    private void Start()
-    {
-        if (!activeOnStart)
-        {
-            Deactivate();
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void SpawnIngredient(SelectEnterEventArgs arg)
     {
-        GetComponent<XRSimpleInteractable>().interactionManager.SelectExit(arg.interactorObject, GetComponent<XRSimpleInteractable>());
+        if (active)
+        {
+            GetComponent<XRSimpleInteractable>().interactionManager.SelectExit(arg.interactorObject, GetComponent<XRSimpleInteractable>());
 
-        GameObject i = Instantiate(ingredient.prefab, spawnPoint.position, transform.rotation, interactableHolder);
+            GameObject i = Instantiate(ingredient.prefab, spawnPoint.position, transform.rotation, ingredientHolder);
 
-        i.GetComponent<XRGrabInteractable>().interactionManager.SelectEnter(arg.interactorObject, i.GetComponent<XRGrabInteractable>());
+            i.GetComponent<XRGrabInteractable>().interactionManager.SelectEnter(arg.interactorObject, i.GetComponent<XRGrabInteractable>());
+        }
     }
 
-    void Activate()
+    public override void ActivateSpawner()
     {
+        active = true;
         GetComponent<XRSimpleInteractable>().enabled = true;
         GetComponent<MeshRenderer>().enabled = true;
     }
 
-    void Deactivate()
+    public override void DeactivateSpawner()
     {
+        active = false;
         GetComponent<XRSimpleInteractable>().enabled = false;
         GetComponent<MeshRenderer>().enabled = false;
     }

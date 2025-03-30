@@ -51,7 +51,7 @@ public class ActivationArea : MonoBehaviour
                 HandManager.instance.leftHand.TryGetFeatureValue(CommonUsages.deviceVelocity, out controllerVelocity);
             }
 
-            print(controllerVelocity.magnitude);
+            //print(controllerVelocity.magnitude);
 
             if (controllerVelocity.magnitude > activationSpeed)
             {

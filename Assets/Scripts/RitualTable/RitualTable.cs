@@ -70,59 +70,25 @@ public class RitualTable : MonoBehaviour
         CheckIngredients();
         if (ingredients.Count > 0 && !ritualActive)
         {
-            bool ritualFound = false;
-            List<Ingredient> tempRecipe = new List<Ingredient>();
+            Ritual r = RitualController.instance.GetRitual(ingredients);
 
-            foreach (Ritual r in rituals)
+            if(r != null)
             {
-                if (ingredients.Count == r.ingredients.Length)
-                {
-                    print("Comparing Ritual: " + r.ritualName);
-
-                    bool recipeMatch = true;
-
-                    tempRecipe = r.ingredients.ToList();
-
-                    tempRecipe = tempRecipe.OrderBy(x => x.ingredientID).ToList();
-                    ingredients = ingredients.OrderBy(x => x.ingredientID).ToList();
-
-                    for (int i = 0; i < ingredients.Count; i++)
-                    {
-
-                        print("Comparing " + ingredients[i].ingredientName + " and " + tempRecipe[i].ingredientName);
-
-                        if (tempRecipe[i].ingredientID == ingredients[i].ingredientID)
-                        {
-                            print("Match Success");
-                            continue;
-                        }
-                        else
-                        {
-                            print("Match Fail");
-                            recipeMatch = false;
-                            break;
-                        }
-                    }
-
-                    if (recipeMatch == true)
-                    {
-                        print("Ritual Found: " + r.ritualName);
-                        currentRitual = r;
-                        validRitual = true;
-                        ritualFound = true;
-                        PrepareRitual();
-                        break;
-                    }
-                }
+                print("Ritual Found: " + r.ritualName);
+                currentRitual = r;
+                validRitual = true;
+                PrepareRitual();
             }
-
-            if(!ritualFound)
+            else
             {
                 print("Ritual Not Found");
                 validRitual = false;
                 PrepareRitual();
             }
-
+        }
+        else
+        {
+            print("No Ingredients Found");
         }
     }
 
