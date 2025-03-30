@@ -1,0 +1,1 @@
+Available for free at https://assetstore.unity.com/packages/3d/props/weapons/lowpoly-weapon-pack-216486
