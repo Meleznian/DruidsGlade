@@ -6,12 +6,15 @@ using UnityEngine;
 public class IngredientScript : MonoBehaviour
 { 
     public Ingredient ingredientScriptable;
+
+    [Header("Options")]
     public bool unstable;
     public bool fragile;
     public float endurance;
+    public float eatTime;
+
 
     bool eating;
-    public float eatTime;
     float timer;
 
     private void Update()

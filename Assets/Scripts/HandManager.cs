@@ -12,31 +12,31 @@ public class HandManager : MonoBehaviour
 
     public static HandManager instance = null;
 
-    public UnityEngine.XR.InputDevice rightHand;
-    public UnityEngine.XR.InputDevice leftHand;
-
-    public IXRSelectInteractor leftInteractor;
-    public IXRSelectInteractor rightInteractor;
-
-    public InputActionReference RightGrip;
-    public InputActionReference RightA;
-
-    public Transform leftHandT;
-    public Transform rightHandT;
-
-    public Rigidbody Staff;
+    [Header("Variables")]
     public float forceMult;
 
-    public GameObject testSphere;
-
+    [Header("Technical Stuff")]
+    public Transform leftHandT;
+    public Transform rightHandT;
+    public Rigidbody Staff;
     public XRRayInteractor teleporter;
     public MeshRenderer teleportCrystal;
-
     public Material crystalActive;
     public Material crystalInactive;
 
+    [HideInInspector]
+
+    public IXRSelectInteractor leftInteractor;
+    public IXRSelectInteractor rightInteractor;
     public bool leftHandOnFire;
     public bool rightHandOnFire;
+    public UnityEngine.XR.InputDevice rightHand;
+    public UnityEngine.XR.InputDevice leftHand;
+    public InputActionReference RightGrip;
+    public InputActionReference RightA;
+
+
+
 
     void Awake()
     {
@@ -78,6 +78,7 @@ public class HandManager : MonoBehaviour
             if(Vector3.Distance(rightHandT.position, Staff.transform.position) <= 1)
             {
                 Staff.GetComponent<XRGrabInteractable>().interactionManager.SelectEnter(rightInteractor, Staff.GetComponent<XRGrabInteractable>());
+                Squirrel.instance.GetDialogue("StaffSummon");
             }
         }
     }

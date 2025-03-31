@@ -40,12 +40,22 @@ public class Squirrel : MonoBehaviour
     public class Dialogue
     {
         public string refID;
-        public bool sequence;
-        internal int index;
         public string[] dialogueOptions;
+
+        [Header("Options")]
+        public bool sequence;
+        public bool autoContinue;
+        public bool loop;
+        internal bool played;
+
+        internal int index;
+
     }
 
+    bool ac;
+    string mostRecentDialogue;
     public List<Dialogue> dialogueList = new();
+    bool welcomed;
 
 
     Vector3 lookPos;
@@ -89,6 +99,7 @@ public class Squirrel : MonoBehaviour
                 {
                     dialogueText.text += queuedDialogue[i];
                     i++;
+                    AudioManager.instance.PlayAudio("SquirrelTalk");
                 }
                 else
                 {
@@ -99,7 +110,16 @@ public class Squirrel : MonoBehaviour
             }
             else if(queueFinished && timer >= dialogueDecay)
             {
-                StopDialogue();
+                if (ac)
+                {
+                    dialogueText.text = "";
+                    playingDialogue = false;
+                    GetDialogue(mostRecentDialogue);
+                }
+                else
+                {
+                    StopDialogue();
+                }
             }
         }
     }
@@ -120,10 +140,10 @@ public class Squirrel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Left Controller") || other.CompareTag("Right Controller"))
-        {
-            GetHint();
-        }
+        //if (other.CompareTag("Left Controller") || other.CompareTag("Right Controller"))
+        //{
+        //    GetHint();
+        //}
 
         if (other.CompareTag("Water"))
         {
@@ -137,6 +157,7 @@ public class Squirrel : MonoBehaviour
 
     }
 
+
     public void GetDialogue(string RefID)
     {
         if (!playingDialogue)
@@ -145,7 +166,14 @@ public class Squirrel : MonoBehaviour
             {
                 if (d.refID == RefID)
                 {
-                    int r = 0;
+                    int r;
+                    ac = d.autoContinue;
+                    mostRecentDialogue = d.refID;
+
+                    if(!d.loop && d.played)
+                    {
+                        break;
+                    }
 
                     if (d.sequence == false)
                     {
@@ -157,21 +185,21 @@ public class Squirrel : MonoBehaviour
 
                         d.index++;
 
-                        if (d.index > d.dialogueOptions.Length)
+                        if (d.index >= d.dialogueOptions.Length)
                         {
                             d.index = 0;
+                            ac = false;
+                            d.played = true;
                         }
                     }
 
                     StartDialogue(d.dialogueOptions[r]);
                 }
             }
-
-            StartDialogue("Dialogue Request Failed, Please check the dialogue reference is correct");
         }
     }
 
-    void GetHint()
+    public void GetHint()
     {
         int i = RitualController.instance.nextHint;
 

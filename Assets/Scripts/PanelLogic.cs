@@ -18,6 +18,6 @@ public class ExamplePanelLogic : MonoBehaviour
 
     public void ToggleSquirrel()
     {
-        Squirrel.instance.GetDialogue("Test");
+        Squirrel.instance.GetDialogue("Ambient");
     }
 }

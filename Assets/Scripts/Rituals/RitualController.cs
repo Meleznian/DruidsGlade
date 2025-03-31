@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class RitualController : MonoBehaviour
@@ -32,6 +33,7 @@ public class RitualController : MonoBehaviour
     public List<RitualEntry> ritualList = new();
 
     public int nextHint;
+    bool potDone;
 
     public Ritual GetRitual(List<Ingredient> ingredients)
     {
@@ -76,7 +78,6 @@ public class RitualController : MonoBehaviour
         }
 
         return null;
-        
     }
 
     public void CheckOffRitual(Ritual ritual)
@@ -86,6 +87,11 @@ public class RitualController : MonoBehaviour
             if(r.ritual == ritual)
             {
                 r.completed = true;
+
+                if(r.refID == "PotRitual")
+                {
+                    Squirrel.instance.GetDialogue("Congrats");
+                } 
             }
         }
 
@@ -106,6 +112,19 @@ public class RitualController : MonoBehaviour
         {
             nextHint = -1;
         }
+    }
 
+    public bool CheckCompletion(string ID)
+    {
+        foreach(RitualEntry r in ritualList)
+        {
+            if(r.refID == ID)
+            {
+                return r.completed;
+            }
+        }
+
+        Debug.LogWarning("Ritual " + ID + " not found, please check ID");
+        return false;
     }
 }

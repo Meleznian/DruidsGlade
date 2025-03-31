@@ -8,8 +8,6 @@ public class RitualTable : MonoBehaviour
     List<IngredientScript> ingredientObjects = new List<IngredientScript>();
     public List<Ingredient> ingredients = new List<Ingredient>();
 
-    public List<Ritual> rituals = new List<Ritual>();
-
     public float failureForce;
     public float failureSize;
 
@@ -89,6 +87,7 @@ public class RitualTable : MonoBehaviour
         else
         {
             print("No Ingredients Found");
+            Squirrel.instance.GetDialogue("NoIng");
         }
     }
 
@@ -138,6 +137,7 @@ public class RitualTable : MonoBehaviour
         ingredients.Clear();
 
         Instantiate(r.ritualPrefab, transform.position, Quaternion.identity);
+        RitualController.instance.CheckOffRitual(r);
 
         ritualActive = false;
     }
