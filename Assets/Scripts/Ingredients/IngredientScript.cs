@@ -17,6 +17,15 @@ public class IngredientScript : MonoBehaviour
     bool eating;
     float timer;
 
+    float nextEatSound;
+    float eatSoundTime;
+
+    private void Start()
+    {
+        eatSoundTime = (eatTime / 3);
+        nextEatSound = eatSoundTime;
+    }
+
     private void Update()
     {
         if (eating)
@@ -42,18 +51,6 @@ public class IngredientScript : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-
-            //if(GetComponent<Rigidbody>().velocity.magnitude > endurance)
-            //{
-            //    Destroy(gameObject);
-            //}
-            //else if(collision.gameObject.GetComponent<Rigidbody>() != null)
-            //{
-            //    if(collision.gameObject.GetComponent<Rigidbody>().velocity.magnitude > endurance)
-            //    {
-            //        Destroy(gameObject);
-            //    }
-            //}
         }
     }
 
@@ -63,6 +60,16 @@ public class IngredientScript : MonoBehaviour
         {
             print("Nom");
             eating = true;
+            AudioManager.instance.PlayAudio("Eat" + gameObject.name);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Mouth"))
+        {
+            print("Wait no don't eat that!");
+            eating = false;
+            timer = 0;
         }
     }
 
@@ -70,7 +77,13 @@ public class IngredientScript : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer >= eatTime)
+        if (timer >= nextEatSound)
+        {
+            AudioManager.instance.PlayAudio("Eat" + gameObject.name);
+            nextEatSound = (eatSoundTime * 2);
+        }
+
+        if (timer >= eatTime)
         {
             Destroy(gameObject);
         }

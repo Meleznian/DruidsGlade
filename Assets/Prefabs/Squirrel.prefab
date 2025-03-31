@@ -295,6 +295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1057569737158974261}
+  - component: {fileID: 7900688365000094515}
   m_Layer: 0
   m_Name: Squirrel
   m_TagString: Untagged
@@ -319,6 +320,102 @@ Transform:
   - {fileID: 7391610881308938020}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &7900688365000094515
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383069845802422341}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4483174862649460211
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,11 +564,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueCanvas: {fileID: 363832934994467073}
   dialogueText: {fileID: 1696520208763020625}
-  dialogueDecay: 3
+  dialogueDecay: 2
   dialogueSpeed: 0.05
   dialogueList:
   - refID: Ambient
-    sequence: 0
     dialogueOptions:
     - Boy howdy do I love magic
     - Summon your staff by raising your right arm and grabbing the air
@@ -480,47 +576,47 @@ MonoBehaviour:
     - '*Squirrel Noises*'
     - Those rocks don't look tasty!
     - What do you mean bean? I'm obviously a squirrel
+    sequence: 0
     autoContinue: 0
     loop: 0
   - refID: OnFire
-    sequence: 0
     dialogueOptions:
     - AAAAAAAAAAAAHHHHHHHH!!
     - AAH IT BURNS, WHY WOULD YOU DO THAT?!!
+    sequence: 0
     autoContinue: 0
     loop: 0
   - refID: Wet
-    sequence: 0
     dialogueOptions:
     - Hey, what was that for?
+    sequence: 0
     autoContinue: 0
     loop: 0
   - refID: Test
-    sequence: 1
     dialogueOptions:
     - Dialogue Test 1
     - Dialogue Test 2
     - Dialogue Test 3
+    sequence: 1
     autoContinue: 0
     loop: 0
   - refID: Welcome
-    sequence: 1
     dialogueOptions:
     - Hi, Welcome to Druid's Glade
     - A magical place where you can perform all sort of amazing rituals
     - Just give me a gentle pat on the head if you ever want some advice
+    sequence: 1
     autoContinue: 1
     loop: 0
   - refID: PotRitual
-    sequence: 1
     dialogueOptions:
     - Rituals are pretty easy to perform
     - Just place your ingredients on the table and wave your staff over them
     - Try performing a ritual wit the ingredientsh two pots as
+    sequence: 1
     autoContinue: 1
     loop: 1
   - refID: Congrats
-    sequence: 1
     dialogueOptions:
     - Great job, now we'll never run out of pots
     - There are many rituals to perform, experiement with ingredients to see what
@@ -528,10 +624,10 @@ MonoBehaviour:
     - If you misplace your staff summon it by raising your right arm and grabbing
       the air
     - Good luck
+    sequence: 1
     autoContinue: 1
     loop: 0
   - refID: RainDance
-    sequence: 1
     dialogueOptions:
     - Wow it sure is dry today
     - Why don't you try summoning some rain
@@ -539,74 +635,75 @@ MonoBehaviour:
     - Those flowers are quite pretty, I wonder how'd they go as ritual ingredients
     - Did you know the water in that pool over there can also be used in rituals
     - Perform the Rain Dance using a flower and some water
+    sequence: 1
     autoContinue: 0
     loop: 1
   - refID: Selected
-    sequence: 0
     dialogueOptions:
     - That tickles!
     - Hee Hee Ha Ha
     - Hey stop that!
     - Let go of me!
+    sequence: 0
     autoContinue: 0
     loop: 0
   - refID: StaffSummon
-    sequence: 1
     dialogueOptions:
     - Yeah like that, nice
+    sequence: 1
     autoContinue: 0
     loop: 0
   - refID: NoIng
-    sequence: 1
     dialogueOptions:
     - You gotta put ingredients on first ya goof
+    sequence: 1
     autoContinue: 0
     loop: 0
   - refID: Flower
-    sequence: 0
     dialogueOptions:
     - Oh! What a pretty flower
     - I'm flattered but you're not my type
     - Aww, for me?
+    sequence: 0
     autoContinue: 0
     loop: 0
   - refID: Flower
-    sequence: 0
     dialogueOptions:
     - Oh! What a pretty flower
     - I'm flattered but you're not my type
+    sequence: 0
     autoContinue: 0
     loop: 0
   - refID: Fruit
-    sequence: 0
     dialogueOptions:
     - That fruit looks tasty!
     - It looks so good It's almost a shame to use it for magic
     - That fruit has some potential magical energies
+    sequence: 0
     autoContinue: 0
     loop: 0
   - refID: Ball of Moss
-    sequence: 0
     dialogueOptions:
     - I hear moss contains special size magic. maybe you could work with that
     - It's a nice colour at least
     - I wonder what it tastes like, mossy probably
+    sequence: 0
     autoContinue: 0
     loop: 0
   - refID: Water
-    sequence: 0
     dialogueOptions:
     - Water makes a good base for several rituals
     - Good ol' H2O
     - Well now I'm thirsty, great
+    sequence: 0
     autoContinue: 0
     loop: 0
   - refID: Pot
-    sequence: 0
     dialogueOptions:
     - Careful, those are fragile
     - Y'know those pots are great at holding water, why do try scooping some up
     - Hopefully there are no green hatted boys around
+    sequence: 0
     autoContinue: 0
     loop: 0
 --- !u!114 &3600189196336474610

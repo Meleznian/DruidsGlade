@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2471171905001717852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8624296336014020004}
+  - component: {fileID: 111571887298415879}
+  m_Layer: 0
+  m_Name: RitualController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8624296336014020004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2471171905001717852}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.987, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &111571887298415879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2471171905001717852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3625ef7fb06dcaa48a5cf3ff140c86ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ritualList:
+  - refID: PotRitual
+    ritual: {fileID: 11400000, guid: 346cdc044a5353a46bea4a3955a314e2, type: 2}
+    completed: 0
+    getsHints: 1
+  - refID: RainDance
+    ritual: {fileID: 11400000, guid: 565ec489b795bf04981e6f78f4fabb93, type: 2}
+    completed: 0
+    getsHints: 1
+  - refID: GrowthRitual
+    ritual: {fileID: 11400000, guid: 2dcd9655be2a5134caccaa286f938d26, type: 2}
+    completed: 0
+    getsHints: 0
+  - refID: ShrinkRitual
+    ritual: {fileID: 11400000, guid: 5839db152ab971f4eac59f47ff7f47ac, type: 2}
+    completed: 0
+    getsHints: 0
+  - refID: CreatePot
+    ritual: {fileID: 11400000, guid: 1f616d6ba4af3204e8a6e52f55aa3f3c, type: 2}
+    completed: 0
+    getsHints: 0
+  nextHint: 0

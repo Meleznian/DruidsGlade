@@ -11,13 +11,9 @@ public class AudioManager : MonoBehaviour
         [Tooltip("If more then one audio clip is added, one will be selected base on the random bool")]
         public AudioClip[] clips;
 
-        [Header("Sound Mixing")]
+        [Header("Options")]
         [Range(0f, 1f)]
         public float volume;
-
-        [Tooltip("Note: Pitch cannot be used with PlayAtLocation()")]
-        [Range(.1f, 3f)]
-        public float pitch;
 
         [Tooltip("Is the audio play randomly or in sequence")]
         public bool random;
@@ -55,8 +51,9 @@ public class AudioManager : MonoBehaviour
             }
 
             s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+            print(s.volume);
+            print(s.source.volume);
         }
     }
 
@@ -64,7 +61,7 @@ public class AudioManager : MonoBehaviour
     {
         debugAudio = audioList[0];
 
-        PlayAudio("Ambient");
+        PlayAudio("AmbientBirds");
     }
 
 
