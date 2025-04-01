@@ -304,7 +304,7 @@ MonoBehaviour:
   - spawnerName: SeaweedSpawner
     spawner: {fileID: 1695061651057164166}
   - spawnerName: Campfire
-    spawner: {fileID: 570910903}
+    spawner: {fileID: 7325033713574634053}
   - spawnerName: Quarry
     spawner: {fileID: 2157304517338512547}
 --- !u!1001 &275100251
@@ -699,6 +699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pot
       objectReference: {fileID: 0}
+    - target: {fileID: 6365176235179186570, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
+      propertyPath: fragile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.19999997
@@ -713,15 +717,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1798378
+      value: 0.179
       objectReference: {fileID: 0}
     - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.46498847
+      value: 0.466
       objectReference: {fileID: 0}
     - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.0480812
+      value: 2.088
       objectReference: {fileID: 0}
     - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
       propertyPath: m_LocalRotation.w
@@ -765,6 +769,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7935290457221748040, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
   m_PrefabInstance: {fileID: 7325033713574634049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &561477615 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8608846712210720286, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+  m_PrefabInstance: {fileID: 6866900127815379880}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &565451432
 PrefabInstance:
@@ -828,17 +837,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4457422190215740708, guid: 0badca336d578b047bc427f64397dedb, type: 3}
   m_PrefabInstance: {fileID: 565451432}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &570910903 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8111207444726108430, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
-  m_PrefabInstance: {fileID: 7325033713574634049}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e6da445647f9d548bce33c1c4ea8f55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &590212567 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8997122178786544568, guid: 12c01a5400cc37142b6dd5b9a3d02558, type: 3}
@@ -880,7 +878,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1254314696}
-  - {fileID: 1199772329}
   - {fileID: 466383164}
   - {fileID: 1466052018}
   - {fileID: 1040099931}
@@ -941,6 +938,10 @@ PrefabInstance:
     - target: {fileID: 7866701732936293457, guid: 544f4d4cf1ab2fc488e31dbb9053a726, type: 3}
       propertyPath: m_Name
       value: BottledWind
+      objectReference: {fileID: 0}
+    - target: {fileID: 8214547308895819307, guid: 544f4d4cf1ab2fc488e31dbb9053a726, type: 3}
+      propertyPath: burstForce
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1474,6 +1475,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4490488061075546773, guid: 3c9cfe0c75c524f4d9122b7df25dc1ef, type: 3}
   m_PrefabInstance: {fileID: 8905554682995849017}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1090218981 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 882361712751037911, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
+  m_PrefabInstance: {fileID: 8953920810425571717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1123626926 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7767831516815040055, guid: ebe5e954c2198674697399142e5d40fa, type: 3}
@@ -1485,80 +1491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c221411a349c57b488ea6b0187604f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1199772328
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 675871212}
-    m_Modifications:
-    - target: {fileID: 5492619184011646898, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_Name
-      value: Pot
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.19999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.19999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.2903419
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.46489316
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.2374208
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.71735764
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.005363683
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6966594
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.0059065633
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.031
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 88.322
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.914
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
---- !u!4 &1199772329 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-  m_PrefabInstance: {fileID: 1199772328}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1209255892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2063,11 +1995,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: be2911572dc3afa448d24b4e97edc5f1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.5
+      value: 6.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be2911572dc3afa448d24b4e97edc5f1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.4999986
+      value: 6.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be2911572dc3afa448d24b4e97edc5f1, type: 3}
       propertyPath: m_LocalScale.z
@@ -3274,6 +3206,147 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077840800}
     m_Modifications:
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[12].refID
+      value: Fruit
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[13].refID
+      value: Ball of Moss
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[14].refID
+      value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[15].refID
+      value: Pot
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[16].refID
+      value: Seaweed
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[17].refID
+      value: Fireball
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[18].refID
+      value: BottledWind
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[12].dialogueOptions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[16].dialogueOptions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[17].dialogueOptions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[18].dialogueOptions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[5].dialogueOptions.Array.data[2]
+      value: Try performing a ritual with two pots as the ingredients
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[12].dialogueOptions.Array.data[0]
+      value: That fruit looks tasty!
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[12].dialogueOptions.Array.data[1]
+      value: It looks so good It's almost a shame to use it for magic
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[12].dialogueOptions.Array.data[2]
+      value: That fruit has some potential magical energies
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[13].dialogueOptions.Array.data[0]
+      value: I hear moss contains special size magic. maybe you could work with that
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[13].dialogueOptions.Array.data[1]
+      value: It's a nice colour at least
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[13].dialogueOptions.Array.data[2]
+      value: I wonder what it tastes like, mossy probably
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[14].dialogueOptions.Array.data[0]
+      value: Water makes a good base for several rituals
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[14].dialogueOptions.Array.data[1]
+      value: Good ol' H2O
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[14].dialogueOptions.Array.data[2]
+      value: Well now I'm thirsty, great
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[15].dialogueOptions.Array.data[0]
+      value: Careful, those are fragile
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[15].dialogueOptions.Array.data[1]
+      value: Y'know those pots are great at holding water, why don't you try scooping
+        some up
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[15].dialogueOptions.Array.data[2]
+      value: Hopefully there are no green hatted boys around, wait what kind of cable
+        did you say you were using?
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[16].dialogueOptions.Array.data[0]
+      value: Ew, did you fish that out of the pond
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[16].dialogueOptions.Array.data[1]
+      value: Hopefully there are no green hatted boys around, wait what kind of cable
+        did you say you were using?
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[16].dialogueOptions.Array.data[2]
+      value: Hopefully there are no green hatted boys around, wait what kind of cable
+        did you say you were using?
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[17].dialogueOptions.Array.data[0]
+      value: Careful with that! you don't want to start a forest fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[17].dialogueOptions.Array.data[1]
+      value: Keep that away from my fur!
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[17].dialogueOptions.Array.data[2]
+      value: Y'know it's amazing druid magic let's you pickup fire like that
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[18].dialogueOptions.Array.data[0]
+      value: Hey is that bottled wind? I hear that stuff's super rare
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[18].dialogueOptions.Array.data[1]
+      value: don't break that, It looks pretty volatile
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[18].dialogueOptions.Array.data[2]
+      value: That should be the final ingredient you need for the transcendance ritual,
+        your almost there
+      objectReference: {fileID: 0}
     - target: {fileID: 1057569737158974261, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3589614
@@ -3353,13 +3426,73 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[2].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[3].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[1].refID
+      value: Eat
+      objectReference: {fileID: 0}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[2].refID
+      value: SquirrelTalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[3].refID
+      value: AmbientBirds
+      objectReference: {fileID: 0}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
       propertyPath: audioList.Array.data[1].source
+      value: 
+      objectReference: {fileID: 1972090847}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[2].source
       value: 
       objectReference: {fileID: 6194541211914736555}
     - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[2].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
       propertyPath: audioList.Array.data[3].source
       value: 
-      objectReference: {fileID: 1972090847}
+      objectReference: {fileID: 561477615}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[3].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[1].clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 155557b924160d847bfb84c3de0d3d59, type: 3}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[2].clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: d14b106713a74b448bcab90869f1706e, type: 3}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[3].clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 748d7f8b373621d498f46bf2f93ac10d, type: 3}
     - target: {fileID: 2257746389650800712, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3403,6 +3536,10 @@ PrefabInstance:
     - target: {fileID: 5222927347739329405, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8608846712210720286, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: m_Pitch
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3482,21 +3619,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 248395585}
     m_Modifications:
-    - target: {fileID: 4207387577266585104, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
+    - target: {fileID: 3795182755180208391, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 3795182755180208391, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
+      propertyPath: m_RenderMode
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5863626526080820294, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
       propertyPath: m_Name
       value: Campfire
-      objectReference: {fileID: 0}
-    - target: {fileID: 6208385946839265844, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6208385946839265844, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
-      propertyPath: m_IncludeLayers.m_Bits
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7935290457221748040, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3538,23 +3671,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8111207444726108430, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
-      propertyPath: fire
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8111207444726108430, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
-      propertyPath: interactableHolder
-      value: 
-      objectReference: {fileID: 675871212}
-    - target: {fileID: 8927857288444235701, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
+--- !u!114 &7325033713574634053 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3585901877857999267, guid: 42b39ed7e09f8b04f945fd11003ae14c, type: 3}
+  m_PrefabInstance: {fileID: 7325033713574634049}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6da445647f9d548bce33c1c4ea8f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7813365165513943532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3567,17 +3699,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pot
       objectReference: {fileID: 0}
+    - target: {fileID: 6365176235179186570, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
+      propertyPath: fragile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.41770244
+      value: 0.41686463
       objectReference: {fileID: 0}
     - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4618778
+      value: 0.4628893
       objectReference: {fileID: 0}
     - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.0560956
+      value: 2.0960145
       objectReference: {fileID: 0}
     - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3763,7 +3899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2011316690059348138, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.743
+      value: 0.459
       objectReference: {fileID: 0}
     - target: {fileID: 2011316690059348138, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3797,6 +3933,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3042480893994095909, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
+      propertyPath: moveAmount
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042480893994095909, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
+      propertyPath: cameraOffset
+      value: 
+      objectReference: {fileID: 1090218981}
     - target: {fileID: 3538180836540978477, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 0

@@ -147,9 +147,9 @@ GameObject:
   - component: {fileID: 747527830696599108}
   - component: {fileID: 8768620979118106482}
   - component: {fileID: 8305463234324110120}
-  - component: {fileID: 5371942861939237702}
   - component: {fileID: -7194874800978592758}
   - component: {fileID: 8353479415529883657}
+  - component: {fileID: 8214547308895819307}
   m_Layer: 0
   m_Name: BottledWind
   m_TagString: Untagged
@@ -323,23 +323,6 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
---- !u!114 &5371942861939237702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7866701732936293457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d16c24949043b8e48bc01bc9b21c8be7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ingredientScriptable: {fileID: 11400000, guid: c4a3170b1b8dbfc48b70273d364a15b2, type: 2}
-  unstable: 0
-  fragile: 1
-  endurance: 5
-  eatTime: 2
 --- !u!114 &-7194874800978592758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,3 +357,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2564423107879867638, guid: 72af14b56f398804bbcbc04b48efce81, type: 3}
+--- !u!114 &8214547308895819307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7866701732936293457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9bb72b8cc17af48977bd8c8171dbb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredientScriptable: {fileID: 11400000, guid: c4a3170b1b8dbfc48b70273d364a15b2, type: 2}
+  unstable: 0
+  fragile: 1
+  endurance: 3
+  eatTime: 3
+  burstForce: 10
+  burstRadius: 5

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class IngredientDialogue : MonoBehaviour
 {   
@@ -8,7 +9,10 @@ public class IngredientDialogue : MonoBehaviour
     {
         if (other.GetComponent<IngredientScript>() != null)
         {
-            Squirrel.instance.GetDialogue(other.GetComponent<IngredientScript>().ingredientScriptable.ingredientName);
+            if (other.GetComponent<XRGrabInteractable>().isSelected == true)
+            {
+                Squirrel.instance.GetDialogue(other.GetComponent<IngredientScript>().ingredientScriptable.ingredientName);
+            }
         }
     }
 }

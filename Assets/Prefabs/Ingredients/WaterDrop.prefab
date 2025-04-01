@@ -439,7 +439,7 @@ MonoBehaviour:
   unstable: 0
   fragile: 0
   endurance: 0
-  eatTime: 0.5
+  eatTime: 1.5
 --- !u!114 &-7194874800978592758
 MonoBehaviour:
   m_ObjectHideFlags: 0

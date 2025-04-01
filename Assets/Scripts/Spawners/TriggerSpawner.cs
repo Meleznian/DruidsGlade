@@ -89,7 +89,7 @@ public class TriggerSpawner : SpawnerBase
         active = true;
         if (fire)
         {
-
+            transform.GetChild(0).gameObject.SetActive(true);
         }
 
         GetComponent<Collider>().enabled = true;
@@ -100,8 +100,9 @@ public class TriggerSpawner : SpawnerBase
         active = false;
         if (fire)
         {
-
+            transform.GetChild(0).gameObject.SetActive(false);
         }
+
         GetComponent<Collider>().enabled = false;
     }
 

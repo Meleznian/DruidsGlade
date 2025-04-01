@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour
         [Header("Options")]
         [Range(0f, 1f)]
         public float volume;
+        [Range(-3f, 3f)]
+        public float pitch;
 
         [Tooltip("Is the audio play randomly or in sequence")]
         public bool random;
@@ -139,4 +141,14 @@ public class AudioManager : MonoBehaviour
             audio.source.Play();
         }
     }
+
+    public void AdjustPitch(string ID, float pitch)
+    {
+        GetAudio(ID).source.pitch += pitch;
+    }
+    public void SetPitch(string ID, float pitch)
+    {
+        GetAudio(ID).source.pitch = pitch;
+    }
+
 }

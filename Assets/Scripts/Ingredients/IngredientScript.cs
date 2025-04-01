@@ -14,7 +14,7 @@ public class IngredientScript : MonoBehaviour
     public float eatTime;
 
 
-    bool eating;
+    internal bool eating;
     float timer;
 
     float nextEatSound;
@@ -42,14 +42,14 @@ public class IngredientScript : MonoBehaviour
             if(collision.gameObject.name != "RitualTable")
             {
                 print(collision.gameObject.name);
-                Destroy(gameObject);
+                Break();
             }
         }
         else if(fragile)
         {
             if(collision.relativeVelocity.magnitude >= endurance)
             {
-                Destroy(gameObject);
+                Break();
             }
         }
     }
@@ -60,7 +60,8 @@ public class IngredientScript : MonoBehaviour
         {
             print("Nom");
             eating = true;
-            AudioManager.instance.PlayAudio("Eat" + gameObject.name);
+            nextEatSound = eatSoundTime;
+            AudioManager.instance.PlayAudio("Eat");
         }
     }
     private void OnTriggerExit(Collider other)
@@ -69,23 +70,30 @@ public class IngredientScript : MonoBehaviour
         {
             print("Wait no don't eat that!");
             eating = false;
+            nextEatSound = eatSoundTime;
             timer = 0;
         }
     }
 
-    void Eat()
+    internal void Eat()
     {
         timer += Time.deltaTime;
-
-        if (timer >= nextEatSound)
-        {
-            AudioManager.instance.PlayAudio("Eat" + gameObject.name);
-            nextEatSound = (eatSoundTime * 2);
-        }
 
         if (timer >= eatTime)
         {
             Destroy(gameObject);
         }
+
+        if (timer >= nextEatSound)
+        {
+            AudioManager.instance.PlayAudio("Eat");
+
+            nextEatSound *= 2;
+        }
+    }
+
+    public virtual void Break()
+    {
+        Destroy(gameObject);
     }
 }

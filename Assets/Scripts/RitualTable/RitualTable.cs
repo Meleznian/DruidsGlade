@@ -66,28 +66,31 @@ public class RitualTable : MonoBehaviour
     public void ActivateRitual()
     {
         CheckIngredients();
-        if (ingredients.Count > 0 && !ritualActive)
+        if (!ritualActive)
         {
-            Ritual r = RitualController.instance.GetRitual(ingredients);
-
-            if(r != null)
+            if (ingredients.Count > 0)
             {
-                print("Ritual Found: " + r.ritualName);
-                currentRitual = r;
-                validRitual = true;
-                PrepareRitual();
+                Ritual r = RitualController.instance.GetRitual(ingredients);
+
+                if (r != null)
+                {
+                    print("Ritual Found: " + r.ritualName);
+                    currentRitual = r;
+                    validRitual = true;
+                    PrepareRitual();
+                }
+                else
+                {
+                    print("Ritual Not Found");
+                    validRitual = false;
+                    PrepareRitual();
+                }
             }
             else
             {
-                print("Ritual Not Found");
-                validRitual = false;
-                PrepareRitual();
+                print("No Ingredients Found");
+                Squirrel.instance.GetDialogue("NoIng");
             }
-        }
-        else
-        {
-            print("No Ingredients Found");
-            Squirrel.instance.GetDialogue("NoIng");
         }
     }
 

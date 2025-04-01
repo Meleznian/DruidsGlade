@@ -333,7 +333,7 @@ MonoBehaviour:
   unstable: 0
   fragile: 0
   endurance: 0
-  eatTime: 0.7
+  eatTime: 1.5
 --- !u!114 &-7194874800978592758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,9 +358,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de749caed26ff840b4f5fb5857b4926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bush: {fileID: 0}
-  onBush: 0
-  bushReference: 
+  spawner: {fileID: 0}
+  attachedToSpawner: 0
+  bushReference: 0
 --- !u!64 &2163640445797424744
 MeshCollider:
   m_ObjectHideFlags: 0

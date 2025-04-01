@@ -47,8 +47,6 @@ public class WaterPot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("Get Triggered");
-
         if (other.gameObject.CompareTag("Water"))
         {
             print("The Object "+ other.gameObject.name + " is Water");
