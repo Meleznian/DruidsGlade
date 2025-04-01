@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
@@ -134,5 +135,10 @@ public class HandManager : MonoBehaviour
         {
             rightHand.SendHapticImpulse(0, 0.5f, 0.1f);
         }
+    }
+
+    public void PrintObject(HoverEnterEventArgs arg)
+    {
+        print("Looking at " + arg.interactableObject.transform.name);
     }
 }

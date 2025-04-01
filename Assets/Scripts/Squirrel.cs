@@ -22,6 +22,7 @@ public class Squirrel : MonoBehaviour
 
     public GameObject dialogueCanvas;
     public TMP_Text dialogueText;
+    public GameObject Head;
 
     Transform player;
 

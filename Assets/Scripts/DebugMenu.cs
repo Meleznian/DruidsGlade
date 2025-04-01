@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class ExamplePanelLogic : MonoBehaviour
+public class DebugMenu : MonoBehaviour
 {
     public Transform cameraOffset;
     public float moveAmount;
@@ -34,5 +34,7 @@ public class ExamplePanelLogic : MonoBehaviour
     {
         cameraOffset.position = new Vector3(cameraOffset.position.x, cameraOffset.position.y - moveAmount, cameraOffset.position.z);
     }
+
+
 
 }
