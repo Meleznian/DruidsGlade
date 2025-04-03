@@ -134,9 +134,10 @@ public class Squirrel : MonoBehaviour
 
     void LookAtPlayer()
     {
-        lookPos = player.position - transform.position;
+        lookPos = player.position;
         lookPos.y = transform.position.y;
         transform.LookAt(lookPos);
+        Head.transform.LookAt(player.position);
     }
 
     private void OnTriggerEnter(Collider other)

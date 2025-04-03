@@ -11,6 +11,9 @@ TagManager:
   - Left Controller
   - Right Controller
   - Fire
+  - Projectile
+  - Flame
+  - Destroyer
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - UI
   - Player
   - RitualTable
-  - 
+  - DoNotRender
   - 
   - 
   - 
