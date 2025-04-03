@@ -774,6 +774,7 @@ MonoBehaviour:
     - Water makes a good base for several rituals
     - Good ol' H2O
     - Well now I'm thirsty, great
+    - Water is the second of the four primordial elements
     sequence: 0
     autoContinue: 0
     loop: 0
@@ -800,6 +801,7 @@ MonoBehaviour:
     - Careful with that! you don't want to start a forest fire
     - Keep that away from my fur!
     - Y'know it's amazing druid magic let's you pick up fire like that
+    - Fire is the third of the four primoridal elements.
     sequence: 0
     autoContinue: 0
     loop: 0
@@ -809,6 +811,14 @@ MonoBehaviour:
     - don't break that, It looks pretty volatile
     - That should be the final ingredient you need for the transcendance ritual,
       your almost there
+    - Air is the final of the four primoridial elements
+    sequence: 0
+    autoContinue: 0
+    loop: 0
+  - refID: Stone
+    dialogueOptions:
+    - Yep that's a rock
+    - Earth is the first of the four primoridal elements
     sequence: 0
     autoContinue: 0
     loop: 0

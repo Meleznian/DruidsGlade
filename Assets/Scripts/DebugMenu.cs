@@ -1,5 +1,3 @@
-using Unity.VisualScripting;
-using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class DebugMenu : MonoBehaviour

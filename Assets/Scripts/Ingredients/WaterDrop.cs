@@ -10,6 +10,7 @@ public class WaterDrop : MonoBehaviour
     public Rigidbody rb;
 
     bool grabbed;
+    bool inWater;
 
     public LayerMask ignore;
     
@@ -34,6 +35,7 @@ public class WaterDrop : MonoBehaviour
 
     public void Dropped()
     {
+        CheckWater();
         grabbed= false;
         rb.isKinematic = false;
     }
@@ -52,9 +54,24 @@ public class WaterDrop : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!grabbed && other.gameObject.name == "WaterSpawner")
+        if(other.gameObject.name == "WaterSpawner")
         {
-            Destroy(gameObject);
+            if (!grabbed)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                inWater = true; 
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "WaterSpawner")
+        {
+            inWater = false;           
         }
     }
 
@@ -67,6 +84,14 @@ public class WaterDrop : MonoBehaviour
             {
                 Landed();
             }
+        }
+    }
+
+    public void CheckWater()
+    {
+        if (inWater == true)
+        {
+            Destroy(gameObject);
         }
     }
 }

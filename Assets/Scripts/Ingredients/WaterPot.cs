@@ -8,6 +8,7 @@ public class WaterPot : MonoBehaviour
 
     public Ingredient waterDrop;
     public MeshRenderer water;
+    public float tiltThreshold;
 
     bool full;
 
@@ -25,7 +26,7 @@ public class WaterPot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(full && Vector3.Dot(transform.up, Vector3.down) > 0)
+        if(full && Vector3.Dot(transform.up, Vector3.down) > tiltThreshold)
         {
             Instantiate(waterDrop.prefab, water.transform.position + (transform.up*0.1f), transform.rotation, transform.parent);
             water.enabled = false;
