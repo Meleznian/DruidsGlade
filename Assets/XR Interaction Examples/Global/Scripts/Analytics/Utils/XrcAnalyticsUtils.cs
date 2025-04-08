@@ -10,14 +10,6 @@ namespace UnityEngine.XR.Content.Interaction.Analytics
     /// </summary>
     class XrcAnalyticsUtils
     {
-        internal static void Register(Door door, StationParameter lockedParameter, StationParameter unlockedParameter)
-        {
-            if (door == null)
-                return;
-
-            door.onLock.AddListener(() => Send(lockedParameter));
-            door.onUnlock.AddListener(() => Send(unlockedParameter));
-        }
 
         internal static void Register(XRPushButton pushButton, StationParameter parameter)
         {

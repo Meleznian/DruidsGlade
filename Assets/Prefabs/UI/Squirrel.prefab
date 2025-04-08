@@ -717,10 +717,10 @@ MonoBehaviour:
     dialogueOptions:
     - Wow it sure is dry today
     - Why don't you try summoning some rain
-    - The Rain Dance is pretty easy you only need two ingredients
+    - The Rain Dance is pretty easy you only need two types ingredients
     - Those flowers are quite pretty, I wonder how'd they go as ritual ingredients
     - Did you know the water in that pool over there can also be used in rituals
-    - Perform the Rain Dance using a flower and some water
+    - Perform the Rain Dance using two flowers and some water
     sequence: 1
     autoContinue: 0
     loop: 1
