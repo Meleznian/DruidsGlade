@@ -25,6 +25,8 @@ public class TriggerSpawner : SpawnerBase
 
     private void OnTriggerEnter(Collider other)
     {
+        print("Object Entered");
+
         if (other.CompareTag("Left Controller"))
         {
             print("Left Hand Entered");
@@ -36,7 +38,8 @@ public class TriggerSpawner : SpawnerBase
                 HandManager.instance.leftHandOnFire = true;
             }
         }
-        else if (other.CompareTag("Right Controller"))
+        
+        if (other.CompareTag("Right Controller"))
         {
             print("Right Hand Entered");
             HandManager.instance.rightHand.SendHapticImpulse(0, 0.5f, 0.1f);

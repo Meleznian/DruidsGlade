@@ -40,7 +40,7 @@ public class ShrinkRitual : MonoBehaviour
             {
                 player.transform.localScale += new Vector3(Time.deltaTime * growthMult, Time.deltaTime * growthMult, Time.deltaTime * growthMult);
 
-                if (player.transform.localScale.x <= 1f)
+                if (player.transform.localScale.x >= 1f)
                 {
                     player.transform.localScale = Vector3.one;
 
