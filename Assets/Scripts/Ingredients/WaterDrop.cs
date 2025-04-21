@@ -48,32 +48,21 @@ public class WaterDrop : MonoBehaviour
         Puddle.SetActive(true);
         transform.rotation = Quaternion.Euler(Vector3.zero);
 
-        GetComponent<XRGrabInteractable>().enabled = false;
-        GetComponent<XRGrabInteractable>().enabled = true;
+        //GetComponent<XRGrabInteractable>().enabled = false;
+        //GetComponent<XRGrabInteractable>().enabled = true;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.name == "WaterSpawner")
+        if(other.gameObject.name == "Pond")
         {
             if (!grabbed)
             {
                 Destroy(gameObject);
             }
-            else
-            {
-                inWater = true; 
-            }
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.name == "WaterSpawner")
-        {
-            inWater = false;           
-        }
-    }
 
     public void OnCollisionEnter(Collision collision)
     {
