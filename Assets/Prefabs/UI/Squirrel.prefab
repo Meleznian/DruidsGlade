@@ -649,8 +649,8 @@ MonoBehaviour:
   dialogueCanvas: {fileID: 363832934994467073}
   dialogueText: {fileID: 1696520208763020625}
   Head: {fileID: 694906936074810426}
-  dialogueDecay: 2
-  dialogueSpeed: 0.05
+  dialogueDecay: 3
+  dialogueSpeed: 0.07
   dialogueList:
   - refID: Ambient
     dialogueOptions:
@@ -749,7 +749,8 @@ MonoBehaviour:
     dialogueOptions:
     - Oh! What a pretty flower
     - I'm flattered but you're not my type
-    - Aww, for me?
+    - Legend says those flowers have an innate connection with the wind, maybe you
+      can use that!
     sequence: 0
     autoContinue: 0
     loop: 0
