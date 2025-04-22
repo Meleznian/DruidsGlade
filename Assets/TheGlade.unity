@@ -11188,10 +11188,6 @@ PrefabInstance:
       value: FruitTreeA
       objectReference: {fileID: 0}
     - target: {fileID: 6306684949944250068, guid: ebe5e954c2198674697399142e5d40fa, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.34999993
-      objectReference: {fileID: 0}
-    - target: {fileID: 6306684949944250068, guid: ebe5e954c2198674697399142e5d40fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.009018898
       objectReference: {fileID: 0}
@@ -11231,10 +11227,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7767831516815040055, guid: ebe5e954c2198674697399142e5d40fa, type: 3}
-      propertyPath: interactablesHolder
-      value: 
-      objectReference: {fileID: 675871212}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

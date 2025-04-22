@@ -279,7 +279,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.7762814, y: 2.5768588, z: 3.5234056}
-  m_LocalScale: {x: 0.5, y: 0.3, z: 0.35}
+  m_LocalScale: {x: 0.9, y: 0.5, z: 0.34999993}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7617630962328881877}
@@ -371,6 +371,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c221411a349c57b488ea6b0187604f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
+  ingredient: {fileID: 11400000, guid: c5bb5eec130b9474d811c71517fec996, type: 2}
+  ingredientHolder: {fileID: 0}
   spawnPoints:
   - growPoint: {fileID: 7617630962328881877}
     attachedIngredient: {fileID: 0}
@@ -384,7 +387,4 @@ MonoBehaviour:
     attachedIngredient: {fileID: 0}
     pointID: 0
     timer: 0
-  interactablesHolder: {fileID: 0}
   growTime: 1
-  active: 0
-  ingredient: {fileID: 11400000, guid: c5bb5eec130b9474d811c71517fec996, type: 2}
