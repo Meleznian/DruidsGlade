@@ -15,6 +15,6 @@ MonoBehaviour:
   ritualName: Shrink Ritual
   ritualPrefab: {fileID: 5572939840197809555, guid: 2fdd555ed7ab3a542bdc44ac51ac3412, type: 3}
   ingredients:
-  - {fileID: 11400000, guid: d5b46bdfc27bb084ea33b57b24643dc2, type: 2}
+  - {fileID: 11400000, guid: c5bb5eec130b9474d811c71517fec996, type: 2}
   - {fileID: 11400000, guid: 4c6f1b2270b5a4843881066e3223e327, type: 2}
   - {fileID: 11400000, guid: 183833e627833ed4b99d5ecef1caf738, type: 2}
