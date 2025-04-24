@@ -1994,37 +1994,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &648951921
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 648951922}
-  m_Layer: 2
-  m_Name: Particles
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &648951922
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 648951921}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8953920810425571718}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &675871211
 GameObject:
   m_ObjectHideFlags: 0
@@ -10965,6 +10934,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2077840800}
     m_Modifications:
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[4].dialogueOptions.Array.data[0]
+      value: Hi, Welcome to <color="green">Druid's Glade </color>
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[7].dialogueOptions.Array.data[4]
       value: Did you know the water in that pool over there can also be used in rituals?
         You'll need something to transport it though
@@ -11595,7 +11568,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 882361712751037911, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 882361712929477107, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -11647,7 +11620,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2046094218056763688, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       propertyPath: m_CameraYOffset
-      value: 0.8
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046094218056763688, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2779971002217986301, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       propertyPath: m_CastDistance
@@ -11959,7 +11936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6503742902947285534, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       propertyPath: m_Height
-      value: 0.8
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6737534881538289723, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       propertyPath: m_Delegates.Array.size
@@ -12113,20 +12090,12 @@ PrefabInstance:
     - {fileID: 4073898338793154450, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
     - {fileID: 5635593583785937573, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2011316690059348138, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 648951922}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 882361712929477109, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1860258383}
   m_SourcePrefab: {fileID: 100100000, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
---- !u!4 &8953920810425571718 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2011316690059348138, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
-  m_PrefabInstance: {fileID: 8953920810425571717}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9103434552615812757
 PrefabInstance:
   m_ObjectHideFlags: 0
