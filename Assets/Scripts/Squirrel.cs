@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using EasyTextEffects;
+
 public class Squirrel : MonoBehaviour
 {
 
@@ -22,6 +24,7 @@ public class Squirrel : MonoBehaviour
     public GameObject dialogueCanvas;
     public TMP_Text dialogueText;
     public GameObject Head;
+    TextEffect effect;
 
     Transform player;
 
@@ -64,6 +67,7 @@ public class Squirrel : MonoBehaviour
     {
         dialogueCanvas.SetActive(false);
         player = Camera.main.transform;
+        effect = dialogueText.GetComponent<TextEffect>();
     }
 
     // Update is called once per frame
@@ -78,12 +82,15 @@ public class Squirrel : MonoBehaviour
     {
         if (!playingDialogue)
         {
-            dialogueCanvas.SetActive(true);
             queueFinished = false;
             playingDialogue = true;
             queuedDialogue = text;
             i = 0;
             len = queuedDialogue.Length;
+            dialogueText.text = text;
+            effect.Refresh();
+            dialogueCanvas.SetActive(true);
+            effect.StartManualEffect("typewriter");
         }
     }
 
@@ -97,13 +104,10 @@ public class Squirrel : MonoBehaviour
             {
                 if (i < len)
                 {
-                    dialogueText.text += queuedDialogue[i];
+                    print("Playing Dialogue");
+                    //dialogueText.text += queuedDialogue[i];
                     i++;
                     AudioManager.instance.PlayAudio("SquirrelTalk");
-                }
-                else
-                {
-                    queueFinished = true;
                 }
 
                 timer = 0f;
@@ -122,6 +126,11 @@ public class Squirrel : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void QueueFinished()
+    {
+        queueFinished = true;
     }
 
     void StopDialogue()

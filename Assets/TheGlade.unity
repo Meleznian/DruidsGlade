@@ -8191,6 +8191,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
   m_PrefabInstance: {fileID: 7813365165513943532}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1267210911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+  m_PrefabInstance: {fileID: 6194541211914736553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33504bdcad783934baca9e78ec7cb1bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1285161987
 GameObject:
   m_ObjectHideFlags: 0
@@ -10934,13 +10945,99 @@ PrefabInstance:
     m_TransformParent: {fileID: 2077840800}
     m_Modifications:
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[16].refID
+      value: Ball of Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[17].refID
+      value: BottledWind
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[18].refID
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[16].dialogueOptions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[18].dialogueOptions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[1].dialogueOptions.Array.data[0]
+      value: <link=red+shake>AAAAAAAAAAAAHHHHHHHH!!</link>
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[1].dialogueOptions.Array.data[1]
+      value: <link=red+shake>AAH IT BURNS, WHY WOULD YOU DO THAT?!!</link>
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[4].dialogueOptions.Array.data[0]
-      value: Hi, Welcome to <color="green">Druid's Glade </color>
+      value: Hi, Welcome to <link=green+wave> Druid's Glade.</link>
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[4].dialogueOptions.Array.data[1]
+      value: A magical place where you can perform all sort of amazing <link=green+wave>rituals</link>
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[4].dialogueOptions.Array.data[2]
+      value: Just give me a gentle <link=blue>pat on the head</link> if you ever
+        want some advice
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[7].dialogueOptions.Array.data[4]
       value: Did you know the water in that pool over there can also be used in rituals?
         You'll need something to transport it though
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[16].dialogueOptions.Array.data[0]
+      value: Careful with that! you don't want to start a forest fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[16].dialogueOptions.Array.data[1]
+      value: Keep that away from my fur!
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[16].dialogueOptions.Array.data[2]
+      value: Y'know it's amazing druid magic let's you pick up fire like that
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[16].dialogueOptions.Array.data[3]
+      value: Fire is the third of the four primoridal elements.
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[17].dialogueOptions.Array.data[0]
+      value: Hey is that bottled wind? I hear that stuff's super rare
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[17].dialogueOptions.Array.data[1]
+      value: don't break that, It looks pretty volatile
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[17].dialogueOptions.Array.data[2]
+      value: That should be the final ingredient you need for the transcendance ritual,
+        your almost there
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[17].dialogueOptions.Array.data[3]
+      value: Air is the final of the four primoridial elements
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[18].dialogueOptions.Array.data[0]
+      value: Yep that's a rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[18].dialogueOptions.Array.data[1]
+      value: Earth is the first of the four primoridal elements
       objectReference: {fileID: 0}
     - target: {fileID: 1057569737158974261, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10989,13 +11086,98 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5856269785723572520, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6194541211914736557}
   m_SourcePrefab: {fileID: 100100000, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+--- !u!114 &6194541211914736554 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1696520208763020625, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+  m_PrefabInstance: {fileID: 6194541211914736553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6194541211914736556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &6194541211914736555 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7900688365000094515, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
   m_PrefabInstance: {fileID: 6194541211914736553}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6194541211914736556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5856269785723572520, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+  m_PrefabInstance: {fileID: 6194541211914736553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6194541211914736557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6194541211914736556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9840f87219df84505803024c796e739d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 6194541211914736554}
+  usePreset: 0
+  preset: {fileID: 0}
+  tagEffects:
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: f9ca8633e6a4ac248b146b17683ae2a6, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: 28185c039fa6eb045ae7a01b0b0a83b6, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: 76feab41a88980145ae44fd5eb641f4e, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: 37db8e32c48cf4579b04b8dc436a7bb8, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: b16bc278bc75e104c9eb9761e64d2dbc, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+  - triggerWhen: 0
+    effect: {fileID: 11400000, guid: b35e91f2ba42c4508990bb116bf016ee, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls: []
+  globalEffects:
+  - triggerWhen: 1
+    effect: {fileID: 11400000, guid: 99e8f86e44a79a74a9689b95f1cf906c, type: 2}
+    onEffectCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1267210911}
+          m_TargetAssemblyTypeName: Squirrel, Assembly-CSharp
+          m_MethodName: QueueFinished
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    overrideTagEffects: 1
+  updatesPerSecond: 30
 --- !u!4 &6634994039153850207 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8495561610540228459, guid: e78318e92743c534e90793934024c9ba, type: 3}
