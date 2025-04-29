@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446566c02145fbe499e7c2a89de841cf, type: 3}
+  m_Name: VerdantRitual
+  m_EditorClassIdentifier: 
+  ritualName: VerdantRitual
+  ritualPrefab: {fileID: 0}
+  ingredients:
+  - {fileID: 11400000, guid: d5b46bdfc27bb084ea33b57b24643dc2, type: 2}
+  - {fileID: 11400000, guid: 4c6f1b2270b5a4843881066e3223e327, type: 2}
+  - {fileID: 11400000, guid: 183833e627833ed4b99d5ecef1caf738, type: 2}
