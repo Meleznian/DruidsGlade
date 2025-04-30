@@ -31,9 +31,21 @@ public class RitualController : MonoBehaviour
     }
 
     public List<RitualEntry> ritualList = new();
+    public int orbs;
+    bool orbsActive;
+
 
     public int nextHint;
     bool potDone;
+
+    private void Update()
+    {
+        if (orbsActive)
+        {
+            CheckMagic();
+        }
+    }
+
 
     public Ritual GetRitual(List<Ingredient> ingredients)
     {
@@ -126,5 +138,29 @@ public class RitualController : MonoBehaviour
 
         Debug.LogWarning("Ritual " + ID + " not found, please check ID");
         return false;
+    }
+
+
+    void SpawnRitual(Ritual r)
+    {
+        Instantiate(r.ritualPrefab, new Vector3(0, 1.2f, 0), Quaternion.identity);
+        nextRitual = null;
+        orbsActive = false;
+    }
+
+    public void StartMagic(Ritual r)
+    {
+        orbsActive = true;
+        nextRitual = r;
+    }
+
+    Ritual nextRitual;
+
+    void CheckMagic()
+    {
+        if (orbs == 0)
+        {
+            SpawnRitual(nextRitual);
+        }
     }
 }

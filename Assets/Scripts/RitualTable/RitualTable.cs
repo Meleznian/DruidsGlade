@@ -21,6 +21,8 @@ public class RitualTable : MonoBehaviour
     bool validRitual;
     bool ritualActive;
 
+    public GameObject magicOrb;
+
     private void Update()
     {
         if (ritualActive)
@@ -133,13 +135,17 @@ public class RitualTable : MonoBehaviour
 
         for(int i = ingredientObjects.Count - 1; i >= 0 ; i--)
         {
+            Instantiate(magicOrb, ingredientObjects[i].gameObject.transform.position, transform.rotation);
+            RitualController.instance.orbs += 1;
+
             Destroy(ingredientObjects[i].gameObject);
         }
 
         ingredientObjects.Clear();
         ingredients.Clear();
 
-        Instantiate(r.ritualPrefab, transform.position, Quaternion.identity);
+        RitualController.instance.StartMagic(r);
+
         RitualController.instance.CheckOffRitual(r);
 
         ritualActive = false;

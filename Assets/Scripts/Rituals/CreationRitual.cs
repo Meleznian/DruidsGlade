@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CreationRitual : MonoBehaviour
-{ 
+{
 
     public int numberOfObjects;
     public GameObject ObjectPrefab;
@@ -35,12 +35,6 @@ public class CreationRitual : MonoBehaviour
         {
             Spawn();
         }
-        else if(timer >= spawnDelay)
-        {
-            finishedDelay = true;
-        }
-
-        timer += Time.deltaTime;
     }
 
 
@@ -56,10 +50,14 @@ public class CreationRitual : MonoBehaviour
 
         if (i >= numberOfObjects)
         {
-            if (timer >= decayTime)
-            {
-                Destroy(gameObject);
-            }
+
+            Destroy(gameObject);
+            
         }
+    }
+
+    public void ForceStart()
+    {
+        finishedDelay = true;
     }
 }

@@ -15,13 +15,12 @@ public class ActivateRitual : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ActivateSpawner();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Timer();
     }
 
     public void ActivateSpawner()
@@ -30,6 +29,9 @@ public class ActivateRitual : MonoBehaviour
         {
             MasterSpawner.instance.ActivateSpawner(s);
         }
+
+        Destroy(gameObject);
+
     }
 
     public void Timer()
@@ -38,7 +40,6 @@ public class ActivateRitual : MonoBehaviour
 
         if (timer >= decayTime)
         {
-            Destroy(gameObject);
         }
     }
 }
