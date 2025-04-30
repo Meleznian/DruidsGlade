@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VerdantRitual
   m_EditorClassIdentifier: 
   ritualName: VerdantRitual
-  ritualPrefab: {fileID: 0}
+  ritualPrefab: {fileID: 2342985245401479249, guid: b4b044b21a6389f40962947f1f804712, type: 3}
   ingredients:
   - {fileID: 11400000, guid: d5b46bdfc27bb084ea33b57b24643dc2, type: 2}
   - {fileID: 11400000, guid: 4c6f1b2270b5a4843881066e3223e327, type: 2}

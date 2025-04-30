@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LightningRitual
   m_EditorClassIdentifier: 
   ritualName: LightningRitual
-  ritualPrefab: {fileID: 0}
+  ritualPrefab: {fileID: 2342985245401479249, guid: bb3db18a7ada2df408a1f9cb91de3fbb, type: 3}
   ingredients:
   - {fileID: 11400000, guid: c5bb5eec130b9474d811c71517fec996, type: 2}
   - {fileID: 11400000, guid: 183833e627833ed4b99d5ecef1caf738, type: 2}
