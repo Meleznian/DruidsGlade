@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TornadoRitual
   m_EditorClassIdentifier: 
   ritualName: TornadoRitual
-  ritualPrefab: {fileID: 0}
+  ritualPrefab: {fileID: 5572939840197809555, guid: d2604700a590bb94e818bbe8394bd3ce, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 183833e627833ed4b99d5ecef1caf738, type: 2}
   - {fileID: 11400000, guid: d5b46bdfc27bb084ea33b57b24643dc2, type: 2}
