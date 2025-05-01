@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Content.Animation;
 
 public class ShrinkRitual : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ShrinkRitual : MonoBehaviour
     float timer;
 
     bool fullSize;
+    bool begin;
 
     GameObject player;
 
@@ -23,30 +25,41 @@ public class ShrinkRitual : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!fullSize)
+        if (begin)
         {
-            player.transform.localScale -= new Vector3(Time.deltaTime * growthMult,Time.deltaTime * growthMult,Time.deltaTime * growthMult);
 
-            if(player.transform.localScale.x < sizeGoal)
+
+            if (!fullSize)
             {
-                fullSize = true;
-            }
-        }
+                player.transform.localScale -= new Vector3(Time.deltaTime * growthMult, Time.deltaTime * growthMult, Time.deltaTime * growthMult);
 
-        else
-        {
-            timer += Time.deltaTime;
-            if (timer >= decayTime)
-            {
-                player.transform.localScale += new Vector3(Time.deltaTime * growthMult, Time.deltaTime * growthMult, Time.deltaTime * growthMult);
-
-                if (player.transform.localScale.x >= 1f)
+                if (player.transform.localScale.x < sizeGoal)
                 {
-                    player.transform.localScale = Vector3.one;
+                    fullSize = true;
+                }
+            }
 
-                    Destroy(gameObject);
+            else
+            {
+                timer += Time.deltaTime;
+                if (timer >= decayTime)
+                {
+                    player.transform.localScale += new Vector3(Time.deltaTime * growthMult, Time.deltaTime * growthMult, Time.deltaTime * growthMult);
+
+                    if (player.transform.localScale.x >= 1f)
+                    {
+                        player.transform.localScale = Vector3.one;
+
+                        Destroy(gameObject);
+                    }
                 }
             }
         }
+    }
+
+
+    public void Begin()
+    {
+        begin = true;
     }
 }
