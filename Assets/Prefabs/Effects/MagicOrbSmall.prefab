@@ -4848,6 +4848,7 @@ MonoBehaviour:
   startDelay: 0.5
   speed: 2
   smallOrb: 1
+  goalName: 
   goal: {x: 0, y: 1.2, z: 0}
   burstPrefab: {fileID: 8477911293673648231, guid: d7d6d54c0546aeb4393dfe32d7a1bc9f, type: 3}
   GoalEffect:

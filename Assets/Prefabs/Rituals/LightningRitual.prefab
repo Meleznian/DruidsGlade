@@ -134,15 +134,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7851965077632238256, guid: f592888b2852fe94f815a94d87177d3d, type: 3}
       propertyPath: goal.x
-      value: 2.157
-      objectReference: {fileID: 0}
-    - target: {fileID: 7851965077632238256, guid: f592888b2852fe94f815a94d87177d3d, type: 3}
-      propertyPath: goal.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7851965077632238256, guid: f592888b2852fe94f815a94d87177d3d, type: 3}
+      propertyPath: goal.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851965077632238256, guid: f592888b2852fe94f815a94d87177d3d, type: 3}
       propertyPath: goal.z
-      value: -0.952
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851965077632238256, guid: f592888b2852fe94f815a94d87177d3d, type: 3}
+      propertyPath: goalName
+      value: Campfire
       objectReference: {fileID: 0}
     - target: {fileID: 7851965077632238256, guid: f592888b2852fe94f815a94d87177d3d, type: 3}
       propertyPath: startDelay

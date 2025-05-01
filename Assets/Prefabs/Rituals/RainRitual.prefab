@@ -5007,6 +5007,10 @@ PrefabInstance:
       value: 0.17254902
       objectReference: {fileID: 0}
     - target: {fileID: 7851965077632238256, guid: f592888b2852fe94f815a94d87177d3d, type: 3}
+      propertyPath: goal
+      value: 
+      objectReference: {fileID: 812205903012214203, guid: 12c01a5400cc37142b6dd5b9a3d02558, type: 3}
+    - target: {fileID: 7851965077632238256, guid: f592888b2852fe94f815a94d87177d3d, type: 3}
       propertyPath: speed
       value: 3
       objectReference: {fileID: 0}

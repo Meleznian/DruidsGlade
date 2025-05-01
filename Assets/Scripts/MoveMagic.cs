@@ -13,6 +13,7 @@ public class MoveMagic : MonoBehaviour
 
     Rigidbody rb;
 
+    public string goalName;
     public Vector3 goal;
     public GameObject burstPrefab;
 
@@ -24,6 +25,12 @@ public class MoveMagic : MonoBehaviour
     {
         t = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
+
+        if(goalName != "")
+        {
+            goal = GameObject.Find(goalName).transform.position;
+        }
+
     }
 
 

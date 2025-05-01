@@ -145,6 +145,10 @@ PrefabInstance:
       value: 1.0320022
       objectReference: {fileID: 0}
     - target: {fileID: 7851965077632238256, guid: f592888b2852fe94f815a94d87177d3d, type: 3}
+      propertyPath: goalName
+      value: Quarry
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851965077632238256, guid: f592888b2852fe94f815a94d87177d3d, type: 3}
       propertyPath: startDelay
       value: 7
       objectReference: {fileID: 0}
