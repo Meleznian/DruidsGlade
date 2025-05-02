@@ -1668,22 +1668,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pot
       objectReference: {fileID: 0}
-    - target: {fileID: 6365176235179186570, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: fragile
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.19999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.19999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.17086463
@@ -1727,10 +1711,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5492619184011646898, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1369979626}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
 --- !u!4 &466383164 stripped
 Transform:
@@ -3666,23 +3647,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4750229036844788, guid: 4c1686a5131ac8b45bfe913f509289c0, type: 3}
   m_PrefabInstance: {fileID: 464213773}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1369979618 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5492619184011646898, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
-  m_PrefabInstance: {fileID: 466383163}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1369979626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369979618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0beed02e70907b4481b0e2e2d46d8c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1410654224
 GameObject:
   m_ObjectHideFlags: 0
@@ -4923,6 +4887,7 @@ MonoBehaviour:
   m_RepeatRate: 0.1
   m_TrackedDeviceDragThresholdMultiplier: 2
   m_TrackedScrollDeltaMultiplier: 5
+  m_BypassUIToolkitEvents: 0
   m_ActiveInputMode: 0
   m_EnableXRInput: 1
   m_EnableMouseInput: 1

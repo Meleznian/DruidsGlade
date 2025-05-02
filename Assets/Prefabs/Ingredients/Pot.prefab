@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 6365176235179186570}
   - component: {fileID: 1209971088835338597}
   - component: {fileID: 8958549900900801120}
+  - component: {fileID: 4071373940460129456}
   m_Layer: 0
   m_Name: Pot
   m_TagString: Untagged
@@ -353,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientScriptable: {fileID: 11400000, guid: c4873ee309fd98d4eb726198b048a9ca, type: 2}
   unstable: 0
-  fragile: 1
+  fragile: 0
   endurance: 5
   eatTime: 3
 --- !u!114 &1209971088835338597
@@ -370,6 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterDrop: {fileID: 11400000, guid: 183833e627833ed4b99d5ecef1caf738, type: 2}
   water: {fileID: 6622763111898638048}
+  tiltThreshold: 0
   colliderCooldown: 0.2
 --- !u!65 &8958549900900801120
 BoxCollider:
@@ -392,6 +394,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.4, y: 0.15, z: 0.4}
   m_Center: {x: 0.0006444007, y: 0.65, z: -0.0000003874302}
+--- !u!114 &4071373940460129456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5492619184011646898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0beed02e70907b4481b0e2e2d46d8c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6450351858716187543
 GameObject:
   m_ObjectHideFlags: 0
