@@ -121,6 +121,12 @@ public class RitualTable : MonoBehaviour
         {
             i.GetComponent<Collider>().enabled = false;
             i.GetComponent<Rigidbody>().useGravity = false;
+
+            if (i.GetComponent<WaterDrop>() != null)
+            {
+                i.GetComponent<WaterDrop>().Dropped();
+            }
+
             i.GetComponent<Rigidbody>().AddForce(Vector3.up * floatStrength);
         }
 

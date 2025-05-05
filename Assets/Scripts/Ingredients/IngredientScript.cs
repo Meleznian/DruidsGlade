@@ -10,20 +10,27 @@ public class IngredientScript : MonoBehaviour
     [Header("Options")]
     public bool unstable;
     public bool fragile;
+    public bool edible;
+    public bool flammable;
     public float endurance;
     public float eatTime;
 
+    bool onFire;
 
     internal bool eating;
     float timer;
+    float burnTimer;
 
     float nextEatSound;
     float eatSoundTime;
+
+    GameObject fireEffect;
 
     private void Start()
     {
         eatSoundTime = (eatTime / 3);
         nextEatSound = eatSoundTime;
+        fireEffect = transform.Find("FireEffect").gameObject;
     }
 
     private void Update()
@@ -31,6 +38,16 @@ public class IngredientScript : MonoBehaviour
         if (eating)
         {
             Eat();
+        }
+
+        if(onFire)
+        {
+            burnTimer += Time.deltaTime;
+
+            if(burnTimer >= 5)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -58,10 +75,21 @@ public class IngredientScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Mouth"))
         {
-            print("Nom");
-            eating = true;
-            nextEatSound = eatSoundTime;
-            AudioManager.instance.PlayAudio("Eat");
+            if (edible)
+            {
+                print("Nom");
+                eating = true;
+                nextEatSound = eatSoundTime;
+                AudioManager.instance.PlayAudio("Eat");
+            }
+        }
+        if (other.gameObject.CompareTag("Fire"))
+        {
+            Ignite();
+        }
+        else if (other.gameObject.CompareTag("Water"))
+        {
+            Douse();
         }
     }
     private void OnTriggerExit(Collider other)
@@ -95,5 +123,17 @@ public class IngredientScript : MonoBehaviour
     public virtual void Break()
     {
         Destroy(gameObject);
+    }
+
+    void Ignite()
+    {
+        onFire = true;
+        fireEffect.SetActive(true);
+    }
+
+    void Douse()
+    {
+        onFire = false;
+        fireEffect.SetActive(false);
     }
 }

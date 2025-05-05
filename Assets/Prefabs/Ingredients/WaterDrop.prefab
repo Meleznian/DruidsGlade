@@ -439,6 +439,8 @@ MonoBehaviour:
   ingredientScriptable: {fileID: 11400000, guid: 183833e627833ed4b99d5ecef1caf738, type: 2}
   unstable: 0
   fragile: 0
+  edible: 0
+  flammable: 0
   endurance: 0
   eatTime: 1.5
 --- !u!114 &-7194874800978592758

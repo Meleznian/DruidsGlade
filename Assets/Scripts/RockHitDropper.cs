@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RockHitDropper : MonoBehaviour
+public class RockHitDropper : SpawnerBase
 {
     [Header("Drop Settings")]
     public GameObject stonePrefab;
@@ -30,8 +30,17 @@ public class RockHitDropper : MonoBehaviour
     {
         Vector3 spawnPos = (dropPoint != null) ? dropPoint.position : transform.position + Vector3.up * 0.7f;
 
-        Instantiate(stonePrefab, spawnPos, Quaternion.identity);
+        if (active)
+        {
+            Instantiate(stonePrefab, spawnPos, Quaternion.identity);
+        }
 
         Debug.Log("Rock hit! Dropping a stone.");
+    }
+
+    public override void ActivateSpawner()
+    {
+        active = true;
+        transform.parent.GetComponent<Animator>().SetTrigger("Emerge");
     }
 }
