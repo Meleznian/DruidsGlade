@@ -7,10 +7,17 @@ public class Staff : MonoBehaviour
 {
     public ActivationArea activationArea;
     GameObject effect;
+    public Transform gem;
+    bool aloft;
 
     private void Start()
     {
         effect = transform.Find("StaffEffect").gameObject;
+    }
+
+    private void Update()
+    {
+        StaffAloft();
     }
 
     public void PickedUp(SelectEnterEventArgs arg)
@@ -45,6 +52,27 @@ public class Staff : MonoBehaviour
         if (other.GetComponent<ActivationArea>() == activationArea)
         {
             effect.SetActive(false);
+        }
+    }
+
+
+    void StaffAloft()
+    {
+        if (!aloft)
+        {
+            if (gem.position.y > (Camera.main.transform.position.y + 0.5f))
+            {
+                effect.SetActive(true);
+                aloft = true;
+            }
+        }
+        else if (aloft)
+        {
+            if (gem.position.y < (Camera.main.transform.position.y + 0.5f))
+            {
+                effect.SetActive(false);
+                aloft = false;
+            }
         }
     }
 }
