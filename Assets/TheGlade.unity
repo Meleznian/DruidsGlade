@@ -7177,6 +7177,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[4].dialogueOptions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[16].dialogueOptions.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -7208,6 +7212,10 @@ PrefabInstance:
       propertyPath: dialogueList.Array.data[4].dialogueOptions.Array.data[2]
       value: Just give me a gentle <link=blue>pat on the head</link> if you ever
         want some advice
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[4].dialogueOptions.Array.data[3]
+      value: Your goal is to craft the ultimate combo and become the strongest Druid
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[5].dialogueOptions.Array.data[1]
