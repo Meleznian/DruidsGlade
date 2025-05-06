@@ -59,6 +59,7 @@ PrefabInstance:
     - {fileID: 5371942861939237702, guid: ac890733d1c7d514f8e0ad9b36b443de, type: 3}
     - {fileID: 8305463234324110120, guid: ac890733d1c7d514f8e0ad9b36b443de, type: 3}
     - {fileID: 8768620979118106482, guid: ac890733d1c7d514f8e0ad9b36b443de, type: 3}
+    - {fileID: -6620211726629131326, guid: ac890733d1c7d514f8e0ad9b36b443de, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -83,6 +84,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 227f81b8b53d91043b267e4734336350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
+  distance: 5
   curveHeight: 1
-  width: 3
+  duration: 2
