@@ -7215,7 +7215,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[4].dialogueOptions.Array.data[3]
-      value: Your goal is to craft the ultimate combo and become the strongest Druid
+      value: Your <link=green+wiggle>goal </link>is to craft the ultimate combo and
+        become the strongest Druid
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[5].dialogueOptions.Array.data[1]
