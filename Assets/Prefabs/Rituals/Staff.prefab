@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3638699020549788339}
   - component: {fileID: 9178253762282374143}
   - component: {fileID: 7088601308185924163}
+  - component: {fileID: 8268624714784112007}
   m_Layer: 0
   m_Name: Staff
   m_TagString: Staff
@@ -33,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.5, z: 0.050000012}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3276589270727774975}
@@ -47,7 +48,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2164423502347427745}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 4f2db797af4e6c7428de6463b59ba904, type: 3}
 --- !u!23 &5541074893490777688
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -68,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7556b1dff7f32214fb5a7d7a8d54fdd0, type: 2}
+  - {fileID: 2100000, guid: d24bfeaa1a59a9a4bbf43c77df455f17, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,7 +112,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 4f2db797af4e6c7428de6463b59ba904, type: 3}
 --- !u!54 &8512275503110301002
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -310,6 +311,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationArea: {fileID: 0}
+--- !u!114 &8268624714784112007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164423502347427745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0beed02e70907b4481b0e2e2d46d8c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4571316409436153761
 GameObject:
   m_ObjectHideFlags: 0
