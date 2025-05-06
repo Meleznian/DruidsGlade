@@ -103,7 +103,8 @@ public class RitualTable : MonoBehaviour
         {
             i.GetComponent<Collider>().enabled = true;
             i.GetComponent<Rigidbody>().useGravity = true;
-            
+
+            i.DeactivateSparkle();
             i.GetComponent<Rigidbody>().AddExplosionForce(failureForce, transform.position, failureSize);
         }
 
@@ -126,7 +127,7 @@ public class RitualTable : MonoBehaviour
             {
                 i.GetComponent<WaterDrop>().Dropped();
             }
-
+            i.ActivateSparkle();
             i.GetComponent<Rigidbody>().AddForce(Vector3.up * floatStrength);
         }
 

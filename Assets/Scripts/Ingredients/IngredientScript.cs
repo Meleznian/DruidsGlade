@@ -25,13 +25,16 @@ public class IngredientScript : MonoBehaviour
     float eatSoundTime;
 
     GameObject fireEffect;
+    GameObject sparkle;
 
     private void Start()
     {
         eatSoundTime = (eatTime / 3);
         nextEatSound = eatSoundTime;
         fireEffect = transform.Find("FireEffect").gameObject;
+        sparkle = transform.Find("WhiteSparkle").gameObject;
     }
+
 
     private void Update()
     {
@@ -135,5 +138,15 @@ public class IngredientScript : MonoBehaviour
     {
         onFire = false;
         fireEffect.SetActive(false);
+    }
+
+    public void ActivateSparkle()
+    {
+        sparkle.SetActive(true);
+    }
+
+    public void DeactivateSparkle()
+    {
+        sparkle.SetActive(false);
     }
 }
