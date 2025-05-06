@@ -7169,12 +7169,24 @@ PrefabInstance:
       value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[7].autoContinue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[0].dialogueOptions.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[16].dialogueOptions.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[18].dialogueOptions.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[0].dialogueOptions.Array.data[6]
+      value: Magic is hard work, don't forget to take a break from time to time
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[1].dialogueOptions.Array.data[0]
@@ -7198,9 +7210,41 @@ PrefabInstance:
         want some advice
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[5].dialogueOptions.Array.data[1]
+      value: Just place your ingredients on the table and <link=blue+wave>wave </link>your
+        staff over them
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[6].dialogueOptions.Array.data[2]
+      value: If you misplace your staff summon it by raising your <link=green + bounce>
+        right </link>hand and grabbing the air
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[7].dialogueOptions.Array.data[1]
+      value: Why don't you try summoning some <link=Blue + wiggle>rain</link>
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[7].dialogueOptions.Array.data[4]
       value: Did you know the water in that pool over there can also be used in rituals?
         You'll need something to transport it though
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[7].dialogueOptions.Array.data[5]
+      value: Perform the <link=Blue+wave>Rain Dance</link>using two flowers and some
+        water
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[9].dialogueOptions.Array.data[0]
+      value: Yeah like that, nice!
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[11].dialogueOptions.Array.data[2]
+      value: Legend says those flowers have an innate connection with the <link=Red+sliding>wind</link>,
+        maybe you can use that!
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[15].dialogueOptions.Array.data[1]
+      value: You know that pots hold water well, why not scoop some up?
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[16].dialogueOptions.Array.data[0]
@@ -7228,8 +7272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[17].dialogueOptions.Array.data[2]
-      value: That should be the final ingredient you need for the transcendance ritual,
-        your almost there
+      value: "That should complete the transcendance ritual\u2014you're almost there"
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[17].dialogueOptions.Array.data[3]
