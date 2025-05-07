@@ -145,10 +145,15 @@ public class IngredientScript : MonoBehaviour
     public void ActivateSparkle()
     {
         sparkle.Play();
+        GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineHidden;
+        GetComponent<Outline>().enabled = false;
     }
 
     public void DeactivateSparkle()
     {
         sparkle.Stop();
+        GetComponent<Outline>().enabled = true;
+        GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineVisible;
+
     }
 }

@@ -45,7 +45,7 @@ public class Staff : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<ActivationArea>() == activationArea)
+        if(other.GetComponent<ActivationArea>() == activationArea && activationArea.staffHeld == true)
         {
             effect.Play();
             trail.emitting = true;
