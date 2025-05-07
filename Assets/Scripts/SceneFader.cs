@@ -40,6 +40,9 @@ public class SceneFader : MonoBehaviour
             yield return null;
         }
         fadeGroup.alpha = 1;
+
+        yield return new WaitForSeconds(0.1f);
+
         SceneManager.LoadScene(sceneName);
     }
 }
