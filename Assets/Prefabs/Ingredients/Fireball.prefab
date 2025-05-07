@@ -205,6 +205,8 @@ MonoBehaviour:
   flammable: 0
   endurance: 0
   eatTime: 2
+  fireEffect: {fileID: 0}
+  sparkle: {fileID: 8109609539487353077}
 --- !u!65 &7304085638722714561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -590,7 +592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2946223095280311965, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2946223095280312032, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -640,5 +642,10 @@ PrefabInstance:
 --- !u!4 &8109609539487352970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2946223095280312032, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
+  m_PrefabInstance: {fileID: 6370351170220676714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8109609539487353077 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2946223095280311967, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
   m_PrefabInstance: {fileID: 6370351170220676714}
   m_PrefabAsset: {fileID: 0}

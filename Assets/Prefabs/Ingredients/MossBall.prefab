@@ -290,6 +290,8 @@ MonoBehaviour:
   flammable: 1
   endurance: 0
   eatTime: 2
+  fireEffect: {fileID: 2574325757517529164}
+  sparkle: {fileID: 4011720744630889362}
 --- !u!114 &-7194874800978592758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2946223095280311965, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2946223095280312032, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -385,6 +387,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
+--- !u!198 &4011720744630889362 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2946223095280311967, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
+  m_PrefabInstance: {fileID: 2256136874864555277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4011720744630889453 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2946223095280312032, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
@@ -404,7 +411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943006549257311345, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5307605030858901880, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: m_Mesh
@@ -429,6 +436,10 @@ PrefabInstance:
     - target: {fileID: 6852036937094909445, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: lengthInSec
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852036937094909445, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6852036937094909445, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: ShapeModule.angle
@@ -570,5 +581,10 @@ PrefabInstance:
 --- !u!4 &735647909083417111 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8546441250590442590, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
+  m_PrefabInstance: {fileID: 8984264445053980233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2574325757517529164 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6852036937094909445, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
   m_PrefabInstance: {fileID: 8984264445053980233}
   m_PrefabAsset: {fileID: 0}

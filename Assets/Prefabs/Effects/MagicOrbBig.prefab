@@ -9678,8 +9678,9 @@ MonoBehaviour:
   startDelay: 1
   speed: 0
   smallOrb: 0
+  goalName: 
   goal: {x: 0, y: 0, z: 0}
-  burstPrefab: {fileID: 8477911293673648231, guid: d7d6d54c0546aeb4393dfe32d7a1bc9f, type: 3}
+  burstPrefab: {fileID: 1783276646780061817, guid: 89a466797f313514fa4da4cd7ec61a0a, type: 3}
   GoalEffect:
     m_PersistentCalls:
       m_Calls: []

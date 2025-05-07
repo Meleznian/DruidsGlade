@@ -444,6 +444,8 @@ MonoBehaviour:
   flammable: 0
   endurance: 0
   eatTime: 1.5
+  fireEffect: {fileID: 0}
+  sparkle: {fileID: 7505840695802722431}
 --- !u!114 &-7194874800978592758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,7 +621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2946223095280311965, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2946223095280312032, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
       propertyPath: m_LocalScale.x
@@ -681,5 +683,10 @@ PrefabInstance:
 --- !u!4 &7505840695802722304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2946223095280312032, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
+  m_PrefabInstance: {fileID: 4668275767757629152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7505840695802722431 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2946223095280311967, guid: a25bdb44d0f43054a945652a2dea3446, type: 3}
   m_PrefabInstance: {fileID: 4668275767757629152}
   m_PrefabAsset: {fileID: 0}

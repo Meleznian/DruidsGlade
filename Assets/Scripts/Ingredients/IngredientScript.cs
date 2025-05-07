@@ -24,15 +24,13 @@ public class IngredientScript : MonoBehaviour
     float nextEatSound;
     float eatSoundTime;
 
-    GameObject fireEffect;
-    GameObject sparkle;
+    public ParticleSystem fireEffect;
+    public ParticleSystem sparkle;
 
     private void Start()
     {
         eatSoundTime = (eatTime / 3);
         nextEatSound = eatSoundTime;
-        fireEffect = transform.Find("FireEffect").gameObject;
-        sparkle = transform.Find("WhiteSparkle").gameObject;
     }
 
 
@@ -131,22 +129,26 @@ public class IngredientScript : MonoBehaviour
     void Ignite()
     {
         onFire = true;
-        fireEffect.SetActive(true);
+        fireEffect.Play();
     }
 
     void Douse()
     {
         onFire = false;
-        fireEffect.SetActive(false);
+        fireEffect.Stop();
+        if(ingredientScriptable.name == "Ball of Fire")
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void ActivateSparkle()
     {
-        sparkle.SetActive(true);
+        sparkle.Play();
     }
 
     public void DeactivateSparkle()
     {
-        sparkle.SetActive(false);
+        sparkle.Stop();
     }
 }
