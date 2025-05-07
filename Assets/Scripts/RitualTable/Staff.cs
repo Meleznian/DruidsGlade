@@ -6,13 +6,16 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Staff : MonoBehaviour
 {
     public ActivationArea activationArea;
-    GameObject effect;
+    ParticleSystem effect;
+    TrailRenderer trail;
     public Transform gem;
     bool aloft;
 
     private void Start()
     {
-        effect = transform.Find("StaffEffect").gameObject;
+        effect = transform.Find("StaffEffect").GetComponent<ParticleSystem>();
+        trail = transform.Find("StaffEffect").GetComponent<TrailRenderer>();
+
     }
 
     private void Update()
@@ -44,14 +47,18 @@ public class Staff : MonoBehaviour
     {
         if(other.GetComponent<ActivationArea>() == activationArea)
         {
-            effect.SetActive(true);
+            effect.Play();
+            trail.emitting = true;
+
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<ActivationArea>() == activationArea)
         {
-            effect.SetActive(false);
+            effect.Stop(); 
+            trail.emitting = false;
+
         }
     }
 
@@ -62,7 +69,8 @@ public class Staff : MonoBehaviour
         {
             if (gem.position.y > (Camera.main.transform.position.y + 0.5f))
             {
-                effect.SetActive(true);
+                effect.Play();
+                trail.emitting = true;
                 aloft = true;
             }
         }
@@ -70,7 +78,8 @@ public class Staff : MonoBehaviour
         {
             if (gem.position.y < (Camera.main.transform.position.y + 0.5f))
             {
-                effect.SetActive(false);
+                effect.Stop();
+                trail.emitting = false;
                 aloft = false;
             }
         }
