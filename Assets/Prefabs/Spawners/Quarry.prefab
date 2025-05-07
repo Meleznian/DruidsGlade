@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 1521738725040118382}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.17, z: 0}
   m_LocalScale: {x: 0.9, y: 0.7, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -200,8 +200,10 @@ GameObject:
   - component: {fileID: 8785470235447178888}
   - component: {fileID: 2257907389735338563}
   - component: {fileID: 5117542957529229482}
-  - component: {fileID: 623184414782816289}
-  - component: {fileID: 435252164471220826}
+  - component: {fileID: 4089549461253530540}
+  - component: {fileID: 3751977374947435250}
+  - component: {fileID: 1191251534381123595}
+  - component: {fileID: 5039633693428616507}
   m_Layer: 0
   m_Name: GrowStone
   m_TagString: Untagged
@@ -218,7 +220,7 @@ Transform:
   m_GameObject: {fileID: 1956701528742197941}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.3657763, z: -0, w: 0.93070287}
-  m_LocalPosition: {x: -0.036, y: 0.39, z: 0.025}
+  m_LocalPosition: {x: -0.036, y: -10.59, z: 0.025}
   m_LocalScale: {x: 0.35, y: 7, z: 0.35}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -227,6 +229,7 @@ Transform:
   - {fileID: 5118580323508056882}
   - {fileID: 2285836903098579462}
   - {fileID: 2665159452901731328}
+  - {fileID: 2022104734865427280}
   m_Father: {fileID: 6617211565389273378}
   m_LocalEulerAnglesHint: {x: 0, y: 42.911, z: 0}
 --- !u!33 &2257907389735338563
@@ -279,7 +282,78 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &623184414782816289
+--- !u!114 &4089549461253530540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956701528742197941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074ccd3f06387024e8663dd4d920e18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
+  ingredient: {fileID: 0}
+  ingredientHolder: {fileID: 0}
+  stonePrefab: {fileID: 7866701732936293457, guid: ac890733d1c7d514f8e0ad9b36b443de, type: 3}
+  pickaxePrefab: {fileID: 1466347319012476787, guid: 19c9dde06fc99a841b7feaca7a639632, type: 3}
+  SpawnEffect: {fileID: 2946223095280311965, guid: 312a7e0405965fb4698d40c5815e179a, type: 3}
+  Sparks: {fileID: 1783276646780061817, guid: 03e9684321a03d4418732ae33d032ea0, type: 3}
+  spawnPoint: {fileID: 2022104734865427280}
+  dropPoint: {fileID: 354831062441193989}
+  pickaxeTag: Pickaxe
+  dropCooldown: 0.5
+--- !u!54 &3751977374947435250
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956701528742197941}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!95 &1191251534381123595
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956701528742197941}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 66bdae6c897d2e44faded2d911f034bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!64 &5039633693428616507
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,46 +372,9 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: d1fd41beb70267947bc1c996df07593d, type: 3}
---- !u!114 &435252164471220826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1956701528742197941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c221411a349c57b488ea6b0187604f5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoints:
-  - growPoint: {fileID: 354831062441193989}
-    attachedIngredient: {fileID: 0}
-    pointID: 0
-    timer: 0
-  - growPoint: {fileID: 3739908183731008397}
-    attachedIngredient: {fileID: 0}
-    pointID: 0
-    timer: 0
-  - growPoint: {fileID: 5118580323508056882}
-    attachedIngredient: {fileID: 0}
-    pointID: 0
-    timer: 0
-  - growPoint: {fileID: 2285836903098579462}
-    attachedIngredient: {fileID: 0}
-    pointID: 0
-    timer: 0
-  - growPoint: {fileID: 2665159452901731328}
-    attachedIngredient: {fileID: 0}
-    pointID: 0
-    timer: 0
-  interactablesHolder: {fileID: 0}
-  growTime: 5
-  active: 1
-  ingredient: {fileID: 11400000, guid: 62fae0fddf9dda446b2f3aad446ed7ee, type: 2}
 --- !u!1 &2004570219735501314
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +458,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &4132473181802956637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2022104734865427280}
+  m_Layer: 0
+  m_Name: PickaxeSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2022104734865427280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132473181802956637}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.6857142, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8785470235447178888}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4391912648471350143
 GameObject:
   m_ObjectHideFlags: 0

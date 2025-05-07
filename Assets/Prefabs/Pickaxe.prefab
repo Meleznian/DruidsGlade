@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5952620414754902091}
   - component: {fileID: 5416849531309681971}
   - component: {fileID: 9099357861666605128}
+  - component: {fileID: -5128535179124220378}
   m_Layer: 0
   m_Name: Pickaxe
   m_TagString: Pickaxe
@@ -38,6 +39,7 @@ Transform:
   - {fileID: 9139609374430688343}
   - {fileID: 1608636923696099219}
   - {fileID: 6226205788783036229}
+  - {fileID: 5036094847479238734}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!33 &2272197531055359296
@@ -297,6 +299,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1939f6fee030ffb478debf84692cecfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5128535179124220378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466347319012476787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7470e71866329341a2a54616a9753d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3515022741484506110
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6226205788783036229}
-  - component: {fileID: 3767294166126034593}
+  - component: {fileID: 3410304569508557612}
   m_Layer: 0
   m_Name: HitboxTrigger
   m_TagString: Pickaxe
@@ -360,8 +374,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 931868283635846402}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &3767294166126034593
-MeshCollider:
+--- !u!65 &3410304569508557612
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -378,10 +392,9 @@ MeshCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.1, y: 0.06, z: 0.5}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1 &7734914974972777884
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +421,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.089, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 931868283635846402}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8570391718441435370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5036094847479238734}
+  m_Layer: 0
+  m_Name: DropPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5036094847479238734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8570391718441435370}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.405, z: 0.152}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

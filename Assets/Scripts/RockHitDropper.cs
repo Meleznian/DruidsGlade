@@ -6,11 +6,17 @@ public class RockHitDropper : SpawnerBase
 {
     [Header("Drop Settings")]
     public GameObject stonePrefab;
+    public GameObject pickaxePrefab;
+    public GameObject SpawnEffect;
+    public GameObject Sparks;
+    public Transform spawnPoint;
+
     public Transform dropPoint; // Option: Empty is OK
     public string pickaxeTag = "Pickaxe";
 
     public float dropCooldown = 0.5f; // Minimum Interval
     private float lastDropTime = -999f;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -33,6 +39,7 @@ public class RockHitDropper : SpawnerBase
         if (active)
         {
             Instantiate(stonePrefab, spawnPos, Quaternion.identity);
+            Instantiate(Sparks, spawnPos, Quaternion.identity);
         }
 
         Debug.Log("Rock hit! Dropping a stone.");
@@ -41,6 +48,16 @@ public class RockHitDropper : SpawnerBase
     public override void ActivateSpawner()
     {
         active = true;
-        transform.parent.GetComponent<Animator>().SetTrigger("Emerge");
+        GetComponent<Animator>().SetTrigger("Emerge");
+    }
+
+    public void SpawnPickaxe()
+    {
+        Instantiate(SpawnEffect, spawnPoint.position, spawnPoint.rotation);
+        GameObject pickaxe = Instantiate(pickaxePrefab, spawnPoint.position, spawnPoint.rotation);
+        pickaxe.GetComponent<Rigidbody>().AddTorque(Vector3.left, ForceMode.Impulse);
+        pickaxe.GetComponent<Rigidbody>().AddForce(Vector3.up * 2, ForceMode.Impulse);
+        dropPoint = pickaxe.transform.Find("DropPoint").transform;
+
     }
 }
