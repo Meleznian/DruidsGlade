@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class ScreenFader : MonoBehaviour
 {
     private Canvas canvas;
@@ -59,5 +60,10 @@ public class ScreenFader : MonoBehaviour
         action?.Invoke();
         yield return new WaitForSeconds(fadedDuration / 2.0f);
         yield return Fade(canvasGroup.alpha, 0f, fadeOutDuration);
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
