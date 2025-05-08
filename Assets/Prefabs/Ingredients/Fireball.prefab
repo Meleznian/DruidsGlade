@@ -438,7 +438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5307605030858901880, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: m_RenderMode
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5307605030858901880, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: m_RenderAlignment
@@ -447,7 +447,7 @@ PrefabInstance:
     - target: {fileID: 5307605030858901880, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0c74f5273cc3e2046b5a910aac12b59f, type: 2}
+      objectReference: {fileID: 2100000, guid: 43dd10f8093b8314a829716e7cacc395, type: 2}
     - target: {fileID: 6852036937094909445, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: ShapeModule.angle
       value: 0
