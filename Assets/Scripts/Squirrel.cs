@@ -150,10 +150,11 @@ public class Squirrel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (other.CompareTag("Left Controller") || other.CompareTag("Right Controller"))
-        //{
-        //    GetHint();
-        //}
+        print("Triggered");
+        if (other.CompareTag("Left Controller") || other.CompareTag("Right Controller"))
+        {
+            GetHint();
+        }
 
         if (other.CompareTag("Water"))
         {
