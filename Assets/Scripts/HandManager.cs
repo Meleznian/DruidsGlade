@@ -36,7 +36,9 @@ public class HandManager : MonoBehaviour
     public InputActionReference RightGrip;
     public InputActionReference RightA;
 
+    public float HandHeight;
 
+    public ParticleSystem handglow;
 
 
     void Awake()
@@ -67,11 +69,23 @@ public class HandManager : MonoBehaviour
     private void FixedUpdate()
     {
         SummonStaff();
+
+        if (rightHandT.position.y > (Camera.main.transform.position.y + HandHeight))
+        {
+            if(!handglow.isPlaying)
+            { 
+                handglow.Play();
+            }
+        }
+        else if(handglow.isPlaying)
+        {
+            handglow.Stop();
+        }
     }
 
     void SummonStaff()
     {
-        if (rightHandT.position.y > (Camera.main.transform.position.y + 0.3f) && RightGrip.action.ReadValue<float>() == 1 && !rightInteractor.hasSelection)
+        if (rightHandT.position.y > (Camera.main.transform.position.y + HandHeight) && RightGrip.action.ReadValue<float>() == 1 && !rightInteractor.hasSelection)
         {
             print("Summoning Staff");
             Staff.AddForce((rightHandT.position - Staff.transform.position)*(Vector3.Distance(rightHandT.position, Staff.transform.position)*forceMult), ForceMode.Impulse);
