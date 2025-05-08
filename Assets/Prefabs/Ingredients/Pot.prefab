@@ -375,6 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterDrop: {fileID: 11400000, guid: 183833e627833ed4b99d5ecef1caf738, type: 2}
+  pot: {fileID: 11400000, guid: c4873ee309fd98d4eb726198b048a9ca, type: 2}
   water: {fileID: 6622763111898638048}
   tiltThreshold: 0
   colliderCooldown: 0.2

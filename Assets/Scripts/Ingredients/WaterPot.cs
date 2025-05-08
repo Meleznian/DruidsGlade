@@ -7,8 +7,10 @@ public class WaterPot : MonoBehaviour
 {
 
     public Ingredient waterDrop;
+    public Ingredient pot;
     public MeshRenderer water;
     public float tiltThreshold;
+    IngredientScript i;
 
     bool full;
     bool inWater;
@@ -22,6 +24,7 @@ public class WaterPot : MonoBehaviour
     void Start()
     {
         jar = GetComponent<BoxCollider>();
+        i = GetComponent<IngredientScript>();
     }
 
     // Update is called once per frame
@@ -44,7 +47,8 @@ public class WaterPot : MonoBehaviour
         {
             print("The Object "+ other.gameObject.name + " is Water");
             water.enabled = true;
-            full = true;   
+            full = true;
+            i.ingredientScriptable = waterDrop;
 
             if(other.transform.parent.GetComponent<XRGrabInteractable>() != null)
             {
@@ -71,6 +75,7 @@ public class WaterPot : MonoBehaviour
             full = false;
             jar.enabled = false;
             timer = 0;
+            i.ingredientScriptable = pot;
         }
 
         if (jar.enabled == false)
