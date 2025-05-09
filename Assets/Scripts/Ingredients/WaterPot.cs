@@ -29,6 +29,7 @@ public class WaterPot : MonoBehaviour
         i = GetComponent<IngredientScript>();
         rt =  GameObject.Find("RitualArea").GetComponent<RitualTable>();
 
+        PotManager.instance.potList.Add(gameObject);
     }
 
     // Update is called once per frame

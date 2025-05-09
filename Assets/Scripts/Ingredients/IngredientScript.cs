@@ -123,6 +123,11 @@ public class IngredientScript : MonoBehaviour
 
     public virtual void Break()
     {
+        if (ingredientScriptable.ingredientID == 0)
+        {
+            PotManager.instance.RemovePot(gameObject, false);
+        }
+
         Destroy(gameObject);
     }
 

@@ -145,6 +145,19 @@ public class RitualTable : MonoBehaviour
             Instantiate(magicOrb, ingredientObjects[i].gameObject.transform.position, transform.rotation);
             RitualController.instance.orbs += 1;
 
+            if (ingredientObjects[i].ingredientScriptable.ingredientID == 0)
+            {
+                print("Removing Pot");
+                if (r.ritualName == "Pot Ritual")
+                {
+                    PotManager.instance.RemovePot(ingredientObjects[i].gameObject, true);
+                }
+                else
+                {
+                    PotManager.instance.RemovePot(ingredientObjects[i].gameObject, false);
+                }
+            }
+
             Destroy(ingredientObjects[i].gameObject);
         }
 

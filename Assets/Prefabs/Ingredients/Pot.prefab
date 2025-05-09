@@ -355,7 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientScriptable: {fileID: 11400000, guid: c4873ee309fd98d4eb726198b048a9ca, type: 2}
   unstable: 0
-  fragile: 0
+  fragile: 1
   edible: 0
   flammable: 0
   endurance: 5
