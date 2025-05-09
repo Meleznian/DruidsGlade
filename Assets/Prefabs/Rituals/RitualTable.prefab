@@ -67,17 +67,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients: []
-  rituals:
-  - {fileID: 11400000, guid: 346cdc044a5353a46bea4a3955a314e2, type: 2}
-  - {fileID: 11400000, guid: 2dcd9655be2a5134caccaa286f938d26, type: 2}
-  - {fileID: 11400000, guid: 5839db152ab971f4eac59f47ff7f47ac, type: 2}
-  - {fileID: 11400000, guid: 565ec489b795bf04981e6f78f4fabb93, type: 2}
-  - {fileID: 11400000, guid: 1f616d6ba4af3204e8a6e52f55aa3f3c, type: 2}
   failureForce: 50
   failureSize: 10
+  failEffect: {fileID: 1574778197031843671}
   activationTime: 3
   floatStrength: 1
   activationTimer: 0
+  magicOrb: {fileID: 5167683254368387023, guid: fab10d0ea4756d84ca261432dd0f9818, type: 3}
 --- !u!1 &6825804660018603780
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,6 +107,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8584421887100890676}
+  - {fileID: 1574778197031843624}
   - {fileID: 4952358082979306732}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -257,3 +254,71 @@ MonoBehaviour:
   table: {fileID: 8076427487311290682}
   staffHeld: 0
   StaffinRightHand: 0
+--- !u!1001 &828593025155954981
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4490488061075546773}
+    m_Modifications:
+    - target: {fileID: 2208308194870398477, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208308194870398477, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208308194870398477, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208308194870398477, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208308194870398477, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208308194870398477, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208308194870398477, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208308194870398477, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208308194870398477, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208308194870398477, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208308194870398576, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+      propertyPath: m_Name
+      value: FailSmoke
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 4742462954154804506, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+--- !u!4 &1574778197031843624 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2208308194870398477, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+  m_PrefabInstance: {fileID: 828593025155954981}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1574778197031843671 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2208308194870398578, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
+  m_PrefabInstance: {fileID: 828593025155954981}
+  m_PrefabAsset: {fileID: 0}
