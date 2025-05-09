@@ -10255,6 +10255,10 @@ PrefabInstance:
       propertyPath: magicOrb
       value: 
       objectReference: {fileID: 5167683254368387023, guid: fab10d0ea4756d84ca261432dd0f9818, type: 3}
+    - target: {fileID: 8076427487311290682, guid: 3c9cfe0c75c524f4d9122b7df25dc1ef, type: 3}
+      propertyPath: failEffect
+      value: 
+      objectReference: {fileID: 2208308194870398576, guid: cd28074f0a7651e46bfd146a8bb37e66, type: 3}
     - target: {fileID: 9197023871976432671, guid: 3c9cfe0c75c524f4d9122b7df25dc1ef, type: 3}
       propertyPath: staff
       value: 
@@ -10315,6 +10319,10 @@ PrefabInstance:
     - target: {fileID: 2011316690059348138, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3297095789945354649, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4831738210530677934, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       propertyPath: m_SizeDelta.x

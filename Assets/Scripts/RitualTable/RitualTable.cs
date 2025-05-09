@@ -10,6 +10,7 @@ public class RitualTable : MonoBehaviour
 
     public float failureForce;
     public float failureSize;
+    public GameObject failEffect;
 
     Ritual currentRitual;
 
@@ -99,6 +100,8 @@ public class RitualTable : MonoBehaviour
     //Throw ingredients everywhere
     void RitualFail()
     {
+        Instantiate(failEffect, new Vector3(0,0.6f,0), Quaternion.identity);
+
         foreach(IngredientScript i in ingredientObjects)
         {
             i.GetComponent<Collider>().enabled = true;
