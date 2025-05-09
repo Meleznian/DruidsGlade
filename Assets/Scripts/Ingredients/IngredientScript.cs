@@ -84,11 +84,11 @@ public class IngredientScript : MonoBehaviour
                 AudioManager.instance.PlayAudio("Eat");
             }
         }
-        if (other.gameObject.CompareTag("Fire"))
+        if (other.gameObject.CompareTag("Fire") && flammable)
         {
             Ignite();
         }
-        else if (other.gameObject.CompareTag("Water"))
+        else if (other.gameObject.CompareTag("Water") && onFire)
         {
             Douse();
         }

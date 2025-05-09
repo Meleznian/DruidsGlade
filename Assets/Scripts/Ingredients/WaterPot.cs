@@ -11,9 +11,11 @@ public class WaterPot : MonoBehaviour
     public MeshRenderer water;
     public float tiltThreshold;
     IngredientScript i;
+    RitualTable rt;
 
     bool full;
     bool inWater;
+    bool inAA;
 
     public float colliderCooldown;
     float timer;
@@ -25,6 +27,8 @@ public class WaterPot : MonoBehaviour
     {
         jar = GetComponent<BoxCollider>();
         i = GetComponent<IngredientScript>();
+        rt =  GameObject.Find("RitualArea").GetComponent<RitualTable>();
+
     }
 
     // Update is called once per frame
@@ -39,6 +43,10 @@ public class WaterPot : MonoBehaviour
         {
             inWater = true;
         }
+        if(other.GetComponent<ActivationArea>() != null)
+        {
+            inAA = true;
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -49,6 +57,7 @@ public class WaterPot : MonoBehaviour
             water.enabled = true;
             full = true;
             i.ingredientScriptable = waterDrop;
+
 
             if(other.transform.parent.GetComponent<XRGrabInteractable>() != null)
             {
@@ -64,6 +73,10 @@ public class WaterPot : MonoBehaviour
         {
             inWater = false;
         }
+        if (other.GetComponent<ActivationArea>() != null)
+        {
+            inAA = false;
+        }
     }
 
     void Empty()
@@ -76,6 +89,13 @@ public class WaterPot : MonoBehaviour
             jar.enabled = false;
             timer = 0;
             i.ingredientScriptable = pot;
+
+            if (inAA)
+            {
+                rt.ingredients.Remove(waterDrop);
+                rt.ingredients.Add(pot);
+            }
+            
         }
 
         if (jar.enabled == false)

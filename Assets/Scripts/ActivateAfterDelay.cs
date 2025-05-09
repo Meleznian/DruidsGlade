@@ -6,6 +6,7 @@ public class ActivateAfterDelay : MonoBehaviour
 {
     public float delay;
     float timer;
+    public bool scaleRate;
 
     public GameObject objToActivate;
 
@@ -18,7 +19,12 @@ public class ActivateAfterDelay : MonoBehaviour
         if (timer >= delay)
         {
             objToActivate.SetActive(true);
-            this.enabled = false;
+            if (scaleRate)
+            {
+                objToActivate.GetComponent<ScaleParticleRate>().SetRate(false);
+            }
+
+            this.enabled = false;           
         }
     }
 }

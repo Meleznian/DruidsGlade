@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ActivateRitual : MonoBehaviour
 {
 
     public string[] ObjectToActivate;
+    public Color skyColour = Color.white;
+    public float skyLight = 1;
 
-    public float decayTime;
+    //public float decayTime;
+    public UnityEvent finishedEvent;
 
     float timer;
 
@@ -15,7 +19,7 @@ public class ActivateRitual : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        LightChanger.instance.ChangeLight(skyColour, skyLight);
     }
 
     // Update is called once per frame
@@ -30,16 +34,16 @@ public class ActivateRitual : MonoBehaviour
             MasterSpawner.instance.ActivateSpawner(s);
         }
 
-        Destroy(gameObject);
+        finishedEvent.Invoke();
 
     }
 
-    public void Timer()
-    {
-        timer += Time.deltaTime;
-
-        if (timer >= decayTime)
-        {
-        }
-    }
+    //public void Timer()
+    //{
+    //    timer += Time.deltaTime;
+    //
+    //    if (timer >= decayTime)
+    //    {
+    //    }
+    //}
 }

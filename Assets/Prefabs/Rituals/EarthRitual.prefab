@@ -46,8 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectToActivate:
-  - GrowStone
-  decayTime: 10
+  - Quarry
+  skyColour: {r: 1, g: 1, b: 1, a: 1}
+  skyLight: 1
+  finishedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &842729614043917406
 PrefabInstance:
   m_ObjectHideFlags: 0
