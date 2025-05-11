@@ -86,6 +86,7 @@ public class IngredientScript : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Fire") && flammable)
         {
+            print("Aflame");
             Ignite();
         }
         else if (other.gameObject.CompareTag("Water") && onFire)

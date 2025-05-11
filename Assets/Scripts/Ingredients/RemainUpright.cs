@@ -6,6 +6,6 @@ public class RemainUpright : MonoBehaviour
 {
     void Update()
     {
-        transform.rotation = Quaternion.Euler(Vector3.zero); 
+        transform.rotation = Quaternion.Euler(new Vector3(-90,0,0)); 
     }
 }
