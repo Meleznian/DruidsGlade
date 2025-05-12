@@ -26,6 +26,7 @@ public class IngredientScript : MonoBehaviour
 
     public ParticleSystem fireEffect;
     public ParticleSystem sparkle;
+    public ParticleSystem breakEffect;
 
     private void Start()
     {
@@ -47,7 +48,7 @@ public class IngredientScript : MonoBehaviour
 
             if(burnTimer >= 5)
             {
-                Destroy(gameObject);
+                Break();
             }
         }
     }
@@ -111,7 +112,7 @@ public class IngredientScript : MonoBehaviour
 
         if (timer >= eatTime)
         {
-            Destroy(gameObject);
+            Break();
         }
 
         if (timer >= nextEatSound)
@@ -128,7 +129,10 @@ public class IngredientScript : MonoBehaviour
         {
             PotManager.instance.RemovePot(gameObject, false);
         }
-
+        if(breakEffect != null)
+        {
+            Instantiate(breakEffect,transform.position,transform.rotation);
+        }
         Destroy(gameObject);
     }
 

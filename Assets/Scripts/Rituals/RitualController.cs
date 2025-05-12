@@ -99,6 +99,7 @@ public class RitualController : MonoBehaviour
             if(r.ritual == ritual)
             {
                 r.completed = true;
+                Journal.instance.Complete(r.refID);
 
                 if(r.refID == "PotRitual")
                 {

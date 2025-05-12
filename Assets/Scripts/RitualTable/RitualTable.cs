@@ -101,6 +101,7 @@ public class RitualTable : MonoBehaviour
     void RitualFail()
     {
         failEffect.Play();
+        Journal.instance.currentRecipe.RevealIngredient();
 
         foreach(IngredientScript i in ingredientObjects)
         {
