@@ -11,6 +11,7 @@ public class Journal : MonoBehaviour
     internal JournalEntry currentRecipe;
 
     int recipeIndex;
+    //public Collider backCover;
 
     void Awake()
     {
@@ -42,7 +43,7 @@ public class Journal : MonoBehaviour
         internal int index;
         public void RevealIngredient()
         {
-            if (index <= ingredients.Length)
+            if (index < ingredients.Length)
             {
                 ingredients[index].SetActive(true);
                 index++;
@@ -77,4 +78,13 @@ public class Journal : MonoBehaviour
             }
         }
     }
+
+    //public void OnGrab()
+    //{
+    //    backCover.isTrigger = true;
+    //}
+    //public void OnDrop()
+    //{
+    //    backCover.isTrigger = false;
+    //}
 }

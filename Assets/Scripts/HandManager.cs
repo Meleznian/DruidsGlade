@@ -20,6 +20,7 @@ public class HandManager : MonoBehaviour
     public Transform leftHandT;
     public Transform rightHandT;
     public Rigidbody Staff;
+    public Rigidbody book;
     public XRRayInteractor teleporter;
     public MeshRenderer teleportCrystal;
     public Material crystalActive;
@@ -34,11 +35,14 @@ public class HandManager : MonoBehaviour
     public UnityEngine.XR.InputDevice rightHand;
     public UnityEngine.XR.InputDevice leftHand;
     public InputActionReference RightGrip;
+    public InputActionReference leftGrip;
     public InputActionReference RightA;
 
     public float HandHeight;
 
     public ParticleSystem handglow;
+    public ParticleSystem lefthandglow;
+
 
 
     void Awake()
@@ -68,19 +72,9 @@ public class HandManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        HandGlow();
         SummonStaff();
-
-        if (rightHandT.position.y > (Camera.main.transform.position.y + HandHeight))
-        {
-            if(!handglow.isPlaying)
-            { 
-                handglow.Play();
-            }
-        }
-        else if(handglow.isPlaying)
-        {
-            handglow.Stop();
-        }
+        SummonBook();
     }
 
     void SummonStaff()
@@ -94,6 +88,19 @@ public class HandManager : MonoBehaviour
             {
                 Staff.GetComponent<XRGrabInteractable>().interactionManager.SelectEnter(rightInteractor, Staff.GetComponent<XRGrabInteractable>());
                 Squirrel.instance.GetDialogue("StaffSummon");
+            }
+        }
+    }
+    void SummonBook()
+    {
+        if (leftHandT.position.y > (Camera.main.transform.position.y + HandHeight) && leftGrip.action.ReadValue<float>() == 1 && !leftInteractor.hasSelection)
+        {
+            //print("Summoning Staff");
+            book.AddForce((leftHandT.position - book.transform.position) * (Vector3.Distance(leftHandT.position, book.transform.position) * forceMult), ForceMode.Impulse);
+
+            if (Vector3.Distance(leftHandT.position, book.transform.position) <= 1)
+            {
+                book.GetComponent<XRGrabInteractable>().interactionManager.SelectEnter(leftInteractor, book.GetComponent<XRGrabInteractable>());
             }
         }
     }
@@ -154,5 +161,32 @@ public class HandManager : MonoBehaviour
     public void PrintObject(HoverEnterEventArgs arg)
     {
         print("Looking at " + arg.interactableObject.transform.name);
+    }
+
+    void HandGlow()
+    {
+        if (rightHandT.position.y > (Camera.main.transform.position.y + HandHeight))
+        {
+            if (!handglow.isPlaying)
+            {
+                handglow.Play();
+            }
+        }
+        else if (handglow.isPlaying)
+        {
+            handglow.Stop();
+        }
+
+        if (leftHandT.position.y > (Camera.main.transform.position.y + HandHeight))
+        {
+            if (!lefthandglow.isPlaying)
+            {
+                lefthandglow.Play();
+            }
+        }
+        else if (lefthandglow.isPlaying)
+        {
+            lefthandglow.Stop();
+        }
     }
 }

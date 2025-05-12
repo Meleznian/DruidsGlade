@@ -102,6 +102,7 @@ public class RitualTable : MonoBehaviour
     {
         failEffect.Play();
         Journal.instance.currentRecipe.RevealIngredient();
+        Squirrel.instance.GetDialogue("RitFailed");
 
         foreach(IngredientScript i in ingredientObjects)
         {
