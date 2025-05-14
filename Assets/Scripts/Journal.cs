@@ -39,11 +39,12 @@ public class Journal : MonoBehaviour
         public string ID;
         public GameObject[] ingredients;
         public GameObject result;
+        public bool progressionRecipe;
 
         internal int index;
         public void RevealIngredient()
         {
-            if (index < ingredients.Length)
+            if (index < ingredients.Length && progressionRecipe)
             {
                 ingredients[index].SetActive(true);
                 index++;
