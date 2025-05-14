@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditorInternal.Profiling.Memory.Experimental.FileFormat;
+using TMPro;
 using UnityEngine;
 
 public class Journal : MonoBehaviour
@@ -37,6 +37,7 @@ public class Journal : MonoBehaviour
     public class JournalEntry
     {
         public string ID;
+        public TMP_Text text;
         public GameObject[] ingredients;
         public GameObject result;
         public bool progressionRecipe;
@@ -48,7 +49,23 @@ public class Journal : MonoBehaviour
             {
                 ingredients[index].SetActive(true);
                 index++;
+
+                //char[] charText = text.text.ToCharArray();
+                //int i = 0;
+
+                //foreach (char c in charText)
+                //{
+                //    if(c == '?')
+                //    {
+                //        break;
+                //    }
+                //    i++;
+                //}
+                //
+                //charText[i] = ' ';
+                //text.text = new string(charText);
             }
+
         }
         public void RevealAll()
         {
@@ -57,6 +74,7 @@ public class Journal : MonoBehaviour
                 g.SetActive(true);
             }
             result.SetActive(true);
+            //text.text = text.text.Replace('?', ' ');
         }
     }
 
