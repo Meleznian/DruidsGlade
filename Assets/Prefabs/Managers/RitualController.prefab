@@ -52,7 +52,7 @@ MonoBehaviour:
   - refID: RainDance
     ritual: {fileID: 11400000, guid: 565ec489b795bf04981e6f78f4fabb93, type: 2}
     completed: 0
-    getsHints: 1
+    getsHints: 0
   - refID: GrowthRitual
     ritual: {fileID: 11400000, guid: 2dcd9655be2a5134caccaa286f938d26, type: 2}
     completed: 0
@@ -65,4 +65,25 @@ MonoBehaviour:
     ritual: {fileID: 11400000, guid: 1f616d6ba4af3204e8a6e52f55aa3f3c, type: 2}
     completed: 0
     getsHints: 0
+  - refID: VerdantRitual
+    ritual: {fileID: 11400000, guid: 48cbddf2ea5a27840be80623ca920e5f, type: 2}
+    completed: 0
+    getsHints: 1
+  - refID: EarthRitual
+    ritual: {fileID: 11400000, guid: 50cda0320d51cdd41a2e6e3d92188ddc, type: 2}
+    completed: 0
+    getsHints: 1
+  - refID: LightningRitual
+    ritual: {fileID: 11400000, guid: d6401631f4905e24b905d9b3532a3807, type: 2}
+    completed: 0
+    getsHints: 1
+  - refID: TornadoRitual
+    ritual: {fileID: 11400000, guid: 5a85a311d9a1eb1438b8482c0e3fd83b, type: 2}
+    completed: 0
+    getsHints: 1
+  - refID: TransRitual
+    ritual: {fileID: 11400000, guid: eef16996fab64e048b81ca23a009b46e, type: 2}
+    completed: 0
+    getsHints: 1
+  orbs: 0
   nextHint: 0

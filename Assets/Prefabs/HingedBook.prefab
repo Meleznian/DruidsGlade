@@ -6355,11 +6355,59 @@ MonoBehaviour:
   - ID: EarthRitual
     text: {fileID: 1753918573660063840}
     ingredients:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    result: {fileID: 0}
+    - {fileID: 3037321900191526873}
+    - {fileID: 5534852446731549756}
+    - {fileID: 3897778971592770863}
+    result: {fileID: 8247979303896732041}
     progressionRecipe: 1
+  - ID: LightningRitual
+    text: {fileID: 7161603596452724435}
+    ingredients:
+    - {fileID: 3391094949916102756}
+    - {fileID: 7854246043018198054}
+    - {fileID: 3943304433888729418}
+    result: {fileID: 6518727394806600992}
+    progressionRecipe: 1
+  - ID: TornadoRitual
+    text: {fileID: 8972255495341352846}
+    ingredients:
+    - {fileID: 2231966294747218219}
+    - {fileID: 8385792156339314131}
+    - {fileID: 8249006696110751886}
+    result: {fileID: 2876248312962971452}
+    progressionRecipe: 1
+  - ID: TransRitual
+    text: {fileID: 756861003442675685}
+    ingredients:
+    - {fileID: 103350093233217845}
+    - {fileID: 8188572849640482426}
+    - {fileID: 7312025970544416417}
+    - {fileID: 6125408906571005793}
+    result: {fileID: 5730012631760043240}
+    progressionRecipe: 1
+  - ID: CreatePot
+    text: {fileID: 8889255274614899121}
+    ingredients:
+    - {fileID: 2916942646798910637}
+    - {fileID: 4657079900233668851}
+    result: {fileID: 4742718666475588059}
+    progressionRecipe: 0
+  - ID: ShrinkRitual
+    text: {fileID: 4410733402692781685}
+    ingredients:
+    - {fileID: 4852449984166282416}
+    - {fileID: 9039671114878031458}
+    - {fileID: 6408328868483509657}
+    result: {fileID: 7377271545008277450}
+    progressionRecipe: 0
+  - ID: GrowthRitual
+    text: {fileID: 8847530293180595955}
+    ingredients:
+    - {fileID: 6791801439611590000}
+    - {fileID: 5911157013203170917}
+    - {fileID: 1801794338088975886}
+    result: {fileID: 400272588441380932}
+    progressionRecipe: 0
 --- !u!114 &1797977241977018701
 MonoBehaviour:
   m_ObjectHideFlags: 0
