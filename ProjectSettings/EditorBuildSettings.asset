@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/StartScene.unity
+    guid: 2c4bb47e29a36834688d6e91c8378668
+  - enabled: 1
     path: Assets/TheGlade.unity
     guid: 4e9fef26e6adb88479ad1b9834a32d94
   m_configObjects:
