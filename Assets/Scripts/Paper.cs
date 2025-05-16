@@ -14,6 +14,11 @@ public class Paper : MonoBehaviour
     public GameObject backNextButton;
     public GameObject backPrevButton;
 
+    private void Start()
+    {
+        CheckButtons();
+    }
+
     public void NextPage()
     {
         pages[index].SetActive(false);
