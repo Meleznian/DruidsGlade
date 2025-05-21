@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class TransRitual : MonoBehaviour
 {
-    [SerializeField] GameObject player;
-    [SerializeField] ParticleSystem sparkle;
+    GameObject player;
+    ParticleSystem sparkle;
+    ParticleSystem vortex;
+    ScreenFader fader;
+
     public float riseSpeed;
+    public float riseTime;
+    float timer;
     bool transing;
+
+   
     // Start is called before the first frame update
     void Start()
     {
+        fader = GameObject.Find("ScreenFader GameObject").GetComponent<ScreenFader>();
         player = GameObject.Find("Player");
-        sparkle = GameObject.Find("GreenSparkle").GetComponent<ParticleSystem>();       
+        sparkle = GameObject.Find("GreenSparkle").GetComponent<ParticleSystem>();      
+        vortex = sparkle.transform.GetChild(0).GetComponent<ParticleSystem>();
     }
 
     private void Update()
@@ -20,6 +29,12 @@ public class TransRitual : MonoBehaviour
         if (transing)
         {
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + (riseSpeed*Time.deltaTime), player.transform.position.z);
+            timer += Time.deltaTime;
+
+            if (timer > riseTime)
+            {
+                fader.FadeAndLoadScene("VictoryScene");
+            }
         }
     }
 
@@ -27,6 +42,7 @@ public class TransRitual : MonoBehaviour
     public void Transcend()
     {
         sparkle.Play();
+        vortex.Play();
         player.GetComponent<CharacterController>().enabled = false;
         transing = true;
     }
