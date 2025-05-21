@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TranscendenceRitual
   m_EditorClassIdentifier: 
   ritualName: Transcendence Ritual
-  ritualPrefab: {fileID: 0}
+  ritualPrefab: {fileID: 5572939840197809555, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 62fae0fddf9dda446b2f3aad446ed7ee, type: 2}
   - {fileID: 11400000, guid: 183833e627833ed4b99d5ecef1caf738, type: 2}
