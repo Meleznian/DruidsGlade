@@ -40,6 +40,7 @@ public class LightningBehaviour : MonoBehaviour
     public void Strike()
     {
         lightning.Play();
+        AudioManager.instance.PlayAudio("Fire");
         GetComponent<ActivateRitual>().ActivateSpawner();
         startTimer = true;
     }

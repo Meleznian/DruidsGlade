@@ -56,6 +56,8 @@ public class IngredientScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        AudioManager.instance.PlayAtLocation("Thud", transform.position);
+
         if (unstable)
         {
             if(collision.gameObject.name != "RitualTable")
@@ -133,6 +135,8 @@ public class IngredientScript : MonoBehaviour
         {
             Instantiate(breakEffect,transform.position,transform.rotation);
         }
+
+        AudioManager.instance.PlayAtLocation("PotSmash", transform.position);
         Destroy(gameObject);
     }
 
