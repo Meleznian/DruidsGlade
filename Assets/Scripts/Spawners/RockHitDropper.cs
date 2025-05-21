@@ -27,7 +27,7 @@ public class RockHitDropper : SpawnerBase
 
         // Prevent consecutive hits within a certain interval
         if (Time.time - lastDropTime < dropCooldown) return;
-
+        AudioManager.instance.PlayAudio("MineStone");
         DropStone();
         lastDropTime = Time.time;
     }
