@@ -5553,6 +5553,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7837583163117729249, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
   m_PrefabInstance: {fileID: 7813365165513943532}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1269443084
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.11612
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.11612
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.11612
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6222
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.158
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6471036689783332660, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bd65063de7fd07d4483885e880a0bcac, type: 2}
+    - target: {fileID: 919132149155446097, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_Name
+      value: bottle Done
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7556b1dff7f32214fb5a7d7a8d54fdd0, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: -8700617353114198275, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+    - {fileID: 65702495048144492, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b280cda448f0dad4f8db1379ab1bb031, type: 3}
 --- !u!114 &1273434128 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 254685912299604361, guid: a237c1ae494a1604a9b274c6b221d903, type: 3}
@@ -11134,3 +11213,4 @@ SceneRoots:
   - {fileID: 2126806882}
   - {fileID: 7820689126352939937}
   - {fileID: 8842889370006757110}
+  - {fileID: 1269443084}
