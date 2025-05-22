@@ -3467,6 +3467,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6306684949944250068, guid: ebe5e954c2198674697399142e5d40fa, type: 3}
   m_PrefabInstance: {fileID: 978247696}
   m_PrefabAsset: {fileID: 0}
+--- !u!223 &985567187 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 305886376802232375, guid: e7b5195f8f6b5c84c9aa27c07bfcadf8, type: 3}
+  m_PrefabInstance: {fileID: 6496397071407062209}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1031371287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7659,6 +7664,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 191179815050597006, guid: e7b5195f8f6b5c84c9aa27c07bfcadf8, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 985567187}
     - target: {fileID: 305886376802232375, guid: e7b5195f8f6b5c84c9aa27c07bfcadf8, type: 3}
       propertyPath: m_Camera
       value: 
