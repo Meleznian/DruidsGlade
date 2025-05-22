@@ -1,63 +1,155 @@
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using Unity.XR.CoreUtils;
 
-public class SettingsMenu : MonoBehaviour
+public class SettingMenu : MonoBehaviour
 {
-    [Header("Audio")]
-    public AudioMixer audioMixer; 
+    [Header("Audio Settings")]
+    public AudioMixer audioMixer;
     public Slider volumeSlider;
     public Toggle muteToggle;
+    private float currentVolume = 0.75f;
 
-    private float currentVolume = 0.75f; // Temporary record of volume (to return when unmuted)
+    [Header("Height Settings")]
+    public Slider heightSlider;
+    public CharacterController characterController;
+    public XROrigin xrOrigin;
+    public float minHeight = 1.1f;
+    public float maxHeight = 1.8f;
 
-    private void Start()
+    [Header("Snap/Smooth Turn")]
+    public Toggle snapTurnToggle;
+    public Toggle smoothTurnToggle;
+    public GameObject turn1SnapObject;
+    public GameObject turn2SmoothObject;
+
+    private bool isChangingToggleInternally = false;
+
+    void Start()
     {
-        // Load saved volume (0.75 if not present)
-        float savedVolume = PlayerPrefs.GetFloat("Volume", 0.75f);
-        currentVolume = savedVolume;
-
-        // Slider setting
+        // volume initialization
+        currentVolume = PlayerPrefs.GetFloat("Volume", 0.75f);
         if (volumeSlider != null)
         {
-            volumeSlider.value = savedVolume;
-            SetVolume(savedVolume);
+            volumeSlider.value = currentVolume;
+            SetVolume(currentVolume);
             volumeSlider.onValueChanged.AddListener(SetVolume);
         }
 
-        // Toggle setting
         if (muteToggle != null)
         {
+            muteToggle.isOn = false;
             muteToggle.onValueChanged.AddListener(SetMute);
         }
+
+        // stature initialization
+        if (heightSlider != null && characterController != null)
+        {
+            heightSlider.minValue = 0f;
+            heightSlider.maxValue = 1f;
+
+            float normalized = Mathf.InverseLerp(minHeight, maxHeight, characterController.height);
+            heightSlider.value = normalized;
+            heightSlider.onValueChanged.AddListener(SetPlayerHeight);
+        }
+
+        // Toggle Event Registration
+        if (snapTurnToggle != null)
+            snapTurnToggle.onValueChanged.AddListener(OnSnapToggleChanged);
+        if (smoothTurnToggle != null)
+            smoothTurnToggle.onValueChanged.AddListener(OnSmoothToggleChanged);
+
+        // Initial state: Smooth ON
+        SetTurnObjects(snap: false, smooth: true);
+        SetToggleStates(snap: false, smooth: true);
     }
 
-    public void SetVolume(float volume)
+    public void SetVolume(float value)
     {
-        currentVolume = volume;
-
-        // Toggle setting not change volume if it is on mute (reflected when toggle is released).
+        currentVolume = value;
         if (muteToggle != null && muteToggle.isOn)
             return;
 
-        float dB = Mathf.Log10(Mathf.Max(volume, 0.0001f)) * 20f;
+        float dB = Mathf.Log10(Mathf.Clamp(value, 0.001f, 1f)) * 20;
         audioMixer.SetFloat("Master", dB);
-        PlayerPrefs.SetFloat("Volume", volume);
+        PlayerPrefs.SetFloat("Volume", value);
         PlayerPrefs.Save();
     }
 
     public void SetMute(bool isMuted)
     {
         if (isMuted)
-        {
-            // When muted: volume set to -80dB (virtually silent)
             audioMixer.SetFloat("Master", -80f);
-        }
         else
-        {
-            // When unmuted: Restore original volume
             SetVolume(currentVolume);
+    }
+
+    public void SetPlayerHeight(float normalizedValue)
+    {
+        float newHeight = Mathf.Lerp(minHeight, maxHeight, normalizedValue);
+        if (characterController != null)
+        {
+            characterController.height = newHeight;
+            characterController.center = new Vector3(0, newHeight / 2f, 0);
         }
+
+        if (xrOrigin != null)
+        {
+            xrOrigin.CameraYOffset = newHeight - 0.1f;
+        }
+    }
+
+    private void OnSnapToggleChanged(bool isOn)
+    {
+        if (isChangingToggleInternally) return;
+
+        if (isOn)
+        {
+            SetTurnObjects(snap: true, smooth: false);
+            SetToggleStates(snap: true, smooth: false);
+        }
+        else if (!smoothTurnToggle.isOn)
+        {
+            RestoreToggle(snapTurnToggle);
+        }
+    }
+
+    private void OnSmoothToggleChanged(bool isOn)
+    {
+        if (isChangingToggleInternally) return;
+
+        if (isOn)
+        {
+            SetTurnObjects(snap: false, smooth: true);
+            SetToggleStates(snap: false, smooth: true);
+        }
+        else if (!snapTurnToggle.isOn)
+        {
+            RestoreToggle(smoothTurnToggle);
+        }
+    }
+
+    private void SetTurnObjects(bool snap, bool smooth)
+    {
+        if (turn1SnapObject != null) turn1SnapObject.SetActive(snap);
+        if (turn2SmoothObject != null) turn2SmoothObject.SetActive(smooth);
+    }
+
+    private void SetToggleStates(bool snap, bool smooth)
+    {
+        isChangingToggleInternally = true;
+
+        if (snapTurnToggle != null) snapTurnToggle.isOn = snap;
+        if (smoothTurnToggle != null) smoothTurnToggle.isOn = smooth;
+
+        isChangingToggleInternally = false;
+    }
+
+    private void RestoreToggle(Toggle toggle)
+    {
+        isChangingToggleInternally = true;
+        toggle.isOn = true;
+        isChangingToggleInternally = false;
     }
 }
