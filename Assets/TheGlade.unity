@@ -6306,6 +6306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pond
       objectReference: {fileID: 0}
+    - target: {fileID: 8426432362318045988, guid: e78318e92743c534e90793934024c9ba, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0666a1b0a34846349acdd2e134a4e291, type: 2}
     - target: {fileID: 8495561610540228459, guid: e78318e92743c534e90793934024c9ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3779497
