@@ -50,6 +50,15 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: 7cf269fed02c4ea488b2edf92bdb7e39, type: 3}
     volume: 0.2
+    pitch: 1
+    random: 0
+    loop: 0
+    source: {fileID: 0}
+  - refID: Eat
+    clips:
+    - {fileID: 8300000, guid: 155557b924160d847bfb84c3de0d3d59, type: 3}
+    volume: 0.5
+    pitch: 1
     random: 0
     loop: 0
     source: {fileID: 0}
@@ -57,6 +66,7 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: d14b106713a74b448bcab90869f1706e, type: 3}
     volume: 0.5
+    pitch: 1
     random: 0
     loop: 0
     source: {fileID: 0}
@@ -64,15 +74,58 @@ MonoBehaviour:
     clips:
     - {fileID: 8300000, guid: 748d7f8b373621d498f46bf2f93ac10d, type: 3}
     volume: 0.1
+    pitch: 1
     random: 0
     loop: 1
     source: {fileID: 8608846712210720286}
-  - refID: EatFlowers
+  - refID: LightningRitual
     clips:
-    - {fileID: 8300000, guid: d14b106713a74b448bcab90869f1706e, type: 3}
-    volume: 0.5
+    - {fileID: 8300000, guid: ee895c8e2efcae7488530bc029eb9425, type: 3}
+    - {fileID: 8300000, guid: 4c859c8528d4f794f9d07ea2b29c0f16, type: 3}
+    volume: 0.1
+    pitch: 1
     random: 0
     loop: 1
+    source: {fileID: 8608846712210720286}
+  - refID: MineStone
+    clips:
+    - {fileID: 8300000, guid: 33eeffa6ef8811d48806fb5e25e4121c, type: 3}
+    volume: 0.1
+    pitch: 1
+    random: 0
+    loop: 0
+    source: {fileID: -2904412019182271653, guid: 19c9dde06fc99a841b7feaca7a639632, type: 3}
+  - refID: Splash
+    clips:
+    - {fileID: 8300000, guid: 89dc2e73bd5f5bc45b260a0d75eec23d, type: 3}
+    volume: 0.1
+    pitch: 1
+    random: 0
+    loop: 0
+    source: {fileID: 0}
+  - refID: Thud
+    clips:
+    - {fileID: 8300000, guid: 5983dfb47264ebc45a9c87144f1dc4f4, type: 3}
+    volume: 0.1
+    pitch: 1
+    random: 0
+    loop: 0
+    source: {fileID: 0}
+  - refID: Fire
+    clips:
+    - {fileID: 8300000, guid: 7b3598b9b86aa774f978d6b9451efc46, type: 3}
+    volume: 0.05
+    pitch: 1
+    random: 0
+    loop: 1
+    source: {fileID: 0}
+  - refID: PotSmash
+    clips:
+    - {fileID: 8300000, guid: 7ab7392af22ab2447aa7ded98ca3cca7, type: 3}
+    volume: 0.1
+    pitch: 1
+    random: 0
+    loop: 0
     source: {fileID: 0}
 --- !u!82 &8608846712210720286
 AudioSource:
@@ -83,11 +136,11 @@ AudioSource:
   m_GameObject: {fileID: 5222927347739329405}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 46c27623f3039a842a8b88746a338f81, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: -3
   Loop: 0
   Mute: 0
   Spatialize: 0
