@@ -28,7 +28,7 @@ public class Journal : MonoBehaviour
     private void Start()
     {
         recipeIndex = 0;
-        currentRecipe = Recipes[0];
+        currentRecipe = Recipes[1];
     }
 
     public JournalEntry[] Recipes;

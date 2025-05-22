@@ -1,47 +1,57 @@
-using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+[RequireComponent(typeof(Canvas), typeof(CanvasGroup))]
 public class ScreenFader : MonoBehaviour
 {
-    private Canvas canvas;
+    [SerializeField] private Canvas canvas;
     private CanvasGroup canvasGroup;
     private static ScreenFader instance;
+
     public static ScreenFader Instance
     {
         get
         {
-            if (instance == null) instance = GameObject.FindFirstObjectByType<ScreenFader>();
+            if (instance == null)
+                instance = FindObjectOfType<ScreenFader>();
             return instance;
         }
     }
+
     void OnEnable()
     {
-        if (canvas == null)
+        if (instance != null && instance != this)
         {
-            canvas = GetComponent<Canvas>();
-            canvas.renderMode = RenderMode.ScreenSpaceCamera;
-            canvas.worldCamera = Camera.main;
-            canvas.planeDistance = 0.5f;
-            canvas = GetComponent<Canvas>();
-            canvasGroup = gameObject.GetComponent<CanvasGroup>();
+            Destroy(gameObject);
+            return;
         }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        //canvas = GetComponent<Canvas>();
+        canvasGroup = GetComponent<CanvasGroup>();
+
+        canvas.renderMode = RenderMode.ScreenSpaceCamera;
+        canvas.worldCamera = Camera.main;
+        canvas.planeDistance = 0.5f;
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
-    public static void FadeOut(float duration = 1f)
+
+    void OnDisable()
     {
-        if (Instance != null)
-            Instance.StartCoroutine(Instance.Fade(Instance.canvasGroup.alpha, 0f, duration));
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-    public static void FadeIn(float duration = 1f)
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (Instance != null)
-            Instance.StartCoroutine(Instance.Fade(Instance.canvasGroup.alpha, 1f, duration));
+        // Reassign camera after scene load
+        if (canvas != null)
+            canvas.worldCamera = Camera.main;
     }
-    public static void FadeOutAndIn(Action action = null, float fadeOutTime = 1f, float fadedTime = 1f, float fadeInTime = 1f)
-    {
-        if (Instance != null)
-            Instance.StartCoroutine(Instance.FadeSequence(action, fadeOutTime, fadedTime, fadeInTime));
-    }
+
     private IEnumerator Fade(float from, float to, float duration)
     {
         float elapsed = 0f;
@@ -53,17 +63,24 @@ public class ScreenFader : MonoBehaviour
         }
         canvasGroup.alpha = to;
     }
-    private IEnumerator FadeSequence(Action action, float fadeOutDuration, float fadedDuration, float fadeInDuration)
+
+    private IEnumerator FadeAndLoadSceneSequence(string sceneName, float fadeOutDuration, float fadedWait, float fadeInDuration)
     {
-        yield return Fade(canvasGroup.alpha, 1f, fadeInDuration);
-        yield return new WaitForSeconds(fadedDuration / 2.0f);
-        action?.Invoke();
-        yield return new WaitForSeconds(fadedDuration / 2.0f);
-        yield return Fade(canvasGroup.alpha, 0f, fadeOutDuration);
+        yield return Fade(canvasGroup.alpha, 1f, fadeOutDuration); // Fade to black
+        yield return new WaitForSeconds(fadedWait);
+        SceneManager.LoadScene(sceneName);
+        yield return new WaitForSeconds(0.1f); // Short wait for camera to initialize
+        yield return Fade(1f, 0f, fadeInDuration); // Fade back in
     }
 
-    public void LoadScene(string sceneName)
+    public void FadeAndLoadScene(string sceneName, float fadeOut = 1f, float wait = 0.2f, float fadeIn = 1f)
     {
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(FadeAndLoadSceneSequence(sceneName, fadeOut, wait, fadeIn));
+    }
+
+    // 🔥 This method shows up in the Unity UI Button's OnClick() dropdown
+    public void LoadSceneFromButton(string sceneName)
+    {
+        FadeAndLoadScene(sceneName); // Uses default fade durations
     }
 }

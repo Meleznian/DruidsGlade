@@ -56,6 +56,8 @@ public class IngredientScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        AudioManager.instance.PlayAtLocation("Thud", transform.position);
+
         if (unstable)
         {
             if(collision.gameObject.name != "RitualTable")
@@ -128,11 +130,13 @@ public class IngredientScript : MonoBehaviour
         if (ingredientScriptable.ingredientID == 0)
         {
             PotManager.instance.RemovePot(gameObject, false);
+            AudioManager.instance.PlayAtLocation("PotSmash", transform.position);
         }
-        if(breakEffect != null)
+        if (breakEffect != null)
         {
             Instantiate(breakEffect,transform.position,transform.rotation);
         }
+
         Destroy(gameObject);
     }
 
@@ -155,15 +159,21 @@ public class IngredientScript : MonoBehaviour
     public void ActivateSparkle()
     {
         sparkle.Play();
-        GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineHidden;
-        GetComponent<Outline>().enabled = false;
+        if (GetComponent<Outline>() != null)
+        {
+            GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineHidden;
+            GetComponent<Outline>().enabled = false;
+        }
     }
 
     public void DeactivateSparkle()
     {
         sparkle.Stop();
-        GetComponent<Outline>().enabled = true;
-        GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineVisible;
+        if (GetComponent<Outline>() != null)
+        {
+            GetComponent<Outline>().enabled = true;
+            GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineVisible;
+        }
 
     }
 }
