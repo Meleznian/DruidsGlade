@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Canvas), typeof(CanvasGroup))]
 public class ScreenFader : MonoBehaviour
 {
-    private Canvas canvas;
+    [SerializeField] private Canvas canvas;
     private CanvasGroup canvasGroup;
     private static ScreenFader instance;
 
@@ -30,7 +30,7 @@ public class ScreenFader : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
 
-        canvas = GetComponent<Canvas>();
+        //canvas = GetComponent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
 
         canvas.renderMode = RenderMode.ScreenSpaceCamera;
