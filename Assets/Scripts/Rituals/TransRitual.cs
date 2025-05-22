@@ -33,7 +33,7 @@ public class TransRitual : MonoBehaviour
 
             if (timer > riseTime)
             {
-                fader.FadeAndLoadScene("VictoryScene");
+                fader.FadeAndLoadScene("TheEnd");
             }
         }
     }
