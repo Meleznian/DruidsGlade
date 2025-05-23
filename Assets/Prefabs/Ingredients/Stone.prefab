@@ -338,6 +338,7 @@ MonoBehaviour:
   eatTime: 3
   fireEffect: {fileID: 0}
   sparkle: {fileID: 4450210916227369568}
+  breakEffect: {fileID: 0}
 --- !u!114 &-7194874800978592758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 0.5
   sparks: {fileID: 1783276646780061817, guid: 03e9684321a03d4418732ae33d032ea0, type: 3}
+  anim: {fileID: 7469008242994162841}
 --- !u!1001 &1522574065165948159
 PrefabInstance:
   m_ObjectHideFlags: 0

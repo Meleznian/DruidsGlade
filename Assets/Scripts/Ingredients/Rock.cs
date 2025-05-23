@@ -7,10 +7,17 @@ public class Rock : MonoBehaviour
 {
     public float strength;
     public GameObject sparks;
+    public Animator anim;
+
     // Start is called before the first frame update
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Pickaxe"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Grow") == true)
+        {
+            print("Growing");
+            return;
+        }
+        else if(collision.gameObject.CompareTag("Pickaxe"))
         {
             Vector3 controllerVelocity;
             Instantiate(sparks, transform.position, Quaternion.identity);

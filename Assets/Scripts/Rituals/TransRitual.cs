@@ -28,7 +28,10 @@ public class TransRitual : MonoBehaviour
     {
         if (transing)
         {
-            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + (riseSpeed*Time.deltaTime), player.transform.position.z);
+            if (SettingMenu.instance.disableMS == false)
+            {
+                player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + (riseSpeed * Time.deltaTime), player.transform.position.z);
+            }
             timer += Time.deltaTime;
 
             if (timer > riseTime)

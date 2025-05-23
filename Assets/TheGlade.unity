@@ -7468,6 +7468,10 @@ PrefabInstance:
       propertyPath: audioList.Array.data[8].source
       value: 
       objectReference: {fileID: 7325033713574634051}
+    - target: {fileID: 641743813913129491, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
+      propertyPath: audioList.Array.data[8].volume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2257746389650800712, guid: e3b0445f11fa5694e80a63acac26207d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

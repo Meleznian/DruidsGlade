@@ -24,10 +24,13 @@ public class GrowthRitual : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SettingMenu.instance.disableMS == true)
+        {
+            Destroy(gameObject);
+        }
+
         if (begin)
         {
-
-
             if (!fullSize)
             {
                 player.transform.localScale += new Vector3(Time.deltaTime * growthMult, Time.deltaTime * growthMult, Time.deltaTime * growthMult);

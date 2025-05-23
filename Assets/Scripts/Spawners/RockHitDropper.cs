@@ -57,7 +57,7 @@ public class RockHitDropper : SpawnerBase
         GameObject pickaxe = Instantiate(pickaxePrefab, spawnPoint.position, spawnPoint.rotation);
         pickaxe.GetComponent<Rigidbody>().AddTorque(Vector3.left, ForceMode.Impulse);
         pickaxe.GetComponent<Rigidbody>().AddForce(Vector3.up * 2, ForceMode.Impulse);
-        //dropPoint = pickaxe.transform.Find("DropPoint").transform;
+        dropPoint = pickaxe.transform.Find("DropPoint").transform;
         Squirrel.instance.GetDialogue("Pickaxe");
     }
 }
