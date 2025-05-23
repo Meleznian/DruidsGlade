@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6869620764414659970}
   - component: {fileID: 8584084421215473595}
+  - component: {fileID: 8109204128307379336}
   m_Layer: 0
   m_Name: SettingManager
   m_TagString: Untagged
@@ -47,3 +48,27 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 46c27623f3039a842a8b88746a338f81, type: 2}
   volumeSlider: {fileID: 0}
   muteToggle: {fileID: 0}
+  heightSlider: {fileID: 0}
+  characterController: {fileID: 0}
+  xrOrigin: {fileID: 0}
+  minHeight: 1.1
+  maxHeight: 1.7
+  snapTurnToggle: {fileID: 0}
+  smoothTurnToggle: {fileID: 0}
+  turn1SnapObject: {fileID: 0}
+  turn2SmoothObject: {fileID: 0}
+--- !u!114 &8109204128307379336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6071951413772885541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7642da6d1d0543649bdddc8033d3c624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsMenu: {fileID: 0}
+  cameraTransform: {fileID: 0}
+  toggleAction: {fileID: 4314173298143038724, guid: 58aa85d4a1f806546b648451d88c884a, type: 3}

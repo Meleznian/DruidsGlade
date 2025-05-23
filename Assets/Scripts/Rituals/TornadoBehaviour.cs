@@ -31,6 +31,7 @@ public class TornadoBehaviour : MonoBehaviour
         Instantiate(appearEffect, bottle.transform.position, bottle.transform.rotation);
         Rigidbody rb = Instantiate(BottledWind, bottle.transform.position, bottle.transform.rotation).GetComponent<Rigidbody>();
         rb.AddExplosionForce(50, transform.position, 3);
+        Squirrel.instance.GetDialogue("Primordial");
     }
 
     public void Stop()

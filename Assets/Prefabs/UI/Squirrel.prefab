@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.01, y: 1.87}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 2.28, y: 1.87}
+  m_SizeDelta: {x: 103.84, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8817438004166671806
 Canvas:
@@ -633,8 +633,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.99999994, y: 0.1, z: 0.99999994}
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Size: {x: 0.99999994, y: 0.2, z: 0.99999994}
+  m_Center: {x: 0, y: 0.5, z: 0.5}
 --- !u!114 &444455059137397065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,7 +661,6 @@ MonoBehaviour:
     - What's my name? You tell me, I'm your familiar
     - '*Squirrel Noises*'
     - Those rocks don't look tasty!
-    - What do you mean bean? I'm obviously a squirrel
     - Magic is hard work, don't forget to take a break from time to time
     sequence: 0
     autoContinue: 0
@@ -693,13 +692,16 @@ MonoBehaviour:
     - A magical place where you can perform all sort of amazing <link=green+wave>rituals</link>
     - Just give me a gentle <link=blue>pat on the head</link> if you ever want some
       advice
+    - Your <link=green+wiggle>goal </link>is to perform the ultimate ritual and <link=green+wave>transcend</link>
+      your mortal shell
     sequence: 1
     autoContinue: 1
     loop: 0
   - refID: PotRitual
     dialogueOptions:
     - Rituals are pretty easy to perform
-    - Just place your ingredients on the table and wave your staff over them
+    - Just place your ingredients on the table and <link=blue+wave>wave </link>your
+      staff over them
     - Try performing a ritual with two pots as the ingredients
     sequence: 1
     autoContinue: 1
@@ -709,8 +711,8 @@ MonoBehaviour:
     - Great job, now we'll never run out of pots
     - There are many rituals to perform, experiement with ingredients to see what
       you can do
-    - If you misplace your staff summon it by raising your right hand and grabbing
-      the air
+    - If you misplace your staff summon it by raising your <link=green + bounce>
+      right </link>hand and grabbing the air
     - Good luck
     sequence: 1
     autoContinue: 1
@@ -718,14 +720,14 @@ MonoBehaviour:
   - refID: RainDance
     dialogueOptions:
     - Wow it sure is dry today
-    - Why don't you try summoning some rain
+    - Why don't you try summoning some <link=Blue + wiggle>rain</link>
     - The Rain Dance is pretty easy you only need two types ingredients
     - Those flowers are quite pretty, I wonder how'd they go as ritual ingredients
     - Did you know the water in that pool over there can also be used in rituals?
       You'll need something to transport it though
-    - Perform the Rain Dance using two flowers and some water
+    - Perform the <link=Blue+wave>Rain Dance</link>using two flowers and some water
     sequence: 1
-    autoContinue: 0
+    autoContinue: 1
     loop: 1
   - refID: Selected
     dialogueOptions:
@@ -738,7 +740,8 @@ MonoBehaviour:
     loop: 0
   - refID: StaffSummon
     dialogueOptions:
-    - Yeah like that, nice
+    - Ooh nice staff summon, you can do the same with your other hand to summon your
+      <link=blue>journal</link>.
     sequence: 1
     autoContinue: 0
     loop: 0
@@ -752,8 +755,8 @@ MonoBehaviour:
     dialogueOptions:
     - Oh! What a pretty flower
     - I'm flattered but you're not my type
-    - Legend says those flowers have an innate connection with the wind, maybe you
-      can use that!
+    - Legend says those flowers have an innate connection with the <link=Red+sliding>wind</link>,
+      maybe you can use that!
     sequence: 0
     autoContinue: 0
     loop: 0
@@ -785,8 +788,7 @@ MonoBehaviour:
   - refID: Pot
     dialogueOptions:
     - Careful, those are fragile
-    - Y'know those pots are great at holding water, why don't you try scooping some
-      up
+    - You know that pots hold water well, why not scoop some up?
     - Hopefully there are no green hatted boys around, wait what kind of cable did
       you say you were using?
     sequence: 0
@@ -805,8 +807,7 @@ MonoBehaviour:
     dialogueOptions:
     - Hey is that bottled wind? I hear that stuff's super rare
     - don't break that, It looks pretty volatile
-    - That should be the final ingredient you need for the transcendance ritual,
-      your almost there
+    - "That should complete the transcendance ritual\u2014you're almost there"
     - Air is the final of the four primoridial elements
     sequence: 0
     autoContinue: 0
@@ -816,6 +817,64 @@ MonoBehaviour:
     - Yep that's a rock
     - Earth is the first of the four primoridal elements
     sequence: 0
+    autoContinue: 0
+    loop: 0
+  - refID: RitFailed
+    dialogueOptions:
+    - Darn, looks like the ritual <link=red>failed</link>. Maybe try a <link=blue>different
+      combination</link>.
+    - Another <link=red>failure</link>. Hey at least your learning what doesn't work
+    - If you're struggling, you can always check your <link=green> journal</link>
+      for hints
+    sequence: 1
+    autoContinue: 0
+    loop: 0
+  - refID: VerdantRitual
+    dialogueOptions:
+    - <link=green>Plants</link> are very important to Druid Magic. Many <link=green>rituals</link>
+      exist to enhance their growth.
+    - One such<link=green> ritual</link> uses uses a couple of the<link=green> plants
+      </link>found here as ingredients.
+    - Course, you'll need a suitable base too, <link=blue>water</link> usually works
+      for that.
+    sequence: 1
+    autoContinue: 0
+    loop: 1
+  - refID: EarthRitual
+    dialogueOptions:
+    - After plants, the <link=green>earth </link>itself is very important to druid
+      culture. Many draw on its power for magic.
+    - To channel the earth you'll need somethin <link=green>composed of earth</link>
+      along with a couple of ingredients that </link=green>sprouted from it</link>.
+    - Hey <link=green>ceramic's</link> a type of earth right?
+    sequence: 1
+    autoContinue: 0
+    loop: 1
+  - refID: LightningRitual
+    dialogueOptions:
+    - <link=green>Storms</link> are just as much a part of nature as what's here
+      on the ground. And they can be summoned just the same.
+    - To summon a storm, you'll need a<link=green> specific plant</link>, some<link=blue>
+      water</link> of course, and something to <link=green>draw it down to you</link>.
+    - Hmm, what do we have that's heavy enough to draw down a storm?
+    sequence: 1
+    autoContinue: 0
+    loop: 1
+  - refID: TornadoRitual
+    dialogueOptions:
+    - You ever wanted to summon a <link=blue+wave>tornado</link>. No? well too bad.
+    - <link=blue>Tornados </link>are chaotic, to summon one you'll need <link=red+shake>two
+      conflicting ingredients</link>, plus a flower of course.
+    - The two ingredients are opposites, one represents <link=blue+wave>life</link>
+      and the other<link=red+shake> destruction</link>
+    sequence: 1
+    autoContinue: 0
+    loop: 1
+  - refID: Primordial
+    dialogueOptions:
+    - You did it! You now have access to all four of the <link=green+wave>primordial
+      elements</link>.
+    sequence: 1
     autoContinue: 0
     loop: 0
 --- !u!114 &3600189196336474610
@@ -939,16 +998,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5229783243726684798}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.089228, y: 2.310652, z: 1.942745}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7862490602098758627}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -5.6, y: 0}
   m_SizeDelta: {x: 100, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &83704313689317256
@@ -979,7 +1038,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: be7e6f0cdfa4e4b4ea8dbaa865d8d8a4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1024,8 +1083,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 90, y: 60}
+  m_AnchoredPosition: {x: -0.9, y: 4.8}
+  m_SizeDelta: {x: 98.3, y: 74.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3991677121311960996
 CanvasRenderer:
@@ -1057,8 +1116,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e92c5bbba3d81f74fb49a8bcb25640e3, type: 2}
+  m_sharedMaterial: {fileID: -6016413136605996851, guid: e92c5bbba3d81f74fb49a8bcb25640e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1585,6 +1644,10 @@ PrefabInstance:
     - target: {fileID: 3399821747579187769, guid: da3b468b35b58334693dfcd04f6e06a7, type: 3}
       propertyPath: m_Name
       value: PushButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399821747579187769, guid: da3b468b35b58334693dfcd04f6e06a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8085050572727677009, guid: da3b468b35b58334693dfcd04f6e06a7, type: 3}
       propertyPath: m_IsActive
