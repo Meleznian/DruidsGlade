@@ -7,6 +7,19 @@ using UnityEditor.XR.LegacyInputHelpers;
 
 public class SettingMenu : MonoBehaviour
 {
+    public static SettingMenu instance = null;
+    void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
     [Header("Audio Settings")]
     public AudioMixer audioMixer;
     public Slider volumeSlider;
@@ -29,9 +42,10 @@ public class SettingMenu : MonoBehaviour
     public SnapTurnProvider snapTurn;
 
 
-    private bool isChangingToggleInternally = false;
+    //private bool isChangingToggleInternally = false;
 
     bool snap;
+    public bool disableMS;
 
     void Start()
     {
@@ -178,5 +192,10 @@ public class SettingMenu : MonoBehaviour
     public void UpdateHeight()
     {
         cameraOffset.position = new Vector3(cameraOffset.position.x, heightSlider.value, cameraOffset.position.z);
+    }
+
+    public void ToggleMS()
+    {
+        disableMS = !disableMS;
     }
 }
