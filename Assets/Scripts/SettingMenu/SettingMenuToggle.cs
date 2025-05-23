@@ -10,21 +10,30 @@ public class SettingMenuToggle : MonoBehaviour
     public Transform cameraTransform;
 
     [Header("Input Settings")]
-    public InputActionReference toggleAction; 
+    public InputActionReference toggleAction;
 
-    private void OnEnable()
+    private void Update()
     {
-        if (toggleAction != null)
-            toggleAction.action.performed += ToggleSettingsMenu;
+        if (toggleAction.action.triggered)
+        {
+            ToggleSettingsMenu();
+        }
     }
 
-    private void OnDisable()
-    {
-        if (toggleAction != null)
-            toggleAction.action.performed -= ToggleSettingsMenu;
-    }
 
-    private void ToggleSettingsMenu(InputAction.CallbackContext context)
+    //private void OnEnable()
+    //{
+    //    if (toggleAction != null)
+    //        toggleAction.action.performed += ToggleSettingsMenu;
+    //}
+    //
+    //private void OnDisable()
+    //{
+    //    if (toggleAction != null)
+    //        toggleAction.action.performed -= ToggleSettingsMenu;
+    //}
+
+    private void ToggleSettingsMenu()
     {
         if (settingsMenu == null || cameraTransform == null) return;
 
