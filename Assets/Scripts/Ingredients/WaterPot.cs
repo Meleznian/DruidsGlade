@@ -27,7 +27,7 @@ public class WaterPot : MonoBehaviour
     {
         jar = GetComponent<BoxCollider>();
         i = GetComponent<IngredientScript>();
-        rt =  GameObject.Find("RitualArea").GetComponent<RitualTable>();
+        rt = GameObject.Find("RitualArea").GetComponent<RitualTable>();
 
         PotManager.instance.potList.Add(gameObject);
     }
@@ -44,7 +44,7 @@ public class WaterPot : MonoBehaviour
         {
             inWater = true;
         }
-        if(other.GetComponent<ActivationArea>() != null)
+        if (other.GetComponent<ActivationArea>() != null)
         {
             inAA = true;
         }
@@ -54,13 +54,13 @@ public class WaterPot : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Water") && full == false && Vector3.Dot(transform.up, Vector3.down) < tiltThreshold)
         {
-            print("The Object "+ other.gameObject.name + " is Water");
+            print("The Object " + other.gameObject.name + " is Water");
             water.enabled = true;
             full = true;
             i.ingredientScriptable = waterDrop;
 
 
-            if(other.transform.parent.GetComponent<XRGrabInteractable>() != null)
+            if (other.transform.parent.GetComponent<XRGrabInteractable>() != null)
             {
                 Destroy(other.transform.parent.gameObject);
                 inWater = false;
@@ -96,7 +96,7 @@ public class WaterPot : MonoBehaviour
                 rt.ingredients.Remove(waterDrop);
                 rt.ingredients.Add(pot);
             }
-            
+
         }
 
         if (jar.enabled == false)
@@ -108,5 +108,18 @@ public class WaterPot : MonoBehaviour
                 jar.enabled = true;
             }
         }
+    }
+
+    public void RitualEmpty()
+    {
+        water.enabled = false;
+        full = false;
+        jar.enabled = false;
+        timer = 0;
+        i.ingredientScriptable = pot;
+        GetComponent<Collider>().enabled = true;
+        GetComponent<Rigidbody>().useGravity = true;
+
+        GetComponent<IngredientScript>().DeactivateSparkle();
     }
 }

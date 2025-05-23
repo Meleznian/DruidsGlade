@@ -21,6 +21,7 @@ public class Rock : MonoBehaviour
 
                 if (controllerVelocity.magnitude >= strength)
                 {
+                    Instantiate(sparks, transform.position, transform.rotation);
                     Destroy(gameObject);
                 }
             }

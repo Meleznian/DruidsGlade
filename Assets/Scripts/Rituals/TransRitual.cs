@@ -5,9 +5,9 @@ using UnityEngine;
 public class TransRitual : MonoBehaviour
 {
     GameObject player;
-    ParticleSystem sparkle;
-    ParticleSystem vortex;
-    ScreenFader fader;
+    [SerializeField] ParticleSystem sparkle;
+    [SerializeField] ParticleSystem vortex;
+    [SerializeField] ScreenFader fader;
 
     public float riseSpeed;
     public float riseTime;

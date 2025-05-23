@@ -104,7 +104,7 @@ public class Squirrel : MonoBehaviour
             {
                 if (i < len)
                 {
-                    print("Playing Dialogue");
+                    //print("Playing Dialogue");
                     //dialogueText.text += queuedDialogue[i];
                     i++;
                     AudioManager.instance.PlayAudio("SquirrelTalk");

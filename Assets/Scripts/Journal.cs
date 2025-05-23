@@ -8,9 +8,9 @@ using UnityEngine;
 public class Journal : MonoBehaviour
 {
     public static Journal instance = null;
-    internal JournalEntry currentRecipe;
+    [SerializeField]internal JournalEntry currentRecipe;
 
-    int recipeIndex;
+    [SerializeField]int recipeIndex;
     //public Collider backCover;
 
     void Awake()
@@ -27,7 +27,7 @@ public class Journal : MonoBehaviour
 
     private void Start()
     {
-        recipeIndex = 0;
+        recipeIndex = 1;
         currentRecipe = Recipes[1];
     }
 
@@ -42,28 +42,14 @@ public class Journal : MonoBehaviour
         public GameObject result;
         public bool progressionRecipe;
 
-        internal int index;
+        public int index;
         public void RevealIngredient()
         {
+            print("Revealing Ingredient");
             if (index < ingredients.Length && progressionRecipe)
             {
                 ingredients[index].SetActive(true);
                 index++;
-
-                //char[] charText = text.text.ToCharArray();
-                //int i = 0;
-
-                //foreach (char c in charText)
-                //{
-                //    if(c == '?')
-                //    {
-                //        break;
-                //    }
-                //    i++;
-                //}
-                //
-                //charText[i] = ' ';
-                //text.text = new string(charText);
             }
 
         }
@@ -74,7 +60,6 @@ public class Journal : MonoBehaviour
                 g.SetActive(true);
             }
             result.SetActive(true);
-            //text.text = text.text.Replace('?', ' ');
         }
     }
 
@@ -86,6 +71,7 @@ public class Journal : MonoBehaviour
             {
                 entry.RevealAll();
 
+                print("Comparing "+ entry.ID + " and "  +currentRecipe.ID);
                 if(entry == currentRecipe)
                 {
                     recipeIndex++;

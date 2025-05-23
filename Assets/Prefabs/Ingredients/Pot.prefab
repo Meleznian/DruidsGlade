@@ -358,7 +358,7 @@ MonoBehaviour:
   fragile: 1
   edible: 0
   flammable: 0
-  endurance: 5
+  endurance: 6
   eatTime: 3
   fireEffect: {fileID: 0}
   sparkle: {fileID: 5279466440245798429}

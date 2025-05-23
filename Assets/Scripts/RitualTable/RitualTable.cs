@@ -163,7 +163,14 @@ public class RitualTable : MonoBehaviour
                 }
             }
 
-            Destroy(ingredientObjects[i].gameObject);
+            if (ingredientObjects[i].ingredientScriptable.ingredientID == 3 && ingredientObjects[i].GetComponent<WaterPot>() != null)
+            {
+                ingredientObjects[i].GetComponent<WaterPot>().RitualEmpty();
+            }
+            else
+            {
+                Destroy(ingredientObjects[i].gameObject);
+            }
         }
 
         ingredientObjects.Clear();

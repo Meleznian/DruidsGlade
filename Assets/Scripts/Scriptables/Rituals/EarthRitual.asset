@@ -16,5 +16,4 @@ MonoBehaviour:
   ritualPrefab: {fileID: 2342985245401479249, guid: 65093731aba645f439c7c5fdbee1d164, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 4c6f1b2270b5a4843881066e3223e327, type: 2}
-  - {fileID: 11400000, guid: c4873ee309fd98d4eb726198b048a9ca, type: 2}
   - {fileID: 11400000, guid: c5bb5eec130b9474d811c71517fec996, type: 2}

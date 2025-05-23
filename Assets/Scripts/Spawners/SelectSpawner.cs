@@ -27,6 +27,7 @@ public class SelectSpawner : SpawnerBase
         active = true;
         GetComponent<XRSimpleInteractable>().enabled = true;
         GetComponent<MeshRenderer>().enabled = true;
+        GetComponent<OutlineOnHover>().enabled = true;
     }
 
     public override void DeactivateSpawner()
