@@ -37,6 +37,7 @@ public class TransRitual : MonoBehaviour
             if (timer > riseTime)
             {
                 fader.FadeAndLoadScene("TheEnd");
+                Destroy(gameObject);
             }
         }
     }
