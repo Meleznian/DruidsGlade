@@ -45,8 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6be80d94a1e0e458eb2524168ab119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riseSpeed: 0.1
-  riseTime: 5
+  sparkle: {fileID: 0}
+  vortex: {fileID: 0}
+  fader: {fileID: 0}
+  riseSpeed: 0.15
+  riseTime: 7
 --- !u!1001 &1733634264050803747
 PrefabInstance:
   m_ObjectHideFlags: 0

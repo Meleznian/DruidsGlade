@@ -440,6 +440,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 6788241516397258961, guid: 12c01a5400cc37142b6dd5b9a3d02558, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7678939094549971756, guid: 12c01a5400cc37142b6dd5b9a3d02558, type: 3}
       propertyPath: m_Name
       value: Statue
@@ -6732,63 +6736,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012476415}
   m_CullTransparentMesh: 1
---- !u!1001 &2027016964
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5572939840197809555, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
-      propertyPath: m_Name
-      value: TransRitual
-      objectReference: {fileID: 0}
-    - target: {fileID: 7193910426477677945, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7193910426477677945, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7193910426477677945, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7193910426477677945, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7193910426477677945, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7193910426477677945, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7193910426477677945, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7193910426477677945, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7193910426477677945, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7193910426477677945, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4a4d21d18b238c74fb073cf49fa65312, type: 3}
 --- !u!1 &2038397919 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5492619184011646898, guid: 391e0924cfe7ad049b61dc63fb968f41, type: 3}
@@ -7598,6 +7545,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2077840800}
     m_Modifications:
+    - target: {fileID: 2082187453580499833, guid: d9bc7dc6c6cd3c24e92765d9f0470bf1, type: 3}
+      propertyPath: m_text
+      value: Place ingredients on the table and wave your staff over them in a circular
+        movement.
+      objectReference: {fileID: 0}
     - target: {fileID: 3004898076768732444, guid: d9bc7dc6c6cd3c24e92765d9f0470bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.32216138
@@ -7638,22 +7590,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4906102662213219252, guid: d9bc7dc6c6cd3c24e92765d9f0470bf1, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: e92c5bbba3d81f74fb49a8bcb25640e3, type: 2}
-    - target: {fileID: 4906102662213219252, guid: d9bc7dc6c6cd3c24e92765d9f0470bf1, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -6016413136605996851, guid: e92c5bbba3d81f74fb49a8bcb25640e3, type: 2}
-    - target: {fileID: 4906102662213219252, guid: d9bc7dc6c6cd3c24e92765d9f0470bf1, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5127797949823034386, guid: d9bc7dc6c6cd3c24e92765d9f0470bf1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8173018282811279011, guid: d9bc7dc6c6cd3c24e92765d9f0470bf1, type: 3}
       propertyPath: m_Name
       value: HingedBook
@@ -7661,28 +7597,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5068442608252315525, guid: d9bc7dc6c6cd3c24e92765d9f0470bf1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4661541122086290051}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9bc7dc6c6cd3c24e92765d9f0470bf1, type: 3}
---- !u!1 &4661541122086290050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5068442608252315525, guid: d9bc7dc6c6cd3c24e92765d9f0470bf1, type: 3}
-  m_PrefabInstance: {fileID: 4661541122086290049}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4661541122086290051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4661541122086290050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0beed02e70907b4481b0e2e2d46d8c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5753213750687865623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7786,14 +7702,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.size
-      value: 26
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[26].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[27].loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[25].refID
       value: Pickaxe
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[26].refID
+      value: TransRitual
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[27].refID
+      value: Reminder
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[25].sequence
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[26].sequence
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[27].sequence
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
@@ -7803,6 +7743,22 @@ PrefabInstance:
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[25].dialogueOptions.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[26].dialogueOptions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[27].dialogueOptions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[0].dialogueOptions.Array.data[4]
+      value: '*Rabbit Noises*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[10].dialogueOptions.Array.data[0]
+      value: You have to put ingredients on first ya goof
       objectReference: {fileID: 0}
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[21].dialogueOptions.Array.data[1]
@@ -7832,6 +7788,16 @@ PrefabInstance:
     - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: dialogueList.Array.data[25].dialogueOptions.Array.data[0]
       value: Oh heck yeah, a pickaxe!, time to smash some stuff!
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[26].dialogueOptions.Array.data[0]
+      value: With all four of the<link=green+wave> primordial elements</link> you
+        can perform the<link=green+wave> Transcendance Ritual</link>.
+      objectReference: {fileID: 0}
+    - target: {fileID: 444455059137397065, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
+      propertyPath: dialogueList.Array.data[27].dialogueOptions.Array.data[0]
+      value: Remember, just give a gentle<link=blue> pat on the head, </link> if
+        you ever need a hint or two.
       objectReference: {fileID: 0}
     - target: {fileID: 1057569737158974261, guid: 89338a6244cf8a94e84c7d294b8dc733, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9225,4 +9191,3 @@ SceneRoots:
   - {fileID: 2126806882}
   - {fileID: 7820689126352939937}
   - {fileID: 8842889370006757110}
-  - {fileID: 2027016964}
