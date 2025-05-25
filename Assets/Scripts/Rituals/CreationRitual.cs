@@ -50,6 +50,10 @@ public class CreationRitual : MonoBehaviour
 
         if (i >= numberOfObjects)
         {
+            if (gameObject.name == "PotRitual")
+            {
+                Squirrel.instance.GetDialogue("Congrats");
+            }
 
             Destroy(gameObject);
             

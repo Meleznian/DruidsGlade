@@ -1,8 +1,40 @@
-Ambient Forest Noises: https://freesound.org/people/unfa/sounds/160280/
 
-Chewing, Breadstick, Single, G.wav by InspectorJ -- https://freesound.org/s/429596/ -- License: Attribution 4.0
+------------------------- Visual Assets --------------------------------------------
 
 RPG Poly Pack - Lite
 https://assetstore.unity.com/packages/3d/environments/landscapes/rpg-poly-pack-lite-148410 
 
+Particle Effects:
+https://assetstore.unity.com/packages/vfx/particles/star-pack-advanced-sparkle-system-185515
+
+Lightning Effect:
+https://assetstore.unity.com/packages/vfx/particles/spells/zap-vfx-urp-303479
+
+Fruit Models:
+https://assetstore.unity.com/packages/3d/props/food/low-poly-fruit-pickups-98135
+
+------------------------- Sound Effects --------------------------------------------
+
+Eating Sound Effect: 
+Chewing, Breadstick, Single, G.wav by InspectorJ -- https://freesound.org/s/429596/ -- License: Attribution 4.0
+
+Splash Sound:
 plouf.mp3 by ComputerHotline -- https://freesound.org/s/407060/ -- License: Attribution 4.0
+
+Ambient Forest Noises: 
+https://freesound.org/people/unfa/sounds/160280/
+
+Pot Smash Sound:
+https://pixabay.com/sound-effects/plate-break-1-36468/
+
+Fire Sound:
+https://pixabay.com/sound-effects/fire-sound-334130/
+
+Thud Sound:
+https://pixabay.com/sound-effects/loud-thud-45719/
+
+Lightning Strike Sound:
+https://pixabay.com/sound-effects/lightning-strike-29683/
+
+Rain Sounds:
+https://pixabay.com/sound-effects/calming-rain-257596/

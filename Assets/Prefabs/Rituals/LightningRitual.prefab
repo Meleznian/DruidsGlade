@@ -493,8 +493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f865a2d902d4448a52cf3ed97477e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startColour: {r: 0.381132, g: 0.381132, b: 0.381132, a: 0}
-  goalColour: {r: 0.3509434, g: 0.3509434, b: 0.3509434, a: 1}
+  startColour: {r: 0.7132075, g: 0.7132075, b: 0.7132075, a: 0}
+  goalColour: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
   speed: 0.3
   fadeInFunction:
     m_PersistentCalls:

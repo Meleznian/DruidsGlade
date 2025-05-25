@@ -98,13 +98,13 @@ public class RitualController : MonoBehaviour
         {
             if(r.ritual == ritual)
             {
+                if (!r.completed && r.getsHints)
+                {
+                    Squirrel.instance.progressedRecently = 2;
+                }
+
                 r.completed = true;
                 Journal.instance.Complete(r.refID);
-
-                if(r.refID == "PotRitual")
-                {
-                    Squirrel.instance.GetDialogue("Congrats");
-                } 
             }
         }
 

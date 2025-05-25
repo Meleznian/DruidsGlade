@@ -59,6 +59,8 @@ public class Squirrel : MonoBehaviour
     string mostRecentDialogue;
     public List<Dialogue> dialogueList = new();
     bool welcomed;
+    float tipTimer;
+    internal int progressedRecently;
 
 
     Vector3 lookPos;
@@ -76,6 +78,8 @@ public class Squirrel : MonoBehaviour
         LookAtPlayer();
 
         PlayDialogue();
+
+        TipTimer();
     }
 
     void StartDialogue(string text)
@@ -221,6 +225,25 @@ public class Squirrel : MonoBehaviour
         else
         {
             GetDialogue("Ambient");
+        }
+    }
+
+
+    void TipTimer()
+    {
+        tipTimer += Time.deltaTime;
+
+        if(tipTimer >= 30)
+        {
+            if(progressedRecently > 0)
+            {
+                progressedRecently--;
+                tipTimer = 0;
+            }
+            else
+            {
+                GetDialogue("Reminder");
+            }
         }
     }
 }

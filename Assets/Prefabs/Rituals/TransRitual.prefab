@@ -164,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7851965077632238256, guid: f592888b2852fe94f815a94d87177d3d, type: 3}
       propertyPath: startDelay
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7851965077632238256, guid: f592888b2852fe94f815a94d87177d3d, type: 3}
       propertyPath: GoalEffect.m_PersistentCalls.m_Calls.Array.size

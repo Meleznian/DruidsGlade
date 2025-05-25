@@ -20,6 +20,11 @@ public class ActivateRitual : MonoBehaviour
     void Start()
     {
         LightChanger.instance.ChangeLight(skyColour, skyLight);
+
+        if(gameObject.name == "RainRitual")
+        {
+            AudioManager.instance.PlayAtLocation("Rain", new Vector3(0,5,0));
+        }
     }
 
     // Update is called once per frame

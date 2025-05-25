@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -76,6 +77,11 @@ public class FadeInObject : MonoBehaviour
     {
         started = true;
         changed = false;
+
+        if(transform.parent.gameObject.name == "LightningRitual")
+        {
+            AudioManager.instance.PlayAtLocation("LightningRumble", new Vector3(0,5,0));
+        }
     }
 
     public void FadeOut()

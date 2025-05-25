@@ -41,6 +41,7 @@ public class LightningBehaviour : MonoBehaviour
     {
         lightning.Play();
         AudioManager.instance.PlayAudio("Fire");
+        AudioManager.instance.PlayAtLocation("LightningStrike", campfire.transform.position);
         GetComponent<ActivateRitual>().ActivateSpawner();
         startTimer = true;
     }
