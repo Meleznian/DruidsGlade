@@ -135,7 +135,7 @@ public class RitualTable : MonoBehaviour
             i.ActivateSparkle();
             i.GetComponent<Rigidbody>().AddForce(Vector3.up * floatStrength);
         }
-
+        AudioManager.instance.PlayAudio("Sparkle");
         ritualActive = true;
         activationTimer = 0;
     }

@@ -64,6 +64,7 @@ public class MoveMagic : MonoBehaviour
                     if (smallOrb)
                     {
                         RitualController.instance.orbs -= 1;
+                        AudioManager.instance.PlayAtLocation("SoftThud",transform.position);
                     }
 
                     Destroy(gameObject);

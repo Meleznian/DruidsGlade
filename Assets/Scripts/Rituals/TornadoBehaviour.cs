@@ -11,6 +11,10 @@ public class TornadoBehaviour : MonoBehaviour
     public ParticleSystem leaves;
     public ParticleSystem tornado;
 
+    private void Start()
+    {
+        AudioManager.instance.PlayAudio("Tornado");
+    }
 
     private void Update()
     {
