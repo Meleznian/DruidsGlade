@@ -20,7 +20,7 @@ public class Respawn : MonoBehaviour
         if (other.gameObject.name == "RespawnField")
         {
             print("Respawning");
-            transform.position = new Vector3(transform.position.x, 20, transform.position.z);
+            transform.position = new Vector3(0, 20,0);
             //transform.rotation = initalRot;
             rb.velocity = Vector3.zero;
         }

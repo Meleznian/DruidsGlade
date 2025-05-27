@@ -233,7 +233,7 @@ public class Squirrel : MonoBehaviour
     {
         tipTimer += Time.deltaTime;
 
-        if(tipTimer >= 30)
+        if(tipTimer >= 60)
         {
             if(progressedRecently > 0)
             {
@@ -243,6 +243,7 @@ public class Squirrel : MonoBehaviour
             else
             {
                 GetDialogue("Reminder");
+                tipTimer = 0;
             }
         }
     }

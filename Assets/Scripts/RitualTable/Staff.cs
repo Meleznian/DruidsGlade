@@ -40,7 +40,7 @@ public class Staff : MonoBehaviour
 
     public void Dropped()
     {
-        activationArea.staffHeld = true;
+        activationArea.staffHeld = false;
     }
 
     private void OnTriggerEnter(Collider other)

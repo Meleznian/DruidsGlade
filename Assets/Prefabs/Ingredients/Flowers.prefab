@@ -190,7 +190,7 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -218,7 +218,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 20
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -405,6 +405,7 @@ MonoBehaviour:
   eatTime: 1
   fireEffect: {fileID: 2392112214916263680}
   sparkle: {fileID: 8664855410795415733}
+  breakEffect: {fileID: 0}
 --- !u!114 &990325696190986435
 MonoBehaviour:
   m_ObjectHideFlags: 0

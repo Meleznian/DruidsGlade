@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8817438004166671806}
   - component: {fileID: 7428446985313508518}
   - component: {fileID: 7245952545652446609}
+  - component: {fileID: 6424225643563783878}
   m_Layer: 0
   m_Name: DialogueCanvas
   m_TagString: Untagged
@@ -103,6 +104,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6424225643563783878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363832934994467073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad69e73affd72934c8dac0270cb8e2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToLook: {fileID: 0}
 --- !u!1 &694906936074810426
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,13 +545,13 @@ Transform:
   m_GameObject: {fileID: 4483174862649460211}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.127, y: -0.178, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7862490602098758627}
   - {fileID: 2588062756068940473}
-  - {fileID: 136678709262252321}
+  - {fileID: 5595728976189986117}
   - {fileID: 561496272816319775}
   m_Father: {fileID: 1057569737158974261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -633,8 +647,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.99999994, y: 0.2, z: 0.99999994}
-  m_Center: {x: 0, y: 0.5, z: 0.5}
+  m_Size: {x: 1, y: 1, z: 2}
+  m_Center: {x: 0, y: 1.2, z: 0.3}
 --- !u!114 &444455059137397065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,7 +673,7 @@ MonoBehaviour:
     - Summon your staff by raising your right arm and grabbing the air
     - Fire is hot!
     - What's my name? You tell me, I'm your familiar
-    - '*Squirrel Noises*'
+    - '*Rabbit Noises*'
     - Those rocks don't look tasty!
     - Magic is hard work, don't forget to take a break from time to time
     sequence: 0
@@ -690,18 +704,18 @@ MonoBehaviour:
     dialogueOptions:
     - Hi, Welcome to <link=green+wave> Druid's Glade.</link>
     - A magical place where you can perform all sort of amazing <link=green+wave>rituals</link>
+    - Eventually you'll even be able to <link=green+wave>transcend</link> your very
+      mortal shell itself and become <link=green+shake>one totally with nature</link>
     - Just give me a gentle <link=blue>pat on the head</link> if you ever want some
       advice
-    - Your <link=green+wiggle>goal </link>is to perform the ultimate ritual and <link=green+wave>transcend</link>
-      your mortal shell
     sequence: 1
     autoContinue: 1
     loop: 0
   - refID: PotRitual
     dialogueOptions:
     - Rituals are pretty easy to perform
-    - Just place your ingredients on the table and <link=blue+wave>wave </link>your
-      staff over them
+    - Just place your ingredients on this stone table and <link=blue+wave>quickly
+      wave </link>your staff over them in a circular motion
     - Try performing a ritual with two pots as the ingredients
     sequence: 1
     autoContinue: 1
@@ -747,7 +761,7 @@ MonoBehaviour:
     loop: 0
   - refID: NoIng
     dialogueOptions:
-    - You gotta put ingredients on first ya goof
+    - You have to put ingredients on first ya goof
     sequence: 1
     autoContinue: 0
     loop: 0
@@ -823,7 +837,7 @@ MonoBehaviour:
     dialogueOptions:
     - Darn, looks like the ritual <link=red>failed</link>. Maybe try a <link=blue>different
       combination</link>.
-    - Another <link=red>failure</link>. Hey at least your learning what doesn't work
+    - Hmm seems that didn't work either. Keep trying though
     - If you're struggling, you can always check your <link=green> journal</link>
       for hints
     sequence: 1
@@ -844,9 +858,8 @@ MonoBehaviour:
     dialogueOptions:
     - After plants, the <link=green>earth </link>itself is very important to druid
       culture. Many draw on its power for magic.
-    - To channel the earth you'll need somethin <link=green>composed of earth</link>
-      along with a couple of ingredients that </link=green>sprouted from it</link>.
-    - Hey <link=green>ceramic's</link> a type of earth right?
+    - To channel the earth you'll need a couple of ingredients that </link=green>sprouted
+      from it</link>.
     sequence: 1
     autoContinue: 0
     loop: 1
@@ -854,17 +867,19 @@ MonoBehaviour:
     dialogueOptions:
     - <link=green>Storms</link> are just as much a part of nature as what's here
       on the ground. And they can be summoned just the same.
-    - To summon a storm, you'll need a<link=green> specific plant</link>, some<link=blue>
-      water</link> of course, and something to <link=green>draw it down to you</link>.
+    - To summon a storm, you'll need a<link=green> a plant that grows high up</link>,
+      some<link=blue> water</link>, and something to <link=green>draw it down to
+      you</link>.
     - Hmm, what do we have that's heavy enough to draw down a storm?
     sequence: 1
     autoContinue: 0
     loop: 1
   - refID: TornadoRitual
     dialogueOptions:
-    - You ever wanted to summon a <link=blue+wave>tornado</link>. No? well too bad.
+    - You ever wanted to summon a <link=blue+wave>tornado</link>. Because thats your
+      next task!
     - <link=blue>Tornados </link>are chaotic, to summon one you'll need <link=red+shake>two
-      conflicting ingredients</link>, plus a flower of course.
+      conflicting ingredients</link>.
     - The two ingredients are opposites, one represents <link=blue+wave>life</link>
       and the other<link=red+shake> destruction</link>
     sequence: 1
@@ -877,6 +892,35 @@ MonoBehaviour:
     sequence: 1
     autoContinue: 0
     loop: 0
+  - refID: Pickaxe
+    dialogueOptions:
+    - Oh heck yeah, a pickaxe!, time to smash some stuff!
+    sequence: 1
+    autoContinue: 0
+    loop: 0
+  - refID: TransRitual
+    dialogueOptions:
+    - With all four of the<link=green+wave> primordial elements</link> you can perform
+      the<link=green+wave> Transcendance Ritual</link>.
+    sequence: 1
+    autoContinue: 0
+    loop: 1
+  - refID: Reminder
+    dialogueOptions:
+    - Remember, just give a gentle<link=blue> pat on the head, </link> if you ever
+      need a hint or two.
+    - 'If you''re having trouble, remember to check your <link=blue> journal </link>. '
+    sequence: 1
+    autoContinue: 0
+    loop: 1
+  - refID: Hurt
+    dialogueOptions:
+    - <link=red+shake>Ouch</link>, don't pat me that hard!
+    - Hey! Not so rough please!
+    - <link=red+shake>Ow</link>, why are you punching me so hard?!
+    sequence: 0
+    autoContinue: 0
+    loop: 1
 --- !u!114 &3600189196336474610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -998,13 +1042,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5229783243726684798}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.089228, y: 2.310652, z: 1.942745}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7862490602098758627}
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -5.6, y: 0}
@@ -1074,13 +1118,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5856269785723572520}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7862490602098758627}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.9, y: 4.8}
@@ -1415,140 +1459,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &463639806854962890
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 402062858390851710}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.89400005
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.21199979
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.73296607
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.68026525
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -85.729
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3102552582028154646, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3102552582028154646, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3102552582028154646, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3102552582028154646, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -3102552582028154646, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3102552582028154646, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3102552582028154646, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1063094714816996356, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1063094714816996356, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1063094714816996356, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1063094714816996356, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -1063094714816996356, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1063094714816996356, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1063094714816996356, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1063094714816996356, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-      propertyPath: m_Name
-      value: bunny
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
---- !u!4 &136678709262252321 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 96735e5c89e5d73488701f33f8554910, type: 3}
-  m_PrefabInstance: {fileID: 463639806854962890}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8077637884169014691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1662,4 +1572,78 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7, type: 3}
   m_PrefabInstance: {fileID: 8077637884169014691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8514853083391581418
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 402062858390851710}
+    m_Modifications:
+    - target: {fileID: 3515341755650904853, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_Name
+      value: bunnyAnimated
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5099999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.23529
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.20740587
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+--- !u!4 &5595728976189986117 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4288218627764373935, guid: 7096054a9244b6c4baadc51c788d91ff, type: 3}
+  m_PrefabInstance: {fileID: 8514853083391581418}
   m_PrefabAsset: {fileID: 0}
