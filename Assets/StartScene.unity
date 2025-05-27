@@ -9283,6 +9283,10 @@ PrefabInstance:
       propertyPath: staff
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9197023871976432671, guid: 3c9cfe0c75c524f4d9122b7df25dc1ef, type: 3}
+      propertyPath: activationSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

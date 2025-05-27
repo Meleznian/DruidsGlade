@@ -103,8 +103,6 @@ public class IngredientScript : MonoBehaviour
         {
             print("Wait no don't eat that!");
             eating = false;
-            nextEatSound = eatSoundTime;
-            timer = 0;
         }
     }
 
