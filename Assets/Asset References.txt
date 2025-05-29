@@ -13,6 +13,12 @@ https://assetstore.unity.com/packages/vfx/particles/spells/zap-vfx-urp-303479
 Fruit Models:
 https://assetstore.unity.com/packages/3d/props/food/low-poly-fruit-pickups-98135
 
+Staff Model:
+https://assetstore.unity.com/packages/3d/props/weapons/free-cartoon-weapon-pack-mobile-vr-23956
+
+Pickaxe Model:
+https://assetstore.unity.com/packages/3d/props/tools/low-poly-archaeological-adventurer-tools-312995
+
 ------------------------- Sound Effects --------------------------------------------
 
 Eating Sound Effect: 
