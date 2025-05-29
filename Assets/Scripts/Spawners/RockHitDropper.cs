@@ -49,10 +49,12 @@ public class RockHitDropper : SpawnerBase
     {
         active = true;
         GetComponent<Animator>().SetTrigger("Emerge");
+        AudioManager.instance.PlayAudio("Rumble");
     }
 
     public void SpawnPickaxe()
     {
+        AudioManager.instance.StopAudio("Rumble");
         Instantiate(SpawnEffect, spawnPoint.position, spawnPoint.rotation);
         GameObject pickaxe = Instantiate(pickaxePrefab, spawnPoint.position, spawnPoint.rotation);
         pickaxe.GetComponent<Rigidbody>().AddTorque(Vector3.left, ForceMode.Impulse);

@@ -446,6 +446,7 @@ MonoBehaviour:
   eatTime: 1.5
   fireEffect: {fileID: 0}
   sparkle: {fileID: 7505840695802722431}
+  breakEffect: {fileID: 0}
 --- !u!114 &-7194874800978592758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,6 +474,7 @@ MonoBehaviour:
   Ball: {fileID: 7784129381606476800}
   Puddle: {fileID: 3455983791230539700}
   rb: {fileID: 8768620979118106482}
+  splash: {fileID: 1783276646780061817, guid: 65954f6bac88b2344ba1589731997994, type: 3}
   ignore:
     serializedVersion: 2
     m_Bits: 16

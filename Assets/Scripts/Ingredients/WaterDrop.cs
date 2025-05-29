@@ -8,6 +8,7 @@ public class WaterDrop : MonoBehaviour
     public GameObject Ball;
     public GameObject Puddle;
     public Rigidbody rb;
+    public GameObject splash;
 
     bool grabbed;
     bool inWater;
@@ -43,6 +44,8 @@ public class WaterDrop : MonoBehaviour
     void Landed()
     {
         rb.isKinematic = true;
+        Instantiate(splash, transform.position, Quaternion.Euler(Vector3.zero));
+        AudioManager.instance.PlayAtLocation("Splash", transform.position);
 
         Ball.SetActive(false);
         Puddle.SetActive(true);

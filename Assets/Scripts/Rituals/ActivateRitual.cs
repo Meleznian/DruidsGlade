@@ -25,6 +25,10 @@ public class ActivateRitual : MonoBehaviour
         {
             AudioManager.instance.PlayAtLocation("Rain", new Vector3(0,5,0));
         }
+        else if (gameObject.name == "VerdantRitual")
+        {
+            AudioManager.instance.PlayAtLocation("Wind", new Vector3(0, 5, 0));
+        }
     }
 
     // Update is called once per frame

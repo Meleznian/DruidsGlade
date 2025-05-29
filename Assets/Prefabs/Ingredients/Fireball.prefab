@@ -261,6 +261,8 @@ MonoBehaviour:
   eatTime: 2
   fireEffect: {fileID: 0}
   sparkle: {fileID: 8109609539487353077}
+  breakEffect: {fileID: 0}
+  smoke: {fileID: 2208308194870398576, guid: 0f77ea0017fc01844ac05ba31efd6870, type: 3}
 --- !u!65 &7304085638722714561
 BoxCollider:
   m_ObjectHideFlags: 0

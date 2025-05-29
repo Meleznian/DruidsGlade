@@ -235,6 +235,7 @@ MonoBehaviour:
   fireEffect: {fileID: 4331988948596239189}
   sparkle: {fileID: 436051219978072902}
   breakEffect: {fileID: 0}
+  smoke: {fileID: 2208308194870398576, guid: 0f77ea0017fc01844ac05ba31efd6870, type: 3}
 --- !u!114 &-7194874800978592758
 MonoBehaviour:
   m_ObjectHideFlags: 0

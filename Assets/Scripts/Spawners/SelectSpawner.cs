@@ -9,6 +9,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 public class SelectSpawner : SpawnerBase
 {
     public Transform spawnPoint;
+    public GameObject grabEffect;
 
     public void SpawnIngredient(SelectEnterEventArgs arg)
     {
@@ -19,6 +20,9 @@ public class SelectSpawner : SpawnerBase
             GameObject i = Instantiate(ingredient.prefab, spawnPoint.position, transform.rotation, ingredientHolder);
 
             i.GetComponent<XRGrabInteractable>().interactionManager.SelectEnter(arg.interactorObject, i.GetComponent<XRGrabInteractable>());
+            AudioManager.instance.PlayAtLocation("Leaves", transform.position);
+            Instantiate(grabEffect, i.transform.position, Quaternion.Euler(Vector3.zero));
+
         }
     }
 

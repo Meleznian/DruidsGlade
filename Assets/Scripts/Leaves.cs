@@ -8,6 +8,7 @@ public class Leaves : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Instantiate(leafParticle, other.transform.position ,other.transform.rotation);
+        AudioManager.instance.PlayAtLocation("Leaves", transform.position);
     }
 
 }

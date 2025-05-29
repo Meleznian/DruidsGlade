@@ -27,6 +27,7 @@ public class IngredientScript : MonoBehaviour
     public ParticleSystem fireEffect;
     public ParticleSystem sparkle;
     public ParticleSystem breakEffect;
+    public GameObject smoke;
 
     private void Start()
     {
@@ -48,6 +49,8 @@ public class IngredientScript : MonoBehaviour
 
             if(burnTimer >= 5)
             {
+                Instantiate(smoke, transform.position, Quaternion.Euler(Vector3.zero));
+                AudioManager.instance.PlayAtLocation("Douse", transform.position);
                 Break();
             }
         }
@@ -63,6 +66,8 @@ public class IngredientScript : MonoBehaviour
             if(collision.gameObject.name != "RitualTable")
             {
                 print(collision.gameObject.name);
+                Instantiate(smoke, transform.position, Quaternion.Euler(Vector3.zero));
+                AudioManager.instance.PlayAtLocation("Douse", transform.position);
                 Break();
             }
         }
@@ -150,6 +155,8 @@ public class IngredientScript : MonoBehaviour
         fireEffect.Stop();
         if(ingredientScriptable.name == "Ball of Fire")
         {
+            Instantiate(smoke, transform.position, Quaternion.Euler(Vector3.zero));
+            AudioManager.instance.PlayAtLocation("Douse", transform.position);
             Destroy(gameObject);
         }
     }
