@@ -72,6 +72,7 @@ public class HandManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        print(RightGrip.action.ReadValue<float>());
         HandGlow();
         SummonStaff();
         SummonBook();
@@ -79,7 +80,7 @@ public class HandManager : MonoBehaviour
 
     void SummonStaff()
     {
-        if (rightHandT.position.y > (Camera.main.transform.position.y + HandHeight) && RightGrip.action.ReadValue<float>() == 1 && !rightInteractor.hasSelection)
+        if (rightHandT.position.y > (Camera.main.transform.position.y + HandHeight) && RightGrip.action.ReadValue<float>() >= 0.9f && !rightInteractor.hasSelection)
         {
             print("Summoning Staff");
             Staff.AddForce((rightHandT.position - Staff.transform.position)*(Vector3.Distance(rightHandT.position, Staff.transform.position)*forceMult), ForceMode.Impulse);
@@ -93,7 +94,7 @@ public class HandManager : MonoBehaviour
     }
     void SummonBook()
     {
-        if (leftHandT.position.y > (Camera.main.transform.position.y + HandHeight) && leftGrip.action.ReadValue<float>() == 1 && !leftInteractor.hasSelection)
+        if (leftHandT.position.y > (Camera.main.transform.position.y + HandHeight) && leftGrip.action.ReadValue<float>() >=0.9f && !leftInteractor.hasSelection)
         {
             //print("Summoning Staff");
             book.AddForce((leftHandT.position - book.transform.position) * (Vector3.Distance(leftHandT.position, book.transform.position) * forceMult), ForceMode.Impulse);
