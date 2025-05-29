@@ -54,8 +54,8 @@ public class AudioManager : MonoBehaviour
 
             s.source.volume = s.volume;
             s.source.loop = s.loop;
-            print(s.volume);
-            print(s.source.volume);
+            //print(s.volume);
+            //print(s.source.volume);
         }
     }
 
