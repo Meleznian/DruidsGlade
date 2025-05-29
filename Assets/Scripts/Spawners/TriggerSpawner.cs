@@ -75,12 +75,12 @@ public class TriggerSpawner : SpawnerBase
 
     void SpawnIngredient()
     {
-        if(rightHandin && RightGrip.action.ReadValue<float>() == 1 && !HandManager.instance.rightInteractor.hasSelection)
+        if(rightHandin && RightGrip.action.ReadValue<float>() >=0.9f && !HandManager.instance.rightInteractor.hasSelection)
         {
             GameObject i = Instantiate(ingredient.prefab, HandManager.instance.rightInteractor.transform.position, transform.rotation, ingredientHolder);
             i.GetComponent<XRGrabInteractable>().interactionManager.SelectEnter(HandManager.instance.rightInteractor, i.GetComponent<XRGrabInteractable>());
         }
-        if (leftHandin && LeftGrip.action.ReadValue<float>() == 1 && !HandManager.instance.leftInteractor.hasSelection)
+        if (leftHandin && LeftGrip.action.ReadValue<float>() >=0.9f && !HandManager.instance.leftInteractor.hasSelection)
         {
             GameObject i = Instantiate(ingredient.prefab, HandManager.instance.leftInteractor.transform.position, transform.rotation, ingredientHolder);
             i.GetComponent<XRGrabInteractable>().interactionManager.SelectEnter(HandManager.instance.leftInteractor, i.GetComponent<XRGrabInteractable>());
