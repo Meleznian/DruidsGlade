@@ -22,6 +22,7 @@ public class LightningBehaviour : MonoBehaviour
     {
         if (startTimer)
         {
+            lightning.Play();
             timer += Time.deltaTime;
             if (timer >= delay)
             {
@@ -39,7 +40,6 @@ public class LightningBehaviour : MonoBehaviour
 
     public void Strike()
     {
-        lightning.Play();
         AudioManager.instance.PlayAudio("Fire");
         AudioManager.instance.PlayAtLocation("LightningStrike", campfire.transform.position);
         GetComponent<ActivateRitual>().ActivateSpawner();

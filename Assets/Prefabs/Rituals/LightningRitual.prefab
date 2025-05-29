@@ -82,7 +82,7 @@ MonoBehaviour:
   cloud: {fileID: 983183444340985873}
   lightning: {fileID: 4430218036018658223}
   campfire: {fileID: 0}
-  delay: 2
+  delay: 1
 --- !u!1001 &5405978158540240732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,9 +111,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lightning
       objectReference: {fileID: 0}
-    - target: {fileID: 6110789885532804200, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
+    - target: {fileID: 5627696518775099638, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735631384014967125, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.96318907
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735631384014967125, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.6245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 6110789885532804200, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574697647633933649, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6630951671508150946, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6637250676514340969, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
@@ -122,6 +142,18 @@ PrefabInstance:
     - target: {fileID: 6637250676514340969, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0.435849
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538455091997576435, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538455091997576435, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538455091997576435, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
+      propertyPath: autoRandomSeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8964859838461161948, guid: 3ee41ddd52738de4c892ede59f17326a, type: 3}
       propertyPath: m_LocalScale.x
