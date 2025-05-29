@@ -9292,7 +9292,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 49808583757544385, guid: a237c1ae494a1604a9b274c6b221d903, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5000002
+      value: 0.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 49808583757544385, guid: a237c1ae494a1604a9b274c6b221d903, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9423,16 +9423,12 @@ PrefabInstance:
       value: -1.01
       objectReference: {fileID: 0}
     - target: {fileID: 8795019984968426992, guid: a237c1ae494a1604a9b274c6b221d903, type: 3}
-      propertyPath: m_MaxValue
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8795019984968426992, guid: a237c1ae494a1604a9b274c6b221d903, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 327756001}
     - target: {fileID: 8892439171494147505, guid: a237c1ae494a1604a9b274c6b221d903, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5000002
+      value: 0.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 8892439171494147505, guid: a237c1ae494a1604a9b274c6b221d903, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9440,7 +9436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8892439171494147505, guid: a237c1ae494a1604a9b274c6b221d903, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5000002
+      value: 0.3333334
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9803,6 +9799,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2886185694602799766, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetPosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886185694602799766, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DebugMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042480893994095909, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
+      propertyPath: originPosition
+      value: 
+      objectReference: {fileID: 700575755}
     - target: {fileID: 3716969211820500028, guid: 6dbc7e20335216f479b5f0c5cb0ad965, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

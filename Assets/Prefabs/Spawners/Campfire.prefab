@@ -707,8 +707,16 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6852036937094909445, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852036937094909445, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: ShapeModule.arc.value
-      value: 70
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852036937094909445, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6852036937094909445, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.size
@@ -832,15 +840,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8546441250590442590, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.111
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8546441250590442590, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1455
+      value: -0.197
       objectReference: {fileID: 0}
     - target: {fileID: 8546441250590442590, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8546441250590442590, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -870,7 +878,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6101989866023926116, guid: 82c48d4dd6786a24a8a071510ff3f87c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

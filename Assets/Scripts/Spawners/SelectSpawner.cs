@@ -21,7 +21,7 @@ public class SelectSpawner : SpawnerBase
 
             i.GetComponent<XRGrabInteractable>().interactionManager.SelectEnter(arg.interactorObject, i.GetComponent<XRGrabInteractable>());
             AudioManager.instance.PlayAtLocation("Leaves", transform.position);
-            Instantiate(grabEffect, i.transform.position, Quaternion.Euler(Vector3.zero));
+            Instantiate(grabEffect, arg.interactorObject.transform.position, Quaternion.Euler(Vector3.zero));
 
         }
     }

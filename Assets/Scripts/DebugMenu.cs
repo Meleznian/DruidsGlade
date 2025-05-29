@@ -3,9 +3,17 @@ using UnityEngine.SceneManagement;
 public class DebugMenu : MonoBehaviour
 {
     public Transform cameraOffset;
+    public Transform originPosition;
+    Transform player;
+
     public float moveAmount;
     bool pressed;
     bool up;
+
+    private void Start()
+    {
+        player = cameraOffset.parent;
+    }
 
     private void Update()
     {
@@ -67,6 +75,11 @@ public class DebugMenu : MonoBehaviour
                 cameraOffset.position = new Vector3(cameraOffset.position.x, cameraOffset.position.y - Time.deltaTime, cameraOffset.position.z);
             }
         }
+    }
+
+    public void ResetPosition()
+    {
+        player.position = new Vector3(originPosition.position.x, 0, originPosition.position.z);
     }
 
 }
