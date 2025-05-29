@@ -9,6 +9,7 @@ public class FadeInObject : MonoBehaviour
 
     public Color startColour;
     public Color goalColour;
+    public bool autoStart;
     float t;
     public float speed;
     bool changed;
@@ -23,6 +24,10 @@ public class FadeInObject : MonoBehaviour
     {
         r = GetComponent<MeshRenderer>().material;
         r.color = startColour;
+        if (autoStart)
+        {
+            FadeIn();
+        }
     }
 
     // Update is called once per frame

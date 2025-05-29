@@ -5133,6 +5133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startColour: {r: 0.381132, g: 0.381132, b: 0.381132, a: 0}
   goalColour: {r: 0.3509434, g: 0.3509434, b: 0.3509434, a: 1}
+  autoStart: 0
   speed: 0
   fadeInFunction:
     m_PersistentCalls:
@@ -5380,7 +5381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b36c73269c1668c4bbfb76bf41a74b15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.17
+      value: 9.77
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b36c73269c1668c4bbfb76bf41a74b15, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5453,6 +5454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startColour: {r: 0.381132, g: 0.381132, b: 0.381132, a: 0}
   goalColour: {r: 0.3509434, g: 0.3509434, b: 0.3509434, a: 1}
+  autoStart: 1
   speed: 0.1
   fadeInFunction:
     m_PersistentCalls:
