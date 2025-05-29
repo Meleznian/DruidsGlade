@@ -27,7 +27,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363832934994467073}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.56}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 0
@@ -35,10 +35,10 @@ RectTransform:
   - {fileID: 6690411216454309018}
   - {fileID: 5712320482916579605}
   m_Father: {fileID: 402062858390851710}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.28, y: 1.87}
+  m_AnchoredPosition: {x: 3.12, y: 2.65}
   m_SizeDelta: {x: 103.84, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8817438004166671806
@@ -714,8 +714,8 @@ MonoBehaviour:
   - refID: PotRitual
     dialogueOptions:
     - Rituals are pretty easy to perform
-    - Just place your ingredients on this stone table and <link=blue+wave>quickly
-      wave </link>your staff over them in a circular motion
+    - Just place your ingredients on this<link=blue> stone ritual table</link> and
+      <link=blue+wave>quickly wave </link>your staff over them in a circular motion
     - Try performing a ritual with two pots as the ingredients
     sequence: 1
     autoContinue: 1
@@ -837,7 +837,8 @@ MonoBehaviour:
     dialogueOptions:
     - Darn, looks like the ritual <link=red>failed</link>. Maybe try a <link=blue>different
       combination</link>.
-    - Hmm seems that didn't work either. Keep trying though
+    - Hmm seems that didn't work either. Keep it up though. A <link=green+wave>good
+      druid never quits.</link>
     - If you're struggling, you can always check your <link=green> journal</link>
       for hints
     sequence: 1
