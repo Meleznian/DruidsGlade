@@ -23,11 +23,11 @@ public class ActivateRitual : MonoBehaviour
 
         if(gameObject.name == "RainRitual")
         {
-            AudioManager.instance.PlayAtLocation("Rain", new Vector3(0,5,0));
+            AudioManager.instance.PlayAtLocation("Rain", new Vector3(0,1,0));
         }
         else if (gameObject.name == "VerdantRitual")
         {
-            AudioManager.instance.PlayAtLocation("Wind", new Vector3(0, 5, 0));
+            AudioManager.instance.PlayAtLocation("Wind", new Vector3(0, 1, 0));
         }
     }
 
